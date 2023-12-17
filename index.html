@@ -2,25 +2,80 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Item Price Search</title>
-    <!-- Include any CSS or external libraries -->
-    <!-- For example: -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Searchable Item Table</title>
+  <style>
+    /* Add your CSS styles here */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
 </head>
 
 <body>
-    <h1>Item Price Search</h1>
-    <input type="text" id="itemInput" placeholder="Enter Item ID">
-    <button onclick="searchItem()">Search</button>
+  <input type="text" id="searchInput" placeholder="Search for items...">
+  <table id="itemTable">
+    <thead>
+      <tr>
+        <th>Item ID</th>
+        <th>Market Value</th>
+        <th>Historical Price</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <!-- Table rows will be dynamically added here -->
+    </tbody>
+  </table>
 
-    <div id="priceDisplay">
-        <!-- Display area for prices and diagrams -->
-    </div>
+  <script>
+    // Fetch data from JSON file
+    fetch('lonewolf.json')
+      .then(response => response.json())
+      .then(data => populateTable(data.pricing_data))
+      .catch(error => console.error('Error fetching data:', error));
 
-    <!-- Include JavaScript file -->
-    <!-- For example: -->
-    <script src="script.js"></script>
+    // Function to populate the table with data
+    function populateTable(pricingData) {
+      const tableBody = document.getElementById('tableBody');
+
+      pricingData.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${item.itemId}</td>
+          <td>${item.marketValue}</td>
+          <td>${item.historical}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+
+      // Search functionality
+      const searchInput = document.getElementById('searchInput');
+      searchInput.addEventListener('input', function () {
+        const searchTerm = this.value.toLowerCase();
+        const rows = tableBody.getElementsByTagName('tr');
+
+        Array.from(rows).forEach(row => {
+          const itemInfo = row.textContent.toLowerCase();
+          if (itemInfo.includes(searchTerm)) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      });
+    }
+  </script>
 </body>
 
 </html>
