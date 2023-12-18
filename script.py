@@ -9,6 +9,9 @@ auth_url = 'https://auth.tradeskillmaster.com/oauth2/token'
 pricing_url = 'https://pricing-api.tradeskillmaster.com/ah/512'
 realm_url = 'https://realm-api.tradeskillmaster.com/regions'
 
+timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+filename = f'{timestamp}.json'
+
 # Request body for access token
 payload = {
     "client_id": "c260f00d-1071-409a-992f-dda2e5498536",
