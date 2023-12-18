@@ -1,0 +1,22 @@
+
+import json
+import csv
+
+# Read the items.csv file and create a mapping of itemId to name
+item_mapping = {}
+with open('items.txt', newline='') as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+        item_mapping[row['entry']] = row['name']
+
+# Read the JSON file and update the itemId with their respective names
+with open('2023-12-18_16-32-09.json', 'r') as jsonfile:
+    data = json.load(jsonfile)
+    for item in data['pricing_data']:
+        item_id = str(item['itemId'])  # Convert itemId to string for matching
+        if item_id in item_mapping:
+            item['itemName'] = item_mapping[item_id]
+
+# Output the updated JSON data to a new file
+with open('combined_data.json', 'w') as outfile:
+    json.dump(data, outfile, indent=4)
