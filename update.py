@@ -1,6 +1,7 @@
 import requests
 import json
 from datetime import datetime
+import os
 
 api_key = os.environ['API_KEY']
 # Endpoint URLs
