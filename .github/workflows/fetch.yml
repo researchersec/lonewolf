@@ -1,7 +1,7 @@
 name: Save Pricing Data
 
-on:
-  schedule:
+#on:
+  #schedule:
     #- cron: "*/15 * * * *"  # 15 mins
 
 jobs:
