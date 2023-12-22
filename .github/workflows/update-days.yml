@@ -2,7 +2,7 @@ name: Update Days
 
 on:
   schedule:
-    - cron: "*15 * * * *"  # 15 mins
+    - cron: "*/15 * * * *"  # 15 mins
 
 jobs:
   save_data:
