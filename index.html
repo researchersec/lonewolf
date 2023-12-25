@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pricing Data</title>
+    <script>
+        async function fetchPricingData(date) {
+            try {
+                const response = await fetch(`pricing_data_${date}.json`);
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        async function displayPricingData(date) {
+            const data = await fetchPricingData(date);
+            const container = document.getElementById('pricing-container');
+
+            // Clear previous data
+            container.innerHTML = '';
+
+            data.forEach(entry => {
+                const timestamp = entry.timestamp;
+                const pricingData = entry.pricing_data;
+
+                const entryDiv = document.createElement('div');
+                entryDiv.classList.add('entry');
+
+                const timestampHeader = document.createElement('h3');
+                timestampHeader.textContent = `Timestamp: ${timestamp}`;
+                entryDiv.appendChild(timestampHeader);
+
+                pricingData.forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.classList.add('item');
+
+                    const itemId = document.createElement('p');
+                    itemId.textContent = `Item ID: ${item.itemId}`;
+                    itemDiv.appendChild(itemId);
+
+                    // Add other item details here...
+
+                    entryDiv.appendChild(itemDiv);
+                });
+
+                container.appendChild(entryDiv);
+            });
+        }
+    </script>
+</head>
+<body>
+    <button onclick="displayPricingData('2023-12-21')">Show Pricing Data for 2023-12-21</button>
+    <div id="pricing-container"></div>
+</body>
+</html>
