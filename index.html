@@ -126,30 +126,33 @@
             return table;
         }
 
-        async function displayPricingData(searchTerm) {
-            const itemNames = await fetchItemNames();
-            const itemIDs = Object.keys(itemNames);
-            let selectedDate;
+async function displayPricingData(searchTerm) {
+    const itemNames = await fetchItemNames();
+    const itemIDs = Object.keys(itemNames);
+    let selectedDate;
 
-            if (itemIDs.includes(searchTerm)) {
-                selectedDate = searchTerm;
-            } else {
-                const selectedItem = Object.entries(itemNames).find(([id, name]) => name.toLowerCase().includes(searchTerm.toLowerCase()));
-                selectedDate = selectedItem ? selectedItem[0] : null;
-            }
-
-            if (selectedDate) {
-                const pricingData = await fetchPricingData(selectedDate);
-                const data = { [selectedDate]: pricingData };
-
-                const container = document.getElementById('pricing-container');
-                container.innerHTML = '';
-                const table = createTable(data, itemNames);
-                container.appendChild(table);
-            } else {
-                alert('Item ID or name not found.');
-            }
+    if (!isNaN(searchTerm)) { // Check if searchTerm is a number (item ID)
+        if (itemIDs.includes(searchTerm)) {
+            selectedDate = searchTerm;
         }
+    } else { // It's a string (item name)
+        const selectedItem = Object.entries(itemNames).find(([id, name]) => name.toLowerCase().includes(searchTerm.toLowerCase()));
+        selectedDate = selectedItem ? selectedItem[0] : null;
+    }
+
+    if (selectedDate) {
+        const pricingData = await fetchPricingData(selectedDate);
+        const data = { [selectedDate]: pricingData };
+
+        const container = document.getElementById('pricing-container');
+        container.innerHTML = '';
+        const table = createTable(data, itemNames);
+        container.appendChild(table);
+    } else {
+        alert('Item ID or name not found.');
+    }
+}
+
     </script>
 </head>
 <body>
