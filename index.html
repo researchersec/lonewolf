@@ -3,6 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Pricing Data</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .increase {
+            background-color: lightgreen;
+        }
+
+        .decrease {
+            background-color: salmon;
+        }
+    </style>
     <script>
         async function fetchPricingData(date) {
             try {
@@ -14,44 +38,61 @@
             }
         }
 
-        async function displayPricingData(date) {
-            const data = await fetchPricingData(date);
-            const container = document.getElementById('pricing-container');
+        function createTable(data) {
+            const table = document.createElement('table');
 
-            // Clear previous data
-            container.innerHTML = '';
-
-            data.forEach(entry => {
-                const timestamp = entry.timestamp;
-                const pricingData = entry.pricing_data;
-
-                const entryDiv = document.createElement('div');
-                entryDiv.classList.add('entry');
-
-                const timestampHeader = document.createElement('h3');
-                timestampHeader.textContent = `Timestamp: ${timestamp}`;
-                entryDiv.appendChild(timestampHeader);
-
-                pricingData.forEach(item => {
-                    const itemDiv = document.createElement('div');
-                    itemDiv.classList.add('item');
-
-                    const itemId = document.createElement('p');
-                    itemId.textContent = `Item ID: ${item.itemId}`;
-                    itemDiv.appendChild(itemId);
-
-                    // Add other item details here...
-
-                    entryDiv.appendChild(itemDiv);
-                });
-
-                container.appendChild(entryDiv);
+            // Create table header
+            const headerRow = table.insertRow();
+            const dates = Object.keys(data);
+            dates.forEach(date => {
+                const headerCell = document.createElement('th');
+                headerCell.textContent = date;
+                headerRow.appendChild(headerCell);
             });
+
+            // Create table body
+            const items = Object.values(data);
+            const rowCount = items.reduce((max, arr) => Math.max(max, arr.length), 0);
+            for (let i = 0; i < rowCount; i++) {
+                const row = table.insertRow();
+                items.forEach(item => {
+                    const cell = row.insertCell();
+                    if (item[i]) {
+                        const pricingData = item[i].pricing_data;
+                        if (pricingData) {
+                            const previousPrice = pricingData[i - 1]?.marketValue || 0;
+                            const currentPrice = pricingData[i]?.marketValue || 0;
+                            cell.textContent = currentPrice;
+
+                            if (currentPrice > previousPrice) {
+                                cell.classList.add('increase');
+                            } else if (currentPrice < previousPrice) {
+                                cell.classList.add('decrease');
+                            }
+                        }
+                    }
+                });
+            }
+
+            return table;
+        }
+
+        async function displayPricingData(dates) {
+            const data = {};
+            for (const date of dates) {
+                const pricingData = await fetchPricingData(date);
+                data[date] = pricingData;
+            }
+
+            const container = document.getElementById('pricing-container');
+            container.innerHTML = '';
+            const table = createTable(data);
+            container.appendChild(table);
         }
     </script>
 </head>
 <body>
-    <button onclick="displayPricingData('2023-12-21')">Show Pricing Data for 2023-12-21</button>
+    <button onclick="displayPricingData(['2023-12-21', '2023-12-22', '2023-12-23'])">Show Pricing Data</button>
     <div id="pricing-container"></div>
 </body>
 </html>
