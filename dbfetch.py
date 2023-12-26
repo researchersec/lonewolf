@@ -14,14 +14,34 @@ realm_url = 'https://realm-api.tradeskillmaster.com/regions'
 conn = sqlite3.connect('pricing_data.db')
 cursor = conn.cursor()
 
-# Create table if it doesn't exist
+# Create tables
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS pricing_data (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        timestamp TEXT,
-        pricing_data TEXT
+        timestamp TEXT
     )
 ''')
+
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS items (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        item_id INTEGER,
+        item_name TEXT
+    )
+''')
+
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS pricing_details (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        pricing_id INTEGER,
+        item_id INTEGER,
+        price INTEGER,
+        FOREIGN KEY(pricing_id) REFERENCES pricing_data(id),
+        FOREIGN KEY(item_id) REFERENCES items(id)
+    )
+''')
+
+conn.commit()
 
 # Request body for access token
 payload = {
@@ -45,14 +65,48 @@ if response.status_code == 201:
 
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-        # Insert data into the SQLite table
+        # Insert timestamp into pricing_data table
         cursor.execute('''
-            INSERT INTO pricing_data (timestamp, pricing_data)
-            VALUES (?, ?)
-        ''', (timestamp, json.dumps(pricing_data)))
+            INSERT INTO pricing_data (timestamp)
+            VALUES (?)
+        ''', (timestamp,))
+        pricing_id = cursor.lastrowid  # Get the last inserted row ID
 
-        conn.commit()
+        # Process pricing details and insert into pricing_details table
+        for item in pricing_data:
+            item_id = item.get('item_id')
+            item_name = item.get('item_name')
+            price = item.get('price')
+
+            # Check if the item exists in the items table, if not, add it
+            cursor.execute('''
+                SELECT id FROM items WHERE item_id = ?
+            ''', (item_id,))
+            item_row = cursor.fetchone()
+
+            if not item_row:
+                cursor.execute('''
+                    INSERT INTO items (item_id, item_name)
+                    VALUES (?, ?)
+                ''', (item_id, item_name))
+                conn.commit()  # Commit the item addition
+
+            # Get the item ID for further reference
+            cursor.execute('''
+                SELECT id FROM items WHERE item_id = ?
+            ''', (item_id,))
+            item_id_db = cursor.fetchone()[0]
+
+            # Insert pricing details into pricing_details table
+            cursor.execute('''
+                INSERT INTO pricing_details (pricing_id, item_id, price)
+                VALUES (?, ?, ?)
+            ''', (pricing_id, item_id_db, price))
+            conn.commit()  # Commit the pricing details
+
     else:
         print("Failed to fetch pricing data")
 else:
     print("Failed to obtain access token")
+
+conn.close()  # Close the database connection when finished
