@@ -39,19 +39,19 @@ if response.status_code == 201:
 
     headers = {'Authorization': f'Bearer {access_token}'}
     pricing_response = requests.get(pricing_url, headers=headers)
-if pricing_response.status_code == 200:
-    pricing_data = pricing_response.json()
-    print("Pricing data obtained successfully")
+    if pricing_response.status_code == 200:
+        pricing_data = pricing_response.json()
+        print("Pricing data obtained successfully")
 
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    
-    # Insert data into the SQLite table
-    cursor.execute('''
-        INSERT INTO pricing_data (timestamp, pricing_data)
-        VALUES (?, ?)
-    ''', (timestamp, json.dumps(pricing_data)))
-    
-    conn.commit()
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        # Insert data into the SQLite table
+        cursor.execute('''
+            INSERT INTO pricing_data (timestamp, pricing_data)
+            VALUES (?, ?)
+        ''', (timestamp, json.dumps(pricing_data)))
+
+        conn.commit()
     else:
         print("Failed to fetch pricing data")
 else:
