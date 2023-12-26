@@ -2,7 +2,7 @@ name: Test SQLite
 
 on:
   schedule:
-    - cron: "*/5 * * * *"  # 15 mins
+    - cron: "*/15 * * * *"  # 15 mins
 
 jobs:
   save_data:
