@@ -91,18 +91,23 @@ if response.status_code == 201:
                 ''', (item_id, item_name))
                 conn.commit()  # Commit the item addition
 
-            # Get the item ID for further reference
-            cursor.execute('''
-                SELECT id FROM items WHERE item_id = ?
-            ''', (item_id,))
-            item_id_db = cursor.fetchone()[0]
+                # Retrieve the newly inserted item's ID
+                cursor.execute('''
+                    SELECT id FROM items WHERE item_id = ?
+                ''', (item_id,))
+                item_row = cursor.fetchone()
 
-            # Insert pricing details into pricing_details table
-            cursor.execute('''
-                INSERT INTO pricing_details (pricing_id, item_id, price)
-                VALUES (?, ?, ?)
-            ''', (pricing_id, item_id_db, price))
-            conn.commit()  # Commit the pricing details
+            if item_row:
+                item_id_db = item_row[0]
+
+                # Insert pricing details into pricing_details table
+                cursor.execute('''
+                    INSERT INTO pricing_details (pricing_id, item_id, price)
+                    VALUES (?, ?, ?)
+                ''', (pricing_id, item_id_db, price))
+                conn.commit()  # Commit the pricing details
+            else:
+                print(f"Failed to add or retrieve item: {item_id} - {item_name}")
 
     else:
         print("Failed to fetch pricing data")
