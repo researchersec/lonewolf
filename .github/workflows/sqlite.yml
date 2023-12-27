@@ -3,6 +3,7 @@ name: Test SQLite
 on:
   schedule:
     - cron: "*/15 * * * *"  # 15 mins
+  workflow_dispatch:
 
 jobs:
   save_data:
