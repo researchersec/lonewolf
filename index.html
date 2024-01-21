@@ -81,22 +81,23 @@
             loadJSON('2024-01-21_02-20-18.json', function(dataJanuary) {
                 // Load items mapping
                 loadItemsMapping(function(itemsMapping) {
-                    // Extract minBuyout prices and item names for comparison
-                    const pricesDecember = dataDecember.pricing_data.map(item => item.minBuyout);
-                    const pricesJanuary = dataJanuary.pricing_data.map(item => item.minBuyout);
-                    const itemIds = dataDecember.pricing_data.map(item => item.itemId);
+                    // Extract minBuyout prices, item names, and calculate price differences
+                    const itemsData = dataDecember.pricing_data.map((item, index) => {
+                        const itemId = item.itemId;
+                        const itemName = itemsMapping[itemId] || 'Unknown Item';
+                        const priceDifference = dataJanuary.pricing_data[index].minBuyout - item.minBuyout;
+                        return { itemName, priceDifference };
+                    });
 
-                    // Calculate price differences
-                    const priceDifferences = pricesJanuary.map((price, index) => price - pricesDecember[index]);
+                    // Sort items by price difference in descending order
+                    itemsData.sort((a, b) => b.priceDifference - a.priceDifference);
 
                     // Display the results on the webpage
                     const priceDifferenceElement = document.getElementById('price-difference');
-                    priceDifferenceElement.innerHTML = '<h2 class="mt-4">Price Differences with Item Names</h2>';
-                    priceDifferences.forEach((difference, index) => {
-                        const itemId = itemIds[index];
-                        const itemName = itemsMapping[itemId] || 'Unknown Item';
-                        const currency = convertToCurrency(difference);
-                        priceDifferenceElement.innerHTML += `<p>${itemName}: ${currency.gold}g ${currency.silver}s ${currency.copper}c</p>`;
+                    priceDifferenceElement.innerHTML = '<h2 class="mt-4">Top Price Differences with Item Names</h2>';
+                    itemsData.forEach((item) => {
+                        const currency = convertToCurrency(item.priceDifference);
+                        priceDifferenceElement.innerHTML += `<p>${item.itemName}: ${currency.gold}g ${currency.silver}s ${currency.copper}c</p>`;
                     });
                 });
             });
