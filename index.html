@@ -25,6 +25,9 @@
     <div class="container">
         <h1 class="mt-4 mb-4">Price Comparison with Item Names</h1>
         <div id="price-difference"></div>
+
+        <!-- Additional section for Tailoring -->
+        <div id="tailoring-cost"></div>
     </div>
 
     <!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
@@ -76,6 +79,15 @@
             return { gold, silver, copper };
         }
 
+        // Function to calculate the cost to buy specific quantities of cloth
+        function calculateTailoringCost(prices, quantities) {
+            let totalCost = 0;
+            for (let i = 0; i < prices.length; i++) {
+                totalCost += prices[i] * quantities[i];
+            }
+            return totalCost;
+        }
+
         // Load JSON data from files
         loadJSON('2023-12-19_14-34-10.json', function(dataDecember) {
             loadJSON('2024-01-21_02-20-18.json', function(dataJanuary) {
@@ -99,6 +111,14 @@
                         const currency = convertToCurrency(item.priceDifference);
                         priceDifferenceElement.innerHTML += `<p>${item.itemName}: ${currency.gold}g ${currency.silver}s ${currency.copper}c</p>`;
                     });
+
+                    // Tailoring section
+                    const tailoringQuantities = [204, 135, 804, 470];
+                    const tailoringCost = calculateTailoringCost(pricesJanuary.map(item => item.minBuyout), tailoringQuantities);
+
+                    const tailoringCostElement = document.getElementById('tailoring-cost');
+                    tailoringCostElement.innerHTML = '<h2 class="mt-4">Tailoring Costs</h2>';
+                    tailoringCostElement.innerHTML += `<p>Cost to buy 204 Linen Cloth: ${convertToCurrency(tailoringCost).gold}g ${convertToCurrency(tailoringCost).silver}s ${convertToCurrency(tailoringCost).copper}c</p>`;
                 });
             });
         });
