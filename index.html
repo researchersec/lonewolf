@@ -64,6 +64,18 @@
             xhr.send();
         }
 
+        // Function to convert price differences to gold, silver, and copper
+        function convertToCurrency(difference) {
+            const goldBase = 10000;
+            const silverBase = 100;
+
+            const gold = Math.floor(difference / goldBase);
+            const silver = Math.floor((difference % goldBase) / silverBase);
+            const copper = difference % silverBase;
+
+            return { gold, silver, copper };
+        }
+
         // Load JSON data from files
         loadJSON('2023-12-19_14-34-10.json', function(dataDecember) {
             loadJSON('2024-01-21_02-20-18.json', function(dataJanuary) {
@@ -83,7 +95,8 @@
                     priceDifferences.forEach((difference, index) => {
                         const itemId = itemIds[index];
                         const itemName = itemsMapping[itemId] || 'Unknown Item';
-                        priceDifferenceElement.innerHTML += `<p>${itemName}: ${difference}</p>`;
+                        const currency = convertToCurrency(difference);
+                        priceDifferenceElement.innerHTML += `<p>${itemName}: ${currency.gold}g ${currency.silver}s ${currency.copper}c</p>`;
                     });
                 });
             });
