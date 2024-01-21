@@ -2,164 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pricing Data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Comparison with Item Names</title>
+
+    <!-- Bootstrap CSS (you may need to adjust the CDN link based on the version you want to use) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <style>
-        /* Styles for the search box and table */
+        /* Custom dark theme styling */
         body {
-            font-family: Arial, sans-serif;
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
         }
 
-        .search-container {
-            text-align: center;
+        #price-difference {
             margin-top: 20px;
         }
-
-        .search-input {
-            padding: 8px;
-            margin-right: 5px;
-        }
-
-        .search-button {
-            padding: 8px 12px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .search-button:hover {
-            background-color: #45a049;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 80%;
-            margin: 20px auto;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        .increase {
-            background-color: lightgreen;
-        }
-
-        .decrease {
-            background-color: salmon;
-        }
     </style>
-    <script>
-        async function fetchPricingData(date) {
-            try {
-                const response = await fetch(`pricing_data_${date}.json`);
-                const data = await response.json();
-                return data;
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        }
-
-        async function fetchItemNames() {
-            try {
-                const response = await fetch('items.txt');
-                const text = await response.text();
-                const lines = text.split('\n');
-                const itemNames = {};
-                lines.slice(1).forEach(line => {
-                    const [entry, name] = line.split(',');
-                    itemNames[entry] = name.trim();
-                });
-                return itemNames;
-            } catch (error) {
-                console.error('Error fetching item names:', error);
-            }
-        }
-
-        function createTable(data, itemNames) {
-            const table = document.createElement('table');
-
-            // Create table header
-            const headerRow = table.insertRow();
-            const dates = Object.keys(data);
-            dates.forEach(date => {
-                const headerCell = document.createElement('th');
-                headerCell.textContent = date;
-                headerRow.appendChild(headerCell);
-            });
-
-            // Create table body
-            const items = Object.values(data);
-            const rowCount = items.reduce((max, arr) => Math.max(max, arr.length), 0);
-            for (let i = 0; i < rowCount; i++) {
-                const row = table.insertRow();
-                items.forEach((item, index) => {
-                    const cell = row.insertCell();
-
-                    if (index === 0 && item[i]) {
-                        const itemId = item[i].pricing_data[0]?.itemId;
-                        const itemName = itemNames[itemId] || 'Unknown';
-                        cell.textContent = itemName;
-                    } else if (item[i]) {
-                        const pricingData = item[i].pricing_data;
-                        if (pricingData) {
-                            const previousPrice = pricingData[i - 1]?.marketValue || 0;
-                            const currentPrice = pricingData[i]?.marketValue || 0;
-                            cell.textContent = currentPrice;
-
-                            if (currentPrice > previousPrice) {
-                                cell.classList.add('increase');
-                            } else if (currentPrice < previousPrice) {
-                                cell.classList.add('decrease');
-                            }
-                        }
-                    }
-                });
-            }
-
-            return table;
-        }
-
-async function displayPricingData(searchTerm) {
-    const itemNames = await fetchItemNames();
-    const itemIDs = Object.keys(itemNames);
-    let selectedDate;
-
-    if (!isNaN(searchTerm)) { // Check if searchTerm is a number (item ID)
-        if (itemIDs.includes(searchTerm)) {
-            selectedDate = searchTerm;
-        }
-    } else { // It's a string (item name)
-        const selectedItem = Object.entries(itemNames).find(([id, name]) => name.toLowerCase().includes(searchTerm.toLowerCase()));
-        selectedDate = selectedItem ? selectedItem[0] : null;
-    }
-
-    if (selectedDate) {
-        const pricingData = await fetchPricingData(selectedDate);
-        const data = { [selectedDate]: pricingData };
-
-        const container = document.getElementById('pricing-container');
-        container.innerHTML = '';
-        const table = createTable(data, itemNames);
-        container.appendChild(table);
-    } else {
-        alert('Item ID or name not found.');
-    }
-}
-
-    </script>
 </head>
 <body>
-    <div class="search-container">
-        <input type="text" id="searchInput" class="search-input" placeholder="Search by Item ID or Name">
-        <button onclick="displayPricingData(document.getElementById('searchInput').value.trim())" class="search-button">Search</button>
+    <div class="container">
+        <h1 class="mt-4 mb-4">Price Comparison with Item Names</h1>
+        <div id="price-difference"></div>
     </div>
-    <div id="pricing-container"></div>
+
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+        // Function to make asynchronous requests
+        function loadJSON(url, callback) {
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const data = JSON.parse(xhr.responseText);
+                    callback(data);
+                }
+            };
+            xhr.open("GET", url, true);
+            xhr.send();
+        }
+
+        // Function to load items mapping
+        function loadItemsMapping(callback) {
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const lines = xhr.responseText.split('\n');
+                    const mapping = {};
+                    for (const line of lines.slice(1)) { // skip header line
+                        const [id, name] = line.split(',');
+                        mapping[id] = name;
+                    }
+                    callback(mapping);
+                }
+            };
+            xhr.open("GET", 'items.txt', true);
+            xhr.send();
+        }
+
+        // Load JSON data from files
+        loadJSON('2023-12-19_14-34-10.json', function(dataDecember) {
+            loadJSON('2024-01-21_02-20-18.json', function(dataJanuary) {
+                // Load items mapping
+                loadItemsMapping(function(itemsMapping) {
+                    // Extract minBuyout prices and item names for comparison
+                    const pricesDecember = dataDecember.pricing_data.map(item => item.minBuyout);
+                    const pricesJanuary = dataJanuary.pricing_data.map(item => item.minBuyout);
+                    const itemIds = dataDecember.pricing_data.map(item => item.itemId);
+
+                    // Calculate price differences
+                    const priceDifferences = pricesJanuary.map((price, index) => price - pricesDecember[index]);
+
+                    // Display the results on the webpage
+                    const priceDifferenceElement = document.getElementById('price-difference');
+                    priceDifferenceElement.innerHTML = '<h2 class="mt-4">Price Differences with Item Names</h2>';
+                    priceDifferences.forEach((difference, index) => {
+                        const itemId = itemIds[index];
+                        const itemName = itemsMapping[itemId] || 'Unknown Item';
+                        priceDifferenceElement.innerHTML += `<p>${itemName}: ${difference}</p>`;
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
