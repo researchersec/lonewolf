@@ -92,12 +92,12 @@
             const xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 && xhr.status === 200) {
-                    const files = JSON.parse(xhr.responseText);
-                    const latestFile = files.reduce((latest, file) => (file.timestamp > latest.timestamp ? file : latest), files[0]);
-                    callback(latestFile.filename);
+                    const filenames = xhr.responseText.split('\n');
+                    const latestFile = filenames.reduce((latest, filename) => (filename > latest ? filename : latest), filenames[0]);
+                    callback(latestFile);
                 }
             };
-            xhr.open("GET", 'list_of_files.json', true);
+            xhr.open("GET", 'list_of_files.txt', true);
             xhr.send();
         }
 
@@ -108,4 +108,4 @@
                 loadItemsMapping(function(itemsMapping) {
                     // Extract minBuyout prices for tailoring items
                     const tailoringItemIds = [2589, 2592, 4306, 4338]; // Linen Cloth, Wool Cloth, Silk Cloth, Mageweave Cloth
-                    const tailoringPrices = data.pricing_data.filter(item => tailoring
+                    const tailoringPrices = data.pricing
