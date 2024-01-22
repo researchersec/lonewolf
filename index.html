@@ -16,7 +16,7 @@
             padding: 20px;
         }
 
-        #price-difference {
+        #price-difference, #tailoring-cost {
             margin-top: 20px;
         }
     </style>
@@ -83,7 +83,7 @@
         function calculateTailoringCost(prices, quantities) {
             let totalCost = 0;
             for (let i = 0; i < prices.length; i++) {
-                totalCost += prices[i] * quantities[i];
+                totalCost += prices[i].minBuyout * quantities[i];
             }
             return totalCost;
         }
@@ -93,29 +93,16 @@
             loadJSON('2024-01-21_02-20-18.json', function(dataJanuary) {
                 // Load items mapping
                 loadItemsMapping(function(itemsMapping) {
-                    // Extract minBuyout prices, item names, and calculate price differences
-                    const itemsData = dataDecember.pricing_data.map((item, index) => {
-                        const itemId = item.itemId;
-                        const itemName = itemsMapping[itemId] || 'Unknown Item';
-                        const priceDifference = dataJanuary.pricing_data[index].minBuyout - item.minBuyout;
-                        return { itemName, priceDifference };
-                    });
+                    // Extract minBuyout prices for tailoring items
+                    const tailoringItemIds = [2589, 2592, 4306, 4338]; // Linen Cloth, Wool Cloth, Silk Cloth, Mageweave Cloth
+                    const tailoringPricesDecember = dataDecember.pricing_data.filter(item => tailoringItemIds.includes(item.itemId));
+                    const tailoringPricesJanuary = dataJanuary.pricing_data.filter(item => tailoringItemIds.includes(item.itemId));
 
-                    // Sort items by price difference in descending order
-                    itemsData.sort((a, b) => b.priceDifference - a.priceDifference);
+                    // Calculate tailoring cost
+                    const tailoringQuantities = [204, 135, 804, 470];
+                    const tailoringCost = calculateTailoringCost(tailoringPricesJanuary, tailoringQuantities);
 
                     // Display the results on the webpage
-                    const priceDifferenceElement = document.getElementById('price-difference');
-                    priceDifferenceElement.innerHTML = '<h2 class="mt-4">Top Price Differences with Item Names</h2>';
-                    itemsData.forEach((item) => {
-                        const currency = convertToCurrency(item.priceDifference);
-                        priceDifferenceElement.innerHTML += `<p>${item.itemName}: ${currency.gold}g ${currency.silver}s ${currency.copper}c</p>`;
-                    });
-
-                    // Tailoring section
-                    const tailoringQuantities = [204, 135, 804, 470];
-                    const tailoringCost = calculateTailoringCost(pricesJanuary.map(item => item.minBuyout), tailoringQuantities);
-
                     const tailoringCostElement = document.getElementById('tailoring-cost');
                     tailoringCostElement.innerHTML = '<h2 class="mt-4">Tailoring Costs</h2>';
                     tailoringCostElement.innerHTML += `<p>Cost to buy 204 Linen Cloth: ${convertToCurrency(tailoringCost).gold}g ${convertToCurrency(tailoringCost).silver}s ${convertToCurrency(tailoringCost).copper}c</p>`;
