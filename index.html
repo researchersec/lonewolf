@@ -16,15 +16,14 @@
             padding: 20px;
         }
 
-        #price-difference, #tailoring-cost {
+        #tailoring-cost {
             margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-4 mb-4">Price Comparison with Item Names</h1>
-        <div id="price-difference"></div>
+        <h1 class="mt-4 mb-4">Tailoring Costs</h1>
 
         <!-- Additional section for Tailoring -->
         <div id="tailoring-cost"></div>
@@ -88,27 +87,25 @@
             return totalCost;
         }
 
-        // Load JSON data from files
-        loadJSON('2023-12-19_14-34-10.json', function(dataDecember) {
-            loadJSON('2024-01-21_02-20-18.json', function(dataJanuary) {
+        // Function to get the latest JSON file
+        function getLatestJSONFile(callback) {
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const files = JSON.parse(xhr.responseText);
+                    const latestFile = files.reduce((latest, file) => (file.timestamp > latest.timestamp ? file : latest), files[0]);
+                    callback(latestFile.filename);
+                }
+            };
+            xhr.open("GET", 'list_of_files.json', true);
+            xhr.send();
+        }
+
+        // Load the latest JSON data
+        getLatestJSONFile(function(latestJSONFile) {
+            loadJSON(latestJSONFile, function(data) {
                 // Load items mapping
                 loadItemsMapping(function(itemsMapping) {
                     // Extract minBuyout prices for tailoring items
                     const tailoringItemIds = [2589, 2592, 4306, 4338]; // Linen Cloth, Wool Cloth, Silk Cloth, Mageweave Cloth
-                    const tailoringPricesDecember = dataDecember.pricing_data.filter(item => tailoringItemIds.includes(item.itemId));
-                    const tailoringPricesJanuary = dataJanuary.pricing_data.filter(item => tailoringItemIds.includes(item.itemId));
-
-                    // Calculate tailoring cost
-                    const tailoringQuantities = [204, 135, 804, 470];
-                    const tailoringCost = calculateTailoringCost(tailoringPricesJanuary, tailoringQuantities);
-
-                    // Display the results on the webpage
-                    const tailoringCostElement = document.getElementById('tailoring-cost');
-                    tailoringCostElement.innerHTML = '<h2 class="mt-4">Tailoring Costs</h2>';
-                    tailoringCostElement.innerHTML += `<p>Cost to buy 204 Linen Cloth: ${convertToCurrency(tailoringCost).gold}g ${convertToCurrency(tailoringCost).silver}s ${convertToCurrency(tailoringCost).copper}c</p>`;
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+                    const tailoringPrices = data.pricing_data.filter(item => tailoring
