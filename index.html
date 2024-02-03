@@ -23,7 +23,7 @@
             fetch('2024-02-03_02-21-51.json')
                 .then(response => response.json())
                 .then(jsonData => {
-                    // Assuming 'itemsTxt' contains your items.txt data
+                    // Load items from items.txt
                     fetch('items.txt')
                         .then(response => response.text())
                         .then(itemsTxt => {
