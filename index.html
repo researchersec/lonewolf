@@ -38,9 +38,10 @@
                                 for (var j = 0; j < jsonData.pricing_data.length; j++) {
                                     if (jsonData.pricing_data[j].itemId.toString() === itemId &&
                                         itemName.toLowerCase().includes(searchInput)) {
+                                        var minBuyoutGold = jsonData.pricing_data[j].minBuyout / 10000;
                                         matchingItems.push({
                                             itemName: itemName,
-                                            minBuyout: jsonData.pricing_data[j].minBuyout
+                                            minBuyoutGold: minBuyoutGold.toFixed(2)
                                         });
                                         break; // Stop searching for this itemId once found
                                     }
@@ -53,7 +54,7 @@
                             if (matchingItems.length > 0) {
                                 resultDiv.innerHTML += "<h2>Search Results</h2>";
                                 for (var k = 0; k < matchingItems.length; k++) {
-                                    resultDiv.innerHTML += `<p>${matchingItems[k].itemName} - Min Buyout: ${matchingItems[k].minBuyout}</p>`;
+                                    resultDiv.innerHTML += `<p>${matchingItems[k].itemName} - Min Buyout: ${matchingItems[k].minBuyoutGold} gold</p>`;
                                 }
                             } else {
                                 resultDiv.innerHTML = "<p>No matching items found.</p>";
