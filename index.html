@@ -3,17 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Item Search</title>
+    <title>WoW Item Search</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
 </head>
-<body>
-
-    <h1>Item Search</h1>
-
-    <label for="searchInput">Search by Item Name:</label>
-    <input type="text" id="searchInput">
-    <button onclick="searchItem()">Search</button>
+<body class="bg-dark text-white">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">WoW Item Search</h1>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="searchInput" placeholder="Search by Item Name">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" onclick="searchItem()">Search</button>
+            </div>
+        </div>
 
     <div id="result"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- DataTables JS and its Bootstrap 4 integration -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap4.min.js
 
     <script>
         function searchItem() {
