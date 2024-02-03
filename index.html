@@ -3,109 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Price Comparison with Item Names</title>
-
-    <!-- Bootstrap CSS (you may need to adjust the CDN link based on the version you want to use) -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <style>
-        /* Custom dark theme styling */
-        body {
-            background-color: #343a40;
-            color: #fff;
-            padding: 20px;
-        }
-
-        #tailoring-cost {
-            margin-top: 20px;
-        }
-    </style>
+    <title>Item Search</title>
 </head>
 <body>
-    <div class="container">
-        <h1 class="mt-4 mb-4">Tailoring Costs</h1>
 
-        <!-- Additional section for Tailoring -->
-        <div id="tailoring-cost"></div>
-    </div>
+    <h1>Item Search</h1>
 
-    <!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <label for="searchInput">Search by Item Name:</label>
+    <input type="text" id="searchInput">
+    <button onclick="searchItem()">Search</button>
+
+    <div id="result"></div>
 
     <script>
-        // Function to make asynchronous requests
-        function loadJSON(url, callback) {
-            const xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    const data = JSON.parse(xhr.responseText);
-                    callback(data);
-                }
-            };
-            xhr.open("GET", url, true);
-            xhr.send();
+        function searchItem() {
+            var searchInput = document.getElementById("searchInput").value.toLowerCase();
+            
+            // Load JSON data from 2024-02-03_02-21-51.json
+            fetch('2024-02-03_02-21-51.json')
+                .then(response => response.json())
+                .then(jsonData => {
+                    // Assuming 'itemsTxt' contains your items.txt data
+                    fetch('items.txt')
+                        .then(response => response.text())
+                        .then(itemsTxt => {
+                            var itemsArray = itemsTxt.split('\n').slice(1).map(line => line.split(','));
+
+                            var matchingItems = [];
+
+                            for (var i = 0; i < jsonData.pricing_data.length; i++) {
+                                var itemId = jsonData.pricing_data[i].itemId.toString();
+                                var itemName = itemsArray.find(item => item[0] === itemId)[1];
+
+                                if (itemName.toLowerCase().includes(searchInput)) {
+                                    matchingItems.push({
+                                        itemId: itemId,
+                                        itemName: itemName,
+                                        marketValue: jsonData.pricing_data[i].marketValue,
+                                        historicalValue: jsonData.pricing_data[i].historical
+                                    });
+                                }
+                            }
+
+                            var resultDiv = document.getElementById("result");
+                            resultDiv.innerHTML = "";
+
+                            if (matchingItems.length > 0) {
+                                resultDiv.innerHTML += "<h2>Search Results</h2>";
+                                for (var j = 0; j < matchingItems.length; j++) {
+                                    resultDiv.innerHTML += `<p><a href="#" onclick="showItemDetails('${matchingItems[j].itemId}')">${matchingItems[j].itemName}</a></p>`;
+                                }
+                            } else {
+                                resultDiv.innerHTML = "<p>No matching items found.</p>";
+                            }
+                        })
+                        .catch(error => console.error('Error loading items.txt:', error));
+                })
+                .catch(error => console.error('Error loading 2024-02-03_02-21-51.json:', error));
         }
 
-        // Function to load items mapping
-        function loadItemsMapping(callback) {
-            const xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    const lines = xhr.responseText.split('\n');
-                    const mapping = {};
-                    for (const line of lines.slice(1)) { // skip header line
-                        const [id, name] = line.split(',');
-                        mapping[id] = name;
-                    }
-                    callback(mapping);
-                }
-            };
-            xhr.open("GET", 'items.txt', true);
-            xhr.send();
+        function showItemDetails(itemId) {
+            // You can navigate to a new page or display details here
+            alert(`Item ID: ${itemId}`);
         }
+    </script>
 
-        // Function to convert price differences to gold, silver, and copper
-        function convertToCurrency(difference) {
-            const goldBase = 10000;
-            const silverBase = 100;
-
-            const gold = Math.floor(difference / goldBase);
-            const silver = Math.floor((difference % goldBase) / silverBase);
-            const copper = difference % silverBase;
-
-            return { gold, silver, copper };
-        }
-
-        // Function to calculate the cost to buy specific quantities of cloth
-        function calculateTailoringCost(prices, quantities) {
-            let totalCost = 0;
-            for (let i = 0; i < prices.length; i++) {
-                totalCost += prices[i].minBuyout * quantities[i];
-            }
-            return totalCost;
-        }
-
-        // Function to get the latest JSON file
-        function getLatestJSONFile(callback) {
-            const xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    const filenames = xhr.responseText.split('\n');
-                    const latestFile = filenames.reduce((latest, filename) => (filename > latest ? filename : latest), filenames[0]);
-                    callback(latestFile);
-                }
-            };
-            xhr.open("GET", 'list_of_files.txt', true);
-            xhr.send();
-        }
-
-        // Load the latest JSON data
-        getLatestJSONFile(function(latestJSONFile) {
-            loadJSON(latestJSONFile, function(data) {
-                // Load items mapping
-                loadItemsMapping(function(itemsMapping) {
-                    // Extract minBuyout prices for tailoring items
-                    const tailoringItemIds = [2589, 2592, 4306, 4338]; // Linen Cloth, Wool Cloth, Silk Cloth, Mageweave Cloth
-                    const tailoringPrices = data.pricing
+</body>
+</html>
