@@ -17,59 +17,51 @@
 
     <script>
         function searchItem() {
-    var searchInput = document.getElementById("searchInput").value.toLowerCase();
-    
-    // Load JSON data from 2024-02-03_02-21-51.json
-    fetch('2024-02-03_02-21-51.json')
-        .then(response => response.json())
-        .then(jsonData => {
-            // Load items from items.txt
-            fetch('items.txt')
-                .then(response => response.text())
-                .then(itemsTxt => {
-                    var itemsArray = itemsTxt.split('\n').map(line => line.split(','));
+            var searchInput = document.getElementById("searchInput").value.toLowerCase();
+            
+            // Load JSON data from 2024-02-03_02-21-51.json
+            fetch('2024-02-03_02-21-51.json')
+                .then(response => response.json())
+                .then(jsonData => {
+                    // Load items from items.txt
+                    fetch('items.txt')
+                        .then(response => response.text())
+                        .then(itemsTxt => {
+                            var itemsArray = itemsTxt.split('\n').map(line => line.split(','));
 
-                    var matchingItems = [];
+                            var matchingItems = [];
 
-                    for (var i = 1; i < itemsArray.length; i++) {
-                        var itemId = itemsArray[i][0];
-                        var itemName = itemsArray[i][1];
+                            for (var i = 1; i < itemsArray.length; i++) {
+                                var itemId = itemsArray[i][0];
+                                var itemName = itemsArray[i][1];
 
-                        for (var j = 0; j < jsonData.pricing_data.length; j++) {
-                            if (jsonData.pricing_data[j].itemId.toString() === itemId &&
-                                itemName.toLowerCase().includes(searchInput)) {
-                                matchingItems.push({
-                                    itemId: itemId,
-                                    itemName: itemName,
-                                    marketValue: jsonData.pricing_data[j].marketValue,
-                                    historicalValue: jsonData.pricing_data[j].historical
-                                });
-                                break; // Stop searching for this itemId once found
+                                for (var j = 0; j < jsonData.pricing_data.length; j++) {
+                                    if (jsonData.pricing_data[j].itemId.toString() === itemId &&
+                                        itemName.toLowerCase().includes(searchInput)) {
+                                        matchingItems.push({
+                                            itemName: itemName,
+                                            minBuyout: jsonData.pricing_data[j].minBuyout
+                                        });
+                                        break; // Stop searching for this itemId once found
+                                    }
+                                }
                             }
-                        }
-                    }
 
-                    var resultDiv = document.getElementById("result");
-                    resultDiv.innerHTML = "";
+                            var resultDiv = document.getElementById("result");
+                            resultDiv.innerHTML = "";
 
-                    if (matchingItems.length > 0) {
-                        resultDiv.innerHTML += "<h2>Search Results</h2>";
-                        for (var k = 0; k < matchingItems.length; k++) {
-                            resultDiv.innerHTML += `<p><a href="#" onclick="showItemDetails('${matchingItems[k].itemId}')">${matchingItems[k].itemName}</a></p>`;
-                        }
-                    } else {
-                        resultDiv.innerHTML = "<p>No matching items found.</p>";
-                    }
+                            if (matchingItems.length > 0) {
+                                resultDiv.innerHTML += "<h2>Search Results</h2>";
+                                for (var k = 0; k < matchingItems.length; k++) {
+                                    resultDiv.innerHTML += `<p>${matchingItems[k].itemName} - Min Buyout: ${matchingItems[k].minBuyout}</p>`;
+                                }
+                            } else {
+                                resultDiv.innerHTML = "<p>No matching items found.</p>";
+                            }
+                        })
+                        .catch(error => console.error('Error loading items.txt:', error));
                 })
-                .catch(error => console.error('Error loading items.txt:', error));
-        })
-        .catch(error => console.error('Error loading 2024-02-03_02-21-51.json:', error));
-}
-
-
-        function showItemDetails(itemId) {
-            // You can navigate to a new page or display details here
-            alert(`Item ID: ${itemId}`);
+                .catch(error => console.error('Error loading 2024-02-03_02-21-51.json:', error));
         }
     </script>
 
