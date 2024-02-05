@@ -76,6 +76,7 @@
                 if (itemName.toLowerCase().includes(searchInput)) {
                     const minBuyoutGold = item.minBuyout / 10000;
                     matchingItems.push({
+                        itemId: itemId,
                         itemName: itemName,
                         minBuyoutGold: minBuyoutGold.toFixed(2)
                     });
@@ -92,11 +93,13 @@
                 resultDiv.innerHTML += "<table id='resultsTable' class='table table-dark table-striped'>";
                 resultDiv.innerHTML += "<thead><tr><th>Item Name</th><th>Min Buyout</th></tr></thead>";
                 resultDiv.innerHTML += "<tbody>";
+
                 for (let k = 0; k < matchingItems.length; k++) {
                     resultDiv.innerHTML += `<tr><td data-wowhead='item=${matchingItems[k].itemId}'><a href='https://www.wowhead.com/item=${matchingItems[k].itemId}' target='_blank'>${matchingItems[k].itemName}</a></td><td>${matchingItems[k].minBuyoutGold} gold</td></tr>`;
                 }
+
                 resultDiv.innerHTML += "</tbody></table>";
-                
+
                 // Initialize the DataTable with default sorting
                 $('#resultsTable').DataTable();
                 $('[data-toggle="tooltip"]').tooltip();
