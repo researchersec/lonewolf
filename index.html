@@ -104,20 +104,15 @@
         function getItemNameById(itemId) {
             var itemsArray = itemsTxt.split('\n').map(line => line.split(','));
 
-            var itemName = itemsArray.find(item => item[0] === itemId)[1];
+            var matchingItem = itemsArray.find(item => item[0] === itemId);
 
-            return itemName;
-        }
-
-        function handleEnterKey(event) {
-            // Number 13 is the "Enter" key on the keyboard
-            if (event.keyCode === 13) {
-                // Cancel the default action (if any)
-                event.preventDefault();
-                // Trigger the search function
-                searchItem();
+            if (matchingItem && matchingItem.length >= 2) {
+                return matchingItem[1];
+            } else {
+                return "Unknown Item";
             }
-        }
+}
+
     </script>
 </body>
 </html>
