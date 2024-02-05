@@ -16,68 +16,88 @@
                 <button class="btn btn-outline-secondary" onclick="searchItem()">Search</button>
             </div>
         </div>
-
-    <div id="result"></div>
+        
+        <div id="result"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-    <!-- DataTables JS and its Bootstrap 4 integration -->
-    <script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://wow.zamimg.com/js/tooltips.js"></script>
 
     <script>
+        let jsonData = [];
+        let itemsTxt = "";
+
+        // Load JSON data from 2024-02-03_02-21-51.json
+        fetch('2024-02-03_02-21-51.json')
+            .then(response => response.json())
+            .then(data => {
+                jsonData = data;
+            })
+            .catch(error => console.error('Error loading 2024-02-03_02-21-51.json:', error));
+
+        // Load items.txt
+        fetch('items.txt')
+            .then(response => response.text())
+            .then(txtData => {
+                itemsTxt = txtData;
+            })
+            .catch(error => console.error('Error loading items.txt:', error));
+
         function searchItem() {
             var searchInput = document.getElementById("searchInput").value.toLowerCase();
             
-            // Load JSON data from 2024-02-03_02-21-51.json
-            fetch('2024-02-03_02-21-51.json')
-                .then(response => response.json())
-                .then(jsonData => {
-                    // Load items from items.txt
-                    fetch('items.txt')
-                        .then(response => response.text())
-                        .then(itemsTxt => {
-                            var itemsArray = itemsTxt.split('\n').map(line => line.split(','));
+            // Check if data is loaded
+            if (!jsonData || !jsonData.pricing_data || !itemsTxt) {
+                console.log("Data not loaded yet. Please try again in a moment.");
+                return;
+            }
 
-                            var matchingItems = [];
+            var matchingItems = [];
 
-                            for (var i = 1; i < itemsArray.length; i++) {
-                                var itemId = itemsArray[i][0];
-                                var itemName = itemsArray[i][1];
+            for (var i = 0; i < jsonData.pricing_data.length; i++) {
+                var itemId = jsonData.pricing_data[i].itemId.toString();
+                var itemName = getItemNameById(itemId);
 
-                                for (var j = 0; j < jsonData.pricing_data.length; j++) {
-                                    if (jsonData.pricing_data[j].itemId.toString() === itemId &&
-                                        itemName.toLowerCase().includes(searchInput)) {
-                                        var minBuyoutGold = jsonData.pricing_data[j].minBuyout / 10000;
-                                        matchingItems.push({
-                                            itemName: itemName,
-                                            minBuyoutGold: minBuyoutGold.toFixed(2)
-                                        });
-                                        break; // Stop searching for this itemId once found
-                                    }
-                                }
-                            }
+                if (itemName.toLowerCase().includes(searchInput)) {
+                    var minBuyoutGold = jsonData.pricing_data[i].minBuyout / 10000;
+                    matchingItems.push({
+                        itemName: itemName,
+                        minBuyoutGold: minBuyoutGold.toFixed(2)
+                    });
+                }
+            }
 
-                            var resultDiv = document.getElementById("result");
-                            resultDiv.innerHTML = "";
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "";
 
-                            if (matchingItems.length > 0) {
-                                resultDiv.innerHTML += "<h2>Search Results</h2>";
-                                for (var k = 0; k < matchingItems.length; k++) {
-                                    resultDiv.innerHTML += `<p>${matchingItems[k].itemName} - Min Buyout: ${matchingItems[k].minBuyoutGold} gold</p>`;
-                                }
-                            } else {
-                                resultDiv.innerHTML = "<p>No matching items found.</p>";
-                            }
-                        })
-                        .catch(error => console.error('Error loading items.txt:', error));
-                })
-                .catch(error => console.error('Error loading 2024-02-03_02-21-51.json:', error));
+            if (matchingItems.length > 0) {
+                resultDiv.innerHTML += "<h2 class='mt-4 mb-3'>Search Results</h2>";
+                resultDiv.innerHTML += "<table id='resultsTable' class='table table-dark table-striped'>";
+                resultDiv.innerHTML += "<thead><tr><th>Item Name</th><th>Min Buyout</th></tr></thead>";
+                resultDiv.innerHTML += "<tbody>";
+                for (var k = 0; k < matchingItems.length; k++) {
+                    resultDiv.innerHTML += `<tr><td data-wowhead='item=${matchingItems[k].itemId}'><a href='https://www.wowhead.com/item=${matchingItems[k].itemId}' target='_blank'>${matchingItems[k].itemName}</a></td><td>${matchingItems[k].minBuyoutGold} gold</td></tr>`;
+                }
+                resultDiv.innerHTML += "</tbody></table>";
+                
+                // Initialize the DataTable with default sorting
+                $('#resultsTable').DataTable();
+                $('[data-toggle="tooltip"]').tooltip();
+            } else {
+                resultDiv.innerHTML = "<p class='mt-4'>No matching items found.</p>";
+            }
+        }
+
+        function getItemNameById(itemId) {
+            var itemsArray = itemsTxt.split('\n').map(line => line.split(','));
+            var itemName = itemsArray.find(item => item[0] === itemId)[1];
+
+            return itemName;
         }
     </script>
-
 </body>
 </html>
