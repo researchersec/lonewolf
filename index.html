@@ -11,13 +11,14 @@
     <div class="container mt-5">
         <h1 class="text-center mb-4">WoW Item Search</h1>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" id="searchInput" placeholder="Search by Item Name">
+            <input type="text" class="form-control" id="searchInput" placeholder="Search by Item Name" onkeyup="handleEnterKey(event)">
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" onclick="searchItem()">Search</button>
             </div>
         </div>
         
         <div id="result"></div>
+        <div id="debugInfo" class="mt-4 text-info"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -30,31 +31,36 @@
     <script>
         let jsonData = [];
         let itemsTxt = "";
+        let debugInfo = document.getElementById("debugInfo");
 
-        // Load JSON data from 2024-02-03_02-21-51.json
+        debugInfo.innerHTML += "<p>Fetching 2024-02-03_02-21-51.json...</p>";
         fetch('2024-02-03_02-21-51.json')
             .then(response => response.json())
             .then(data => {
                 jsonData = data;
+                debugInfo.innerHTML += "<p>2024-02-03_02-21-51.json loaded successfully.</p>";
             })
             .catch(error => console.error('Error loading 2024-02-03_02-21-51.json:', error));
 
-        // Load items.txt
+        debugInfo.innerHTML += "<p>Fetching items.txt...</p>";
         fetch('items.txt')
             .then(response => response.text())
             .then(txtData => {
                 itemsTxt = txtData;
+                debugInfo.innerHTML += "<p>items.txt loaded successfully.</p>";
             })
             .catch(error => console.error('Error loading items.txt:', error));
 
         function searchItem() {
             var searchInput = document.getElementById("searchInput").value.toLowerCase();
-            
+
             // Check if data is loaded
             if (!jsonData || !jsonData.pricing_data || !itemsTxt) {
-                console.log("Data not loaded yet. Please try again in a moment.");
+                debugInfo.innerHTML += "<p>Data not loaded yet. Please try again in a moment.</p>";
                 return;
             }
+
+            debugInfo.innerHTML += "<p>Searching for: " + searchInput + "</p>";
 
             var matchingItems = [];
 
@@ -75,6 +81,8 @@
             resultDiv.innerHTML = "";
 
             if (matchingItems.length > 0) {
+                debugInfo.innerHTML += "<p>Matching items found: " + JSON.stringify(matchingItems) + "</p>";
+
                 resultDiv.innerHTML += "<h2 class='mt-4 mb-3'>Search Results</h2>";
                 resultDiv.innerHTML += "<table id='resultsTable' class='table table-dark table-striped'>";
                 resultDiv.innerHTML += "<thead><tr><th>Item Name</th><th>Min Buyout</th></tr></thead>";
@@ -88,15 +96,27 @@
                 $('#resultsTable').DataTable();
                 $('[data-toggle="tooltip"]').tooltip();
             } else {
+                debugInfo.innerHTML += "<p>No matching items found.</p>";
                 resultDiv.innerHTML = "<p class='mt-4'>No matching items found.</p>";
             }
         }
 
         function getItemNameById(itemId) {
             var itemsArray = itemsTxt.split('\n').map(line => line.split(','));
+
             var itemName = itemsArray.find(item => item[0] === itemId)[1];
 
             return itemName;
+        }
+
+        function handleEnterKey(event) {
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+                // Cancel the default action (if any)
+                event.preventDefault();
+                // Trigger the search function
+                searchItem();
+            }
         }
     </script>
 </body>
