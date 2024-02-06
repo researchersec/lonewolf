@@ -1,0 +1,49 @@
+{
+  "tailoring_guide": [
+    {
+      "level_range": "1 - 45",
+      "crafting": [
+        {
+          "item": "Bolt of Linen Cloth",
+          "quantity": 102,
+          "requirements": [
+            {
+              "item": "Linen Cloth",
+              "quantity": 204
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level_range": "40 - 70",
+      "crafting": [
+        {
+          "item": "Linen Belt",
+          "quantity": 40,
+          "requirements": [
+            {
+              "item": "Bolt of Linen Cloth",
+              "quantity": 40
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level_range": "70 - 75",
+      "crafting": [
+        {
+          "item": "Reinforced Linen Cape",
+          "quantity": 5,
+          "requirements": [
+            {
+              "item": "Bolt of Linen Cloth",
+              "quantity": 10
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
