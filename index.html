@@ -97,10 +97,21 @@
             $('#resultsTable').DataTable();
         }
 
+
         // Function to format currency as gold, silver, and copper
         function formatCurrency(gold, silver, copper) {
             return `${gold}g${silver.toString().padStart(2, '0')}s${copper.toString().padStart(2, '0')}c`;
         }
+        
+        // Set up the Enter key event listener here, outside of the searchPlayer function
+        document.getElementById("playerName").addEventListener("keyup", function(event) {
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+                // Cancel the default action (if any)
+                event.preventDefault();
+                // Trigger the search function
+                searchPlayer();
+            }});
     </script>
 </body>
 </html>
