@@ -23,7 +23,7 @@
             <thead>
                 <tr>
                     <th>Item Name</th>
-                    <th>Min Buyout (Gold)</th>
+                    <th>Min Buyout</th>
                 </tr>
             </thead>
             <tbody>
@@ -79,8 +79,13 @@
                 const itemPricing = pricingData.find(pricing => pricing.itemId === item.entry);
 
                 if (itemPricing) {
-                    // Display the item name and minBuyout in gold
-                    tableContent += `<tr><td>${item.name}</td><td>${(itemPricing.minBuyout / 10000).toFixed(2)} gold</td></tr>`;
+                    // Convert minBuyout to gold, silver, and copper
+                    const minBuyoutGold = Math.floor(itemPricing.minBuyout / 10000);
+                    const minBuyoutSilver = Math.floor((itemPricing.minBuyout % 10000) / 100);
+                    const minBuyoutCopper = itemPricing.minBuyout % 100;
+
+                    // Display the item name and formatted minBuyout
+                    tableContent += `<tr><td>${item.name}</td><td>${formatCurrency(minBuyoutGold, minBuyoutSilver, minBuyoutCopper)}</td></tr>`;
                 }
             });
 
@@ -88,6 +93,11 @@
 
             // Initialize the DataTable
             $('#resultsTable').DataTable();
+        }
+
+        // Function to format currency as gold, silver, and copper
+        function formatCurrency(gold, silver, copper) {
+            return `${gold}g${silver.toString().padStart(2, '0')}s${copper.toString().padStart(2, '0')}c`;
         }
     </script>
 </body>
