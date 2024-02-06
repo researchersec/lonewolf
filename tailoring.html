@@ -47,6 +47,7 @@
             .then(response => response.json())
             .then(data => {
                 itemsData = data.items;
+                console.log("Items data loaded successfully:", itemsData);
                 loadPricingData(); // Call the function to load pricing data once items data is loaded
             })
             .catch(error => {
@@ -60,6 +61,7 @@
                 .then(response => response.json())
                 .then(jsonData => {
                     pricingData = jsonData.pricing_data;
+                    console.log("Pricing data loaded successfully:", pricingData);
                     displayTailoringGuide(); // Call the function to display the tailoring guide once pricing data is loaded
                 })
                 .catch(error => {
