@@ -70,6 +70,8 @@
                 $('#resultsTable').DataTable().clear().destroy();
             }
 
+            let searchInput = document.getElementById("searchInput").value.toLowerCase();
+
             let tableContent = '';
 
             // Implement your search logic here using itemsData and pricingData
@@ -78,7 +80,7 @@
                 // Example logic: Search for the item in pricingData
                 const itemPricing = pricingData.find(pricing => pricing.itemId === item.entry);
 
-                if (itemPricing) {
+                if (itemPricing && item.name.toLowerCase().includes(searchInput)) {
                     // Convert minBuyout to gold, silver, and copper
                     const minBuyoutGold = Math.floor(itemPricing.minBuyout / 10000);
                     const minBuyoutSilver = Math.floor((itemPricing.minBuyout % 10000) / 100);
