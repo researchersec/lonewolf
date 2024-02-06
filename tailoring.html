@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailoring Guide</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Tailoring Guide</h1>
+
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Level 1 - 45
+            </div>
+            <div class="card-body" id="level1_45_content">
+                <!-- This div will be filled with content dynamically -->
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header bg-primary text-white">
+                Level 40 - 70
+            </div>
+            <div class="card-body" id="level40_70_content">
+                <!-- This div will be filled with content dynamically -->
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header bg-primary text-white">
+                Level 70 - 75
+            </div>
+            <div class="card-body" id="level70_75_content">
+                <!-- This div will be filled with content dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let itemsData = [];
+        let pricingData = [];
+
+        // Load items data from items.json
+        fetch('items.json')
+            .then(response => response.json())
+            .then(data => {
+                itemsData = data.items;
+                loadPricingData(); // Call the function to load pricing data once items data is loaded
+            })
+            .catch(error => {
+                console.error("Error fetching items data: ", error);
+            });
+
+        // Function to load pricing data
+        function loadPricingData() {
+            // Load pricing data from the JSON file
+            fetch('prices/2024-02-06_12-47-38.json')
+                .then(response => response.json())
+                .then(jsonData => {
+                    pricingData = jsonData.pricing_data;
+                    displayTailoringGuide(); // Call the function to display the tailoring guide once pricing data is loaded
+                })
+                .catch(error => {
+                    console.error("Error fetching pricing data: ", error);
+                });
+        }
+
+        // Function to display the tailoring guide
+        function displayTailoringGuide() {
+            // Loop through the level brackets and populate the content
+            populateLevelContent(1, 45, 'level1_45_content');
+            populateLevelContent(40, 70, 'level40_70_content');
+            populateLevelContent(70, 75, 'level70_75_content');
+        }
+
+        // Function to populate content for a specific level bracket
+        function populateLevelContent(minLevel, maxLevel, containerId) {
+            const container = document.getElementById(containerId);
+            let content = '';
+
+            // Loop through the items data and pricing data to find matching items for the current level bracket
+            itemsData.forEach(item => {
+                // Check if the item level falls within the current level bracket
+                if (item.level >= minLevel && item.level <= maxLevel) {
+                    // Find pricing data for the current item
+                    const itemPricing = pricingData.find(pricing => pricing.itemId === item.entry);
+
+                    if (itemPricing) {
+                        // Convert minBuyout to gold, silver, and copper
+                        const minBuyoutGold = Math.floor(itemPricing.minBuyout / 10000);
+                        const minBuyoutSilver = Math.floor((itemPricing.minBuyout % 10000) / 100);
+                        const minBuyoutCopper = itemPricing.minBuyout % 100;
+
+                        // Add the item and its price to the content
+                        content += `<p>${item.name} (${formatCurrency(minBuyoutGold, minBuyoutSilver, minBuyoutCopper)})</p>`;
+                    } else {
+                        // If pricing data is not available, display the item name only
+                        content += `<p>${item.name}</p>`;
+                    }
+                }
+            });
+
+            // Update the container with the generated content
+            container.innerHTML = content;
+        }
+
+        // Function to format currency as gold, silver, and copper
+        function formatCurrency(gold, silver, copper) {
+            return `${gold}g${silver.toString().padStart(2, '0')}s${copper.toString().padStart(2, '0')}c`;
+        }
+    </script>
+</body>
+</html>
