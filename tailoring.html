@@ -12,27 +12,9 @@
 
         <div class="card">
             <div class="card-header bg-primary text-white">
-                Level 1 - 45
+                Tailoring Guide
             </div>
-            <div class="card-body" id="level1_45_content">
-                <!-- This div will be filled with content dynamically -->
-            </div>
-        </div>
-
-        <div class="card mt-4">
-            <div class="card-header bg-primary text-white">
-                Level 40 - 70
-            </div>
-            <div class="card-body" id="level40_70_content">
-                <!-- This div will be filled with content dynamically -->
-            </div>
-        </div>
-
-        <div class="card mt-4">
-            <div class="card-header bg-primary text-white">
-                Level 70 - 75
-            </div>
-            <div class="card-body" id="level70_75_content">
+            <div class="card-body" id="tailoring_guide_content">
                 <!-- This div will be filled with content dynamically -->
             </div>
         </div>
@@ -71,36 +53,29 @@
 
         // Function to display the tailoring guide
         function displayTailoringGuide() {
-            // Loop through the level brackets and populate the content
-            populateLevelContent(1, 45, 'level1_45_content');
-            populateLevelContent(40, 70, 'level40_70_content');
-            populateLevelContent(70, 75, 'level70_75_content');
-        }
-
-        // Function to populate content for a specific level bracket
-        function populateLevelContent(minLevel, maxLevel, containerId) {
-            const container = document.getElementById(containerId);
+            const container = document.getElementById('tailoring_guide_content');
             let content = '';
 
-            // Loop through the items data and pricing data to find matching items for the current level bracket
+            console.log("Displaying Tailoring Guide...");
+
+            // Loop through the items data and pricing data to generate the tailoring guide content
             itemsData.forEach(item => {
-                // Check if the item level falls within the current level bracket
-                if (item.level >= minLevel && item.level <= maxLevel) {
-                    // Find pricing data for the current item
-                    const itemPricing = pricingData.find(pricing => pricing.itemId === item.entry);
+                // Find pricing data for the current item
+                const itemPricing = pricingData.find(pricing => pricing.itemId === item.entry);
 
-                    if (itemPricing) {
-                        // Convert minBuyout to gold, silver, and copper
-                        const minBuyoutGold = Math.floor(itemPricing.minBuyout / 10000);
-                        const minBuyoutSilver = Math.floor((itemPricing.minBuyout % 10000) / 100);
-                        const minBuyoutCopper = itemPricing.minBuyout % 100;
+                if (itemPricing) {
+                    console.log(`Found pricing data for item ${item.entry}:`, itemPricing);
 
-                        // Add the item and its price to the content
-                        content += `<p>${item.name} (${formatCurrency(minBuyoutGold, minBuyoutSilver, minBuyoutCopper)})</p>`;
-                    } else {
-                        // If pricing data is not available, display the item name only
-                        content += `<p>${item.name}</p>`;
-                    }
+                    // Convert minBuyout to gold, silver, and copper
+                    const minBuyoutGold = Math.floor(itemPricing.minBuyout / 10000);
+                    const minBuyoutSilver = Math.floor((itemPricing.minBuyout % 10000) / 100);
+                    const minBuyoutCopper = itemPricing.minBuyout % 100;
+
+                    // Add the item and its price to the content
+                    content += `<p>${item.name} (${formatCurrency(minBuyoutGold, minBuyoutSilver, minBuyoutCopper)})</p>`;
+                } else {
+                    // If pricing data is not available, display the item name only
+                    content += `<p>${item.name}</p>`;
                 }
             });
 
