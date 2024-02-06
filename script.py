@@ -11,7 +11,10 @@ realm_url = 'https://realm-api.tradeskillmaster.com/regions'
 
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 filename = f'{timestamp}.json'
+directory = 'prices'
 
+# Specify the full path for the file
+file_path = os.path.join(directory, filename)
 # Request body for access token
 payload = {
     "client_id": "c260f00d-1071-409a-992f-dda2e5498536",
@@ -35,7 +38,7 @@ if response.status_code == 201:
         print("Pricing data obtained successfully")
 
         # Save pricing data to items.json
-        with open(filename, 'w') as file:
+        with open(file_path, 'w') as file:
             json.dump({"pricing_data": pricing_data}, file, indent=4)
     else:
         print("Failed to fetch pricing data")
