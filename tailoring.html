@@ -1,92 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailoring Guide</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="bg-light">
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">Tailoring Guide</h1>
+<script>
+    let itemsData = [];
+    let pricingData = [];
+    let tailoringData = [];
 
-        <div class="card">
-            <div class="card-header bg-primary text-white">
-                Tailoring Guide
-            </div>
-            <div class="card-body" id="tailoring_guide_content">
-                <!-- This div will be filled with content dynamically -->
-            </div>
-        </div>
-    </div>
+    // Load items data from items.json
+    fetch('items.json')
+        .then(response => response.json())
+        .then(data => {
+            itemsData = data.items;
+        })
+        .catch(error => {
+            console.error("Error fetching items data: ", error);
+        });
 
-    <script>
-        let itemsData = [];
-        let pricingData = [];
+    // Load pricing data from the JSON file
+    fetch('prices/2024-02-06_12-47-38.json')
+        .then(response => response.json())
+        .then(jsonData => {
+            pricingData = jsonData.pricing_data;
+        })
+        .catch(error => {
+            console.error("Error fetching pricing data: ", error);
+        });
 
-        // Load items data from items.json
-        fetch('items.json')
-            .then(response => response.json())
-            .then(data => {
-                itemsData = data.items;
-                console.log("Items data loaded successfully:", itemsData);
-                loadPricingData(); // Call the function to load pricing data once items data is loaded
-            })
-            .catch(error => {
-                console.error("Error fetching items data: ", error);
-            });
+    // Load tailoring data from tailoring.json
+    fetch('tailoring.json')
+        .then(response => response.json())
+        .then(data => {
+            tailoringData = data.tailoring;
+        })
+        .catch(error => {
+            console.error("Error fetching tailoring data: ", error);
+        });
 
-        // Function to load pricing data
-        function loadPricingData() {
-            // Load pricing data from the JSON file
-            fetch('prices/2024-02-06_12-47-38.json')
-                .then(response => response.json())
-                .then(jsonData => {
-                    pricingData = jsonData.pricing_data;
-                    console.log("Pricing data loaded successfully:", pricingData);
-                    displayTailoringGuide(); // Call the function to display the tailoring guide once pricing data is loaded
-                })
-                .catch(error => {
-                    console.error("Error fetching pricing data: ", error);
-                });
-        }
-
-        // Function to display the tailoring guide
-        function displayTailoringGuide() {
-            const container = document.getElementById('tailoring_guide_content');
-            let content = '';
-
-            console.log("Displaying Tailoring Guide...");
-
-            // Loop through the items data and pricing data to generate the tailoring guide content
-            itemsData.forEach(item => {
-                // Find pricing data for the current item
-                const itemPricing = pricingData.find(pricing => pricing.itemId === item.entry);
-
+    // Function to fetch the price of an item from pricing data
+    function fetchItemPrice(itemName, quantity) {
+        return new Promise(resolve => {
+            // Assuming itemsData contains your items data
+            const itemData = itemsData.find(item => item.name === itemName);
+            if (itemData) {
+                // Find the corresponding item in pricingData using item ID
+                const itemPricing = pricingData.find(pricing => pricing.itemId === itemData.entry);
                 if (itemPricing) {
-                    console.log(`Found pricing data for item ${item.entry}:`, itemPricing);
-
-                    // Convert minBuyout to gold, silver, and copper
-                    const minBuyoutGold = Math.floor(itemPricing.minBuyout / 10000);
-                    const minBuyoutSilver = Math.floor((itemPricing.minBuyout % 10000) / 100);
-                    const minBuyoutCopper = itemPricing.minBuyout % 100;
-
-                    // Add the item and its price to the content
-                    content += `<p>${item.name} (${formatCurrency(minBuyoutGold, minBuyoutSilver, minBuyoutCopper)})</p>`;
+                    // Calculate total price based on item price and quantity
+                    const totalPrice = (itemPricing.minBuyout / 10000) * quantity;
+                    resolve(totalPrice.toFixed(2));
                 } else {
-                    // If pricing data is not available, display the item name only
-                    content += `<p>${item.name}</p>`;
+                    // If item price is not found, resolve with 0
+                    resolve(0);
                 }
+            } else {
+                // If item is not found in items data, resolve with 0
+                resolve(0);
+            }
+        });
+    }
+
+    // Function to search for items and display their prices
+    function searchAndDisplayPrices() {
+        let itemName = document.getElementById("itemName").value.toLowerCase();
+        let quantity = parseInt(document.getElementById("quantity").value);
+
+        // Fetch the price of the item
+        fetchItemPrice(itemName, quantity)
+            .then(price => {
+                // Display the price
+                document.getElementById("price").innerText = price;
             });
+    }
 
-            // Update the container with the generated content
-            container.innerHTML = content;
-        }
+    // Function to search for tailoring requirements and display their prices
+    function searchAndDisplayTailoringRequirements(levelBracket) {
+        let requirements = tailoringData[levelBracket];
 
-        // Function to format currency as gold, silver, and copper
-        function formatCurrency(gold, silver, copper) {
-            return `${gold}g${silver.toString().padStart(2, '0')}s${copper.toString().padStart(2, '0')}c`;
-        }
-    </script>
-</body>
-</html>
+        // Clear previous content
+        document.getElementById("tailoringRequirements").innerHTML = '';
+
+        // Loop through requirements and display
+        requirements.forEach(requirement => {
+            let itemName = requirement.itemName.toLowerCase();
+            let quantity = requirement.quantity;
+            let price = 0; // Default price to 0
+
+            // Fetch the price of the requirement item
+            fetchItemPrice(itemName, quantity)
+                .then(itemPrice => {
+                    // Update the total price
+                    price += parseFloat(itemPrice);
+                    // Display the requirement
+                    document.getElementById("tailoringRequirements").innerHTML += `<li>${quantity}x ${itemName}: ${itemPrice} gold</li>`;
+                });
+
+            // Update the total price after all requirements are fetched
+            document.getElementById("totalPrice").innerText = price.toFixed(2) + ' gold';
+        });
+    }
+</script>
+
+<!-- HTML for input fields and button to get item price -->
+<input type="text" id="itemName" placeholder="Item Name">
+<input type="number" id="quantity" placeholder="Quantity" value="1">
+<button onclick="searchAndDisplayPrices()">Get Price</button>
+
+<!-- Container to display the price -->
+<div>Price: <span id="price"></span></div>
+
+<!-- HTML for button and select dropdown to get tailoring requirements -->
+<button onclick="searchAndDisplayTailoringRequirements(document.getElementById('levelBracket').value)">Get Tailoring Requirements</button>
+<select id="levelBracket">
+    <option value="1 - 45">1 - 45</option>
+    <option value="40 - 70">40 - 70</option>
+    <option value="70 - 75">70 - 75</option>
+</select>
+
+<!-- Container to display tailoring requirements and total price -->
+<div>
+    <h3>Requirements</h3>
+    <ul id="tailoringRequirements"></ul>
+    <div>Total Price: <span id="totalPrice"></span></div>
+</div>
