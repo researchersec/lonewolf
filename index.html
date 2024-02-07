@@ -86,8 +86,11 @@
                     const minBuyoutSilver = Math.floor((itemPricing.minBuyout % 10000) / 100);
                     const minBuyoutCopper = itemPricing.minBuyout % 100;
 
+                    // Construct Wowhead link with item ID
+                    const wowheadLink = `<a href="https://www.wowhead.com/wotlk/item=${item.entry}" data-wowhead="item=${item.entry}" target="_blank">${item.name}</a>`;
+
                     // Display the item name and formatted minBuyout
-                    tableContent += `<tr><td>${item.name}</td><td>${formatCurrency(minBuyoutGold, minBuyoutSilver, minBuyoutCopper)}</td></tr>`;
+                    tableContent += `<tr><td>${wowheadLink}</td><td>${formatCurrency(minBuyoutGold, minBuyoutSilver, minBuyoutCopper)}</td></tr>`;
                 }
             });
 
@@ -111,7 +114,8 @@
                 event.preventDefault();
                 // Trigger the search function
                 searchItem();
-            }});
+            }
+        });
     </script>
 </body>
 </html>
