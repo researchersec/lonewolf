@@ -47,7 +47,7 @@ if response.status_code == 201:
 
         # Copy the content of timestamp.json to latest.json
         try:
-            shutil.copyfile(file_path, latest_file_path)
+            shutil.move(file_path, latest_file_path)
             print("latest.json has been updated with the same data as timestamp.json.")
         except FileNotFoundError:
             print(f"Error: File {file_path} not found.")
