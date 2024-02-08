@@ -15,6 +15,12 @@ directory = 'prices'
 
 # Specify the full path for the file
 file_path = os.path.join(directory, filename)
+
+# Specify the path for the latest file
+latest_file_path = os.path.join(directory, 'latest.json')
+
+# Copy the content of timestamp.json to latest.json
+shutil.copyfile(file_path, latest_file_path)
 # Request body for access token
 payload = {
     "client_id": "c260f00d-1071-409a-992f-dda2e5498536",
@@ -40,6 +46,9 @@ if response.status_code == 201:
         # Save pricing data to items.json
         with open(file_path, 'w') as file:
             json.dump({"pricing_data": pricing_data}, file, indent=4)
+        # Copy the content of timestamp.json to latest.json
+        shutil.copyfile(file_path, latest_file_path)
+
     else:
         print("Failed to fetch pricing data")
 else:
