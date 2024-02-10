@@ -24,6 +24,8 @@
                 <tr>
                     <th>Item Name</th>
                     <th>Min Buyout</th>
+                    <th>Quantity</th>
+                    <th>Num Auctions</th>
                 </tr>
             </thead>
             <tbody>
@@ -74,23 +76,17 @@
 
             let tableContent = '';
 
-            // Implement your search logic here using itemsData and pricingData
-            // Example: Loop through the itemsData and pricingData to find search results
             itemsData.forEach(item => {
-                // Example logic: Search for the item in pricingData
                 const itemPricing = pricingData.find(pricing => pricing.itemId === item.entry);
 
                 if (itemPricing && item.name.toLowerCase().includes(searchInput)) {
-                    // Convert minBuyout to gold, silver, and copper
                     const minBuyoutGold = Math.floor(itemPricing.minBuyout / 10000);
                     const minBuyoutSilver = Math.floor((itemPricing.minBuyout % 10000) / 100);
                     const minBuyoutCopper = itemPricing.minBuyout % 100;
 
-                    // Construct Wowhead link with item ID
                     const wowheadLink = `<a href="https://www.wowhead.com/wotlk/item=${item.entry}" data-wowhead="item=${item.entry}" target="_blank">${item.name}</a>`;
 
-                    // Display the item name and formatted minBuyout
-                    tableContent += `<tr><td>${wowheadLink}</td><td>${formatCurrency(minBuyoutGold, minBuyoutSilver, minBuyoutCopper)}</td></tr>`;
+                    tableContent += `<tr><td>${wowheadLink}</td><td>${formatCurrency(minBuyoutGold, minBuyoutSilver, minBuyoutCopper)}</td><td>${itemPricing.quantity}</td><td>${itemPricing.numAuctions}</td></tr>`;
                 }
             });
 
@@ -99,7 +95,6 @@
             // Initialize the DataTable
             $('#resultsTable').DataTable();
         }
-
 
         // Function to format currency as gold, silver, and copper
         function formatCurrency(gold, silver, copper) {
