@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lonewolf Auctionhouse</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
+    <script src="https://wow.zamimg.com/js/tooltips.js"></script>
+</head>
+<body class="bg-dark text-white">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Lonewolf</h1>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="searchInput" placeholder="Search for an item">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" onclick="searchItem()">Search</button>
+            </div>
+        </div>
+        
+        <table id="resultsTable" class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Min Buyout</th>
+                    <th>Quantity</th>
+                    <th>Num Auctions</th>
+                    <th>Change Last Day (%)</th>
+                    <th>Change Last Week (%)</th>
+                    <th>Change Last Month (%)</th>
+                    <th>Change All Time (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- The table content will be filled using JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- DataTables JS and its Bootstrap 4 integration -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap4.min.js"></script>
+
+    <script>
+        let itemsData = [];
+        let pricingData = [];
+
+        // Load items data from items.json
+        fetch('items.json')
+            .then(response => response.json())
+            .then(data => {
+                itemsData = data.items;
+            })
+            .catch(error => {
+                console.error("Error fetching items data: ", error);
+            });
+
+        // Load pricing data from the JSON file
+        fetch('prices/latest.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                pricingData = jsonData.pricing_data;
+            })
+            .catch(error => {
+                console.error("Error fetching pricing data: ", error);
+            });
+
+        // Fetch historic pricing data from the JSON files
+        const fetchHistoricData = async () => {
+            const today = new Date();
+            const oneDayAgo = new Date(today);
+            oneDayAgo.setDate(oneDayAgo.getDate() - 1);
+            const oneWeekAgo = new Date(today);
+            oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+            const oneMonthAgo = new Date(today);
+            oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
+
+            const historicDataPromises = [
+                fetchHistoricDataForPeriod(oneDayAgo),
+                fetchHistoricDataForPeriod(oneWeekAgo),
+                fetchHistoricDataForPeriod(oneMonthAgo),
+                fetch('prices/all_time.json').then(response => response.json())
+            ];
+
+            const historicData = await Promise.all(historicDataPromises);
+            return historicData;
+        };
+
+        const fetchHistoricDataForPeriod = async (date) => {
+            const formattedDate = formatDate(date);
+            const response = await fetch(`prices/${formattedDate}.json`);
+            const jsonData = await response.json();
+            return jsonData.pricing_data;
+        };
+
+        const formatDate = (date) => {
+            return date.toISOString().split('T')[0].replace(/-/g, '_');
+        };
+
+        // Calculate price change for each time period
+        const calculatePriceChange = (currentPrice, historicPrice) => {
+            return ((currentPrice - historicPrice) / historicPrice) * 100;
+        };
+
+        // Update the table with historic pricing data
+        const updateTable = (pricingData, historicData) => {
+            let tableContent = '';
+
+            itemsData.forEach(item => {
+                const itemPricing = pricingData.find(pricing => pricing.itemId === item.entry);
+
+                if (itemPricing) {
+                    const minBuyoutGold = Math.floor(itemPricing.minBuyout / 10000);
+                    const minBuyoutSilver = Math.floor((itemPricing.minBuyout % 10000) / 100);
+                    const minBuyoutCopper = itemPricing.minBuyout % 100;
+
+                    const wowheadLink = `<a href="https://www.wowhead.com/wotlk/item=${item.entry}" data-wowhead="item=${item.entry}" target="_blank">${item.name}</a>`;
+
+                    // Calculate price change for each time period
+                    const priceChangeLastDay = calculatePriceChange(itemPricing.minBuyout, historicData[0].find(pricing => pricing.itemId === item.entry).minBuyout);
+                    const priceChangeLastWeek = calculatePriceChange(itemPricing.minBuyout, historicData[1].find(pricing => pricing.itemId === item.entry).minBuyout);
+                    const priceChangeLastMonth = calculatePriceChange(itemPricing.minBuyout, historicData[2].find(pricing => pricing.itemId === item.entry).minBuyout);
+                    const priceChangeAllTime = calculatePriceChange(itemPricing.minBuyout, historicData[3].find(pricing => pricing.itemId === item.entry).minBuyout);
+
+                    tableContent += `<tr><td>${wowheadLink}</td><td>${formatCurrency(minBuyoutGold, minBuyoutSilver, minBuyoutCopper)}</td><td>${itemPricing.quantity}</td><td>${itemPricing.numAuctions}</td><td>${priceChangeLastDay.toFixed(2)}%</td><td>${priceChangeLastWeek.toFixed(2)}%</td><td>${priceChangeLastMonth.toFixed(2)}%</td><td>${priceChangeAllTime.toFixed(2)}%</td></tr>`;
+                }
+            });
+
+            $('#resultsTable tbody').html(tableContent);
+
+            // Initialize the DataTable
+            $('#resultsTable').DataTable();
+        };
+
+        // Function to format currency as gold, silver, and copper
+        const formatCurrency = (gold, silver, copper) => {
+            return `${gold}g${silver.toString().padStart(2, '0')}s${copper.toString().padStart(2, '0')}c`;
+        };
+
+        // Search item function
+        const searchItem = async () => {
+            // Resetting the DataTable and table content
+            if ($.fn.dataTable.isDataTable('#resultsTable')) {
+                $('#resultsTable').DataTable().clear().destroy();
+            }
+
+            let searchInput = document.getElementById("searchInput").value.toLowerCase();
+
+            const historicData = await fetchHistoricData();
+
+            updateTable(pricingData, historicData);
+        };
+
+        // Set up the Enter key event listener here, outside of the searchItem function
+        document.getElementById("searchInput").addEventListener("keyup", function(event) {
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+                // Cancel the default action (if any)
+                event.preventDefault();
+                // Trigger the search function
+                searchItem();
+            }
+        });
+    </script>
+</body>
+</html>
