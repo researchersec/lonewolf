@@ -29,7 +29,6 @@
                     <th>Change Last Day (%)</th>
                     <th>Change Last Week (%)</th>
                     <th>Change Last Month (%)</th>
-                    <th>Change All Time (%)</th>
                 </tr>
             </thead>
             <tbody>
@@ -81,25 +80,30 @@
             oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
 
             const historicDataPromises = [
-                fetchHistoricDataForPeriod(oneDayAgo),
-                fetchHistoricDataForPeriod(oneWeekAgo),
-                fetchHistoricDataForPeriod(oneMonthAgo),
-                fetch('prices/all_time.json').then(response => response.json())
+                fetchHistoricDataForPeriod(formatDate(today)),
+                fetchHistoricDataForPeriod(formatDate(oneDayAgo)),
+                fetchHistoricDataForPeriod(formatDate(oneWeekAgo)),
+                fetchHistoricDataForPeriod(formatDate(oneMonthAgo))
             ];
 
             const historicData = await Promise.all(historicDataPromises);
             return historicData;
         };
 
-        const fetchHistoricDataForPeriod = async (date) => {
-            const formattedDate = formatDate(date);
+        const fetchHistoricDataForPeriod = async (formattedDate) => {
             const response = await fetch(`prices/${formattedDate}.json`);
             const jsonData = await response.json();
             return jsonData.pricing_data;
         };
 
         const formatDate = (date) => {
-            return date.toISOString().split('T')[0].replace(/-/g, '_');
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            const hours = String(date.getHours()).padStart(2, '0');
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+            const seconds = String(date.getSeconds()).padStart(2, '0');
+            return `${year}-${month}-${day}_${hours}-${minutes}-${seconds}`;
         };
 
         // Calculate price change for each time period
@@ -125,9 +129,8 @@
                     const priceChangeLastDay = calculatePriceChange(itemPricing.minBuyout, historicData[0].find(pricing => pricing.itemId === item.entry).minBuyout);
                     const priceChangeLastWeek = calculatePriceChange(itemPricing.minBuyout, historicData[1].find(pricing => pricing.itemId === item.entry).minBuyout);
                     const priceChangeLastMonth = calculatePriceChange(itemPricing.minBuyout, historicData[2].find(pricing => pricing.itemId === item.entry).minBuyout);
-                    const priceChangeAllTime = calculatePriceChange(itemPricing.minBuyout, historicData[3].find(pricing => pricing.itemId === item.entry).minBuyout);
 
-                    tableContent += `<tr><td>${wowheadLink}</td><td>${formatCurrency(minBuyoutGold, minBuyoutSilver, minBuyoutCopper)}</td><td>${itemPricing.quantity}</td><td>${itemPricing.numAuctions}</td><td>${priceChangeLastDay.toFixed(2)}%</td><td>${priceChangeLastWeek.toFixed(2)}%</td><td>${priceChangeLastMonth.toFixed(2)}%</td><td>${priceChangeAllTime.toFixed(2)}%</td></tr>`;
+                    tableContent += `<tr><td>${wowheadLink}</td><td>${formatCurrency(minBuyoutGold, minBuyoutSilver, minBuyoutCopper)}</td><td>${itemPricing.quantity}</td><td>${itemPricing.numAuctions}</td><td>${priceChangeLastDay.toFixed(2)}%</td><td>${priceChangeLastWeek.toFixed(2)}%</td><td>${priceChangeLastMonth.toFixed(2)}%</td></tr>`;
                 }
             });
 
