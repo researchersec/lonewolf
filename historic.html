@@ -129,11 +129,17 @@
                     const weekChangeClass = percentageChangeWeek < 0 ? 'text-danger' : 'text-success';
                     const monthChangeClass = percentageChangeMonth < 0 ? 'text-danger' : 'text-success';
 
+                    const minBuyoutGold = Math.floor(minBuyoutLatest / 10000);
+                    const minBuyoutSilver = Math.floor((minBuyoutLatest % 10000) / 100);
+                    const minBuyoutCopper = minBuyoutLatest % 100;
+
+                    const minBuyoutFormatted = `<span style="color:gold">${minBuyoutGold}g</span><span style="color:silver">${minBuyoutSilver}s</span><span style="color:chocolate">${minBuyoutCopper}c</span>`;
+
                     const wowheadLink = `<a href="https://www.wowhead.com/wotlk/item=${item.entry}" data-wowhead="item=${item.entry}" target="_blank">${item.name}</a>`;
 
                     tableContent += `<tr>
                         <td>${wowheadLink}</td>
-                        <td>${formatCurrency(minBuyoutLatest)}</td>
+                        <td>${minBuyoutFormatted}</td>
                         <td class="${dayChangeClass}">${percentageChangeDay.toFixed(2)}%</td>
                         <td class="${weekChangeClass}">${percentageChangeWeek.toFixed(2)}%</td>
                         <td class="${monthChangeClass}">${percentageChangeMonth.toFixed(2)}%</td>
