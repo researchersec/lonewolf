@@ -1,4 +1,3 @@
-
 import json
 from datetime import datetime, timedelta
 import os
@@ -24,9 +23,8 @@ def calculate_historic_data(latest_data, files, days_interval):
             with open(os.path.join('prices', filename), 'r') as file:
                 data = json.load(file)
                 historic_data.update(data)
-            return filename
 
-    return None
+    return historic_data
 
 # Function to parse timestamp from filename and convert to datetime object
 def parse_timestamp(filename):
@@ -65,32 +63,32 @@ if sorted_files:
         latest_data = json.load(file)
 
     # Calculate historic data (e.g., for the last day, last week, last month)
-    day_file = calculate_historic_data(latest_data, sorted_files, 1)
-    week_file = calculate_historic_data(latest_data, sorted_files, 7)
-    month_file = calculate_historic_data(latest_data, sorted_files, 30)
+    day_data = calculate_historic_data(latest_data, sorted_files, 1)
+    week_data = calculate_historic_data(latest_data, sorted_files, 7)
+    month_data = calculate_historic_data(latest_data, sorted_files, 30)
 
-    if day_file:
-        print("Day file:", day_file)
+    if day_data:
+        print("Day data:", day_data)
     else:
-        print("No file found for day.")
-    if week_file:
-        print("Week file:", week_file)
+        print("No data found for day.")
+    if week_data:
+        print("Week data:", week_data)
     else:
-        print("No file found for week.")
-    if month_file:
-        print("Month file:", month_file)
+        print("No data found for week.")
+    if month_data:
+        print("Month data:", month_data)
     else:
-        print("No file found for month.")
+        print("No data found for month.")
     
     # Write historic data to separate files
-    if day_file:
+    if day_data:
         with open(os.path.join('prices', 'day.json'), 'w') as file:
-            json.dump(latest_data, file, indent=4)
-    if week_file:
+            json.dump(day_data, file, indent=4)
+    if week_data:
         with open(os.path.join('prices', 'week.json'), 'w') as file:
-            json.dump(latest_data, file, indent=4)
-    if month_file:
+            json.dump(week_data, file, indent=4)
+    if month_data:
         with open(os.path.join('prices', 'month.json'), 'w') as file:
-            json.dump(latest_data, file, indent=4)
+            json.dump(month_data, file, indent=4)
 else:
     print("No files found matching the specified timestamp format.")
