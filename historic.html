@@ -15,7 +15,7 @@
         <div class="input-group mb-3">
             <input type="text" class="form-control" id="searchInput" placeholder="Search for an item">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" onclick="searchItem()">Search</button>
+                <button id="searchButton" class="btn btn-outline-secondary">Search</button>
             </div>
         </div>
         
@@ -140,3 +140,38 @@
                         <td>${formatCurrency(minBuyoutGoldDay, minBuyoutSilverDay, minBuyoutCopperDay)}</td>
                         <td>${formatCurrency(minBuyoutGoldWeek, minBuyoutSilverWeek, minBuyoutCopperWeek)}</td>
                         <td>${formatCurrency(minBuyoutGoldMonth, minBuyoutSilverMonth, minBuyoutCopperMonth)}</td>
+                        <td>${itemPricingLatest.quantity}</td>
+                        <td>${itemPricingLatest.numAuctions}</td>
+                    </tr>`;
+                }
+            });
+
+            $('#resultsTable tbody').html(tableContent);
+
+            // Initialize the DataTable
+            $('#resultsTable').DataTable();
+        }
+
+        // Function to format currency as gold, silver, and copper
+        function formatCurrency(gold, silver, copper) {
+            return `${gold}g${silver.toString().padStart(2, '0')}s${copper.toString().padStart(2, '0')}c`;
+        }
+        
+        // Set up the Enter key event listener here, outside of the searchPlayer function
+        document.getElementById("searchInput").addEventListener("keyup", function(event) {
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+                // Cancel the default action (if any)
+                event.preventDefault();
+                // Trigger the search function
+                searchItem();
+            }
+        });
+
+        // Add event listener for search button click
+        document.getElementById("searchButton").addEventListener("click", function() {
+            searchItem();
+        });
+    </script>
+</body>
+</html>
