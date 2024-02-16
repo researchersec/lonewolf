@@ -24,9 +24,9 @@
                 <tr>
                     <th>Item Name</th>
                     <th>Min Buyout (Latest)</th>
-                    <th>Min Buyout (Day)</th>
-                    <th>Min Buyout (Week)</th>
-                    <th>Min Buyout (Month)</th>
+                    <th>Day % Change</th>
+                    <th>Week % Change</th>
+                    <th>Month % Change</th>
                     <th>Quantity</th>
                     <th>Num Auctions</th>
                 </tr>
@@ -115,31 +115,28 @@
                 const itemPricingWeek = weekPricingData.find(pricing => pricing.itemId === item.entry);
                 const itemPricingMonth = monthPricingData.find(pricing => pricing.itemId === item.entry);
 
-                if (itemPricingLatest && item.name.toLowerCase().includes(searchInput)) {
-                    const minBuyoutGoldLatest = Math.floor(itemPricingLatest.minBuyout / 10000);
-                    const minBuyoutSilverLatest = Math.floor((itemPricingLatest.minBuyout % 10000) / 100);
-                    const minBuyoutCopperLatest = itemPricingLatest.minBuyout % 100;
+                if (itemPricingLatest && itemPricingDay && itemPricingWeek && itemPricingMonth && item.name.toLowerCase().includes(searchInput)) {
+                    const minBuyoutLatest = itemPricingLatest.minBuyout;
+                    const minBuyoutDay = itemPricingDay.minBuyout;
+                    const minBuyoutWeek = itemPricingWeek.minBuyout;
+                    const minBuyoutMonth = itemPricingMonth.minBuyout;
 
-                    const minBuyoutGoldDay = Math.floor(itemPricingDay.minBuyout / 10000);
-                    const minBuyoutSilverDay = Math.floor((itemPricingDay.minBuyout % 10000) / 100);
-                    const minBuyoutCopperDay = itemPricingDay.minBuyout % 100;
+                    const percentageChangeDay = ((minBuyoutLatest - minBuyoutDay) / minBuyoutDay) * 100;
+                    const percentageChangeWeek = ((minBuyoutLatest - minBuyoutWeek) / minBuyoutWeek) * 100;
+                    const percentageChangeMonth = ((minBuyoutLatest - minBuyoutMonth) / minBuyoutMonth) * 100;
 
-                    const minBuyoutGoldWeek = Math.floor(itemPricingWeek.minBuyout / 10000);
-                    const minBuyoutSilverWeek = Math.floor((itemPricingWeek.minBuyout % 10000) / 100);
-                    const minBuyoutCopperWeek = itemPricingWeek.minBuyout % 100;
-
-                    const minBuyoutGoldMonth = Math.floor(itemPricingMonth.minBuyout / 10000);
-                    const minBuyoutSilverMonth = Math.floor((itemPricingMonth.minBuyout % 10000) / 100);
-                    const minBuyoutCopperMonth = itemPricingMonth.minBuyout % 100;
+                    const dayChangeClass = percentageChangeDay < 0 ? 'text-danger' : 'text-success';
+                    const weekChangeClass = percentageChangeWeek < 0 ? 'text-danger' : 'text-success';
+                    const monthChangeClass = percentageChangeMonth < 0 ? 'text-danger' : 'text-success';
 
                     const wowheadLink = `<a href="https://www.wowhead.com/wotlk/item=${item.entry}" data-wowhead="item=${item.entry}" target="_blank">${item.name}</a>`;
 
                     tableContent += `<tr>
                         <td>${wowheadLink}</td>
-                        <td>${formatCurrency(minBuyoutGoldLatest, minBuyoutSilverLatest, minBuyoutCopperLatest)}</td>
-                        <td>${formatCurrency(minBuyoutGoldDay, minBuyoutSilverDay, minBuyoutCopperDay)}</td>
-                        <td>${formatCurrency(minBuyoutGoldWeek, minBuyoutSilverWeek, minBuyoutCopperWeek)}</td>
-                        <td>${formatCurrency(minBuyoutGoldMonth, minBuyoutSilverMonth, minBuyoutCopperMonth)}</td>
+                        <td>${formatCurrency(minBuyoutLatest)}</td>
+                        <td class="${dayChangeClass}">${percentageChangeDay.toFixed(2)}%</td>
+                        <td class="${weekChangeClass}">${percentageChangeWeek.toFixed(2)}%</td>
+                        <td class="${monthChangeClass}">${percentageChangeMonth.toFixed(2)}%</td>
                         <td>${itemPricingLatest.quantity}</td>
                         <td>${itemPricingLatest.numAuctions}</td>
                     </tr>`;
@@ -153,7 +150,10 @@
         }
 
         // Function to format currency as gold, silver, and copper
-        function formatCurrency(gold, silver, copper) {
+        function formatCurrency(amount) {
+            const gold = Math.floor(amount / 10000);
+            const silver = Math.floor((amount % 10000) / 100);
+            const copper = amount % 100;
             return `${gold}g${silver.toString().padStart(2, '0')}s${copper.toString().padStart(2, '0')}c`;
         }
         
