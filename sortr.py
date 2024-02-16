@@ -21,7 +21,7 @@ def calculate_historic_data(latest_data, files, days_interval):
         # Check if the timestamp falls within the specified interval
         if start_date <= timestamp_date <= end_date:
             # Read data from the file and update historic_data
-            with open(os.path.join('lonewolf', 'prices', filename), 'r') as file:
+            with open(os.path.join('prices', filename), 'r') as file:
                 data = json.load(file)
                 historic_data.update(data)
             return filename
@@ -46,7 +46,7 @@ def parse_timestamp(filename):
     return datetime(year, month, day, hour, minute, second)
 
 # Get list of filenames in the 'lonewolf/prices' directory
-files_in_prices_dir = os.listdir('lonewolf/prices')
+files_in_prices_dir = os.listdir('prices')
 
 # Filter files with the specified timestamp format
 filtered_files = [filename for filename in files_in_prices_dir if filename.endswith('.json') and len(filename) == 24 and filename[4] == '-' and filename[7] == '-' and filename[10] == '_' and filename[13] == '-' and filename[16] == '-']
@@ -61,7 +61,7 @@ print("Sorted files:", sorted_files)
 # Check if any files matching the specified timestamp format were found
 if sorted_files:
     # Read latest pricing data from the 'latest.json' file
-    with open(os.path.join('lonewolf', 'prices', 'latest.json'), 'r') as file:
+    with open(os.path.join('prices', 'latest.json'), 'r') as file:
         latest_data = json.load(file)
 
     # Calculate historic data (e.g., for the last day, last week, last month)
