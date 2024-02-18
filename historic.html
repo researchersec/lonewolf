@@ -124,7 +124,7 @@
                     const minBuyoutSilver = Math.floor((minBuyoutLatest % 10000) / 100);
                     const minBuyoutCopper = minBuyoutLatest % 100;
 
-                    const minBuyoutFormatted = `<span style="color:gold">${minBuyoutGold}g</span><span style="color:silver">${minBuyoutSilver}s</span><span style="color:chocolate">${minBuyoutCopper}c</span>`;
+                    const minBuyoutFormatted = formatCurrency(minBuyoutLatest);
 
                     const wowheadLink = `<a href="https://www.wowhead.com/wotlk/item=${item.entry}" data-wowhead="item=${item.entry}" target="_blank">${item.name}</a>`;
 
@@ -159,8 +159,7 @@
                 itemsData.forEach(item => {
                     const itemPricing = pricingData.find(pricing => pricing.itemId === item.entry);
                     if (itemPricing) {
-                        const prices = [...Array(7).keys()].map(day => itemPricing.minBuyout);
-                        createPriceChart(item.entry, prices);
+                        createPriceChart(item.entry, itemPricing.minBuyout);
                     }
                 });
             })
@@ -170,15 +169,15 @@
         }
 
         // Function to create a line chart for an item
-        function createPriceChart(itemEntry, prices) {
+        function createPriceChart(itemEntry, minBuyoutLatest) {
+            var prices = [...Array(7).keys()].map(day => minBuyoutLatest);
+
             var ctx = document.getElementById(`priceChart-${itemEntry}`).getContext('2d');
 
             var priceChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: prices.map(function(price, index) {
-                        return 'Day ' + (index + 1);
-                    }),
+                    labels: [...Array(7).keys()].map(day => `Day ${day + 1}`),
                     datasets: [{
                         label: 'Price Over Time',
                         data: prices,
