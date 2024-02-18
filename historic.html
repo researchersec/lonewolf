@@ -66,49 +66,29 @@
                 console.error("Error fetching items data: ", error);
             });
 
-        // Load pricing data from the JSON files
-        fetch('prices/latest.json')
-            .then(response => response.json())
-            .then(jsonData => {
-                pricingData = jsonData.pricing_data;
-                itemsData.forEach(item => {
-                    const itemPricing = pricingData.find(pricing => pricing.itemId === item.entry);
-                    if (itemPricing) {
-                        const prices = [...Array(7).keys()].map(day => itemPricing.minBuyout);
-                        createPriceChart(item.entry, prices);
-                    }
-                });
-            })
-            .catch(error => {
-                console.error("Error fetching pricing data: ", error);
-            });
+        // Function to format currency as gold, silver, and copper
+        function formatCurrency(amount) {
+            const gold = Math.floor(amount / 10000);
+            const silver = Math.floor((amount % 10000) / 100);
+            const copper = amount % 100;
+            return `${gold}g${silver.toString().padStart(2, '0')}s${copper.toString().padStart(2, '0')}c`;
+        }
 
-        fetch('prices/day.json')
-            .then(response => response.json())
-            .then(jsonData => {
-                dayPricingData = jsonData.pricing_data;
-            })
-            .catch(error => {
-                console.error("Error fetching day pricing data: ", error);
-            });
+        // Set up the Enter key event listener here, outside of the searchPlayer function
+        document.getElementById("searchInput").addEventListener("keyup", function(event) {
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+                // Cancel the default action (if any)
+                event.preventDefault();
+                // Trigger the search function
+                searchItem();
+            }
+        });
 
-        fetch('prices/week.json')
-            .then(response => response.json())
-            .then(jsonData => {
-                weekPricingData = jsonData.pricing_data;
-            })
-            .catch(error => {
-                console.error("Error fetching week pricing data: ", error);
-            });
-
-        fetch('prices/month.json')
-            .then(response => response.json())
-            .then(jsonData => {
-                monthPricingData = jsonData.pricing_data;
-            })
-            .catch(error => {
-                console.error("Error fetching month pricing data: ", error);
-            });
+        // Add event listener for search button click
+        document.getElementById("searchButton").addEventListener("click", function() {
+            searchItem();
+        });
 
         function searchItem() {
             // Resetting the DataTable and table content
@@ -163,25 +143,31 @@
 
             $('#resultsTable tbody').html(tableContent);
 
+            // Create line charts after fetching the pricing data
+            createLineCharts();
+
             // Initialize the DataTable
             $('#resultsTable').DataTable();
         }
 
-        // Set up the Enter key event listener here, outside of the searchPlayer function
-        document.getElementById("searchInput").addEventListener("keyup", function(event) {
-            // Number 13 is the "Enter" key on the keyboard
-            if (event.keyCode === 13) {
-                // Cancel the default action (if any)
-                event.preventDefault();
-                // Trigger the search function
-                searchItem();
-            }
-        });
-
-        // Add event listener for search button click
-        document.getElementById("searchButton").addEventListener("click", function() {
-            searchItem();
-        });
+        // Function to create line charts for each item
+        function createLineCharts() {
+            fetch('prices/latest.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                pricingData = jsonData.pricing_data;
+                itemsData.forEach(item => {
+                    const itemPricing = pricingData.find(pricing => pricing.itemId === item.entry);
+                    if (itemPricing) {
+                        const prices = [...Array(7).keys()].map(day => itemPricing.minBuyout);
+                        createPriceChart(item.entry, prices);
+                    }
+                });
+            })
+            .catch(error => {
+                console.error("Error fetching pricing data: ", error);
+            });
+        }
 
         // Function to create a line chart for an item
         function createPriceChart(itemEntry, prices) {
@@ -209,14 +195,6 @@
                     }
                 }
             });
-        }
-
-        // Function to format currency as gold, silver, and copper
-        function formatCurrency(amount) {
-            const gold = Math.floor(amount / 10000);
-            const silver = Math.floor((amount % 10000) / 100);
-            const copper = amount % 100;
-            return `${gold}g${silver.toString().padStart(2, '0')}s${copper.toString().padStart(2, '0')}c`;
         }
     </script>
 </body>
