@@ -61,6 +61,7 @@
             .then(response => response.json())
             .then(data => {
                 itemsData = data.items;
+                searchItem(); // Perform initial search after loading items data
             })
             .catch(error => {
                 console.error("Error fetching items data: ", error);
@@ -73,17 +74,6 @@
             const copper = amount % 100;
             return `${gold}g${silver.toString().padStart(2, '0')}s${copper.toString().padStart(2, '0')}c`;
         }
-
-        // Set up the Enter key event listener here, outside of the searchPlayer function
-        document.getElementById("searchInput").addEventListener("keyup", function(event) {
-            // Number 13 is the "Enter" key on the keyboard
-            if (event.keyCode === 13) {
-                // Cancel the default action (if any)
-                event.preventDefault();
-                // Trigger the search function
-                searchItem();
-            }
-        });
 
         // Add event listener for search button click
         document.getElementById("searchButton").addEventListener("click", function() {
@@ -143,29 +133,16 @@
 
             $('#resultsTable tbody').html(tableContent);
 
-            // Create line charts after fetching the pricing data
-            createLineCharts();
+            // Create line charts for each item
+            itemsData.forEach(item => {
+                const itemPricingLatest = pricingData.find(pricing => pricing.itemId === item.entry);
+                if (itemPricingLatest) {
+                    createPriceChart(item.entry, itemPricingLatest.minBuyout);
+                }
+            });
 
             // Initialize the DataTable
             $('#resultsTable').DataTable();
-        }
-
-        // Function to create line charts for each item
-        function createLineCharts() {
-            fetch('prices/latest.json')
-            .then(response => response.json())
-            .then(jsonData => {
-                pricingData = jsonData.pricing_data;
-                itemsData.forEach(item => {
-                    const itemPricing = pricingData.find(pricing => pricing.itemId === item.entry);
-                    if (itemPricing) {
-                        createPriceChart(item.entry, itemPricing.minBuyout);
-                    }
-                });
-            })
-            .catch(error => {
-                console.error("Error fetching pricing data: ", error);
-            });
         }
 
         // Function to create a line chart for an item
