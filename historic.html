@@ -29,12 +29,15 @@
                     <th>Month % Change</th>
                     <th>Quantity</th>
                     <th>Num Auctions</th>
+                    <th>Price Over Time</th> <!-- New column for the line chart -->
                 </tr>
             </thead>
             <tbody>
                 <!-- The table content will be filled using JavaScript -->
             </tbody>
         </table>
+        
+        <canvas id="priceChart" width="400" height="200"></canvas> <!-- Canvas for the line chart -->
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -44,6 +47,9 @@
     <!-- DataTables JS and its Bootstrap 4 integration -->
     <script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap4.min.js"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script>
         let itemsData = [];
@@ -67,6 +73,9 @@
             .then(response => response.json())
             .then(jsonData => {
                 pricingData = jsonData.pricing_data;
+                // Extract prices for the chart
+                const prices = pricingData.map(pricing => pricing.minBuyout);
+                createPriceChart(prices);
             })
             .catch(error => {
                 console.error("Error fetching pricing data: ", error);
@@ -145,6 +154,7 @@
                         <td class="${monthChangeClass}">${percentageChangeMonth.toFixed(2)}%</td>
                         <td>${itemPricingLatest.quantity}</td>
                         <td>${itemPricingLatest.numAuctions}</td>
+                        <td><canvas id="priceChart-${item.entry}" width="100" height="50"></canvas></td>
                     </tr>`;
                 }
             });
@@ -178,6 +188,33 @@
         document.getElementById("searchButton").addEventListener("click", function() {
             searchItem();
         });
+
+        function createPriceChart(prices) {
+            var ctx = document.getElementById('priceChart').getContext('2d');
+
+            var priceChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: prices.map(function(price, index) {
+                        return 'Day ' + (index + 1);
+                    }),
+                    datasets: [{
+                        label: 'Price Over Time',
+                        data: prices,
+                        borderColor: 'rgb(255, 99, 132)',
+                        borderWidth: 1,
+                        fill: false
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: false
+                        }
+                    }
+                }
+            });
+        }
     </script>
 </body>
 </html>
