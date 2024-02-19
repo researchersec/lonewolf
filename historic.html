@@ -56,16 +56,31 @@
         let weekPricingData = [];
         let monthPricingData = [];
 
-        // Load items data from items.json
+        // Load items data from items.json and fetch pricing data
         fetch('items.json')
             .then(response => response.json())
             .then(data => {
                 itemsData = data.items;
-                // Call the searchItem function after itemsData is populated
+
+                // Fetch pricing data for all items
+                return Promise.all([
+                    fetch('prices/latest.json').then(response => response.json()),
+                    fetch('prices/day.json').then(response => response.json()),
+                    fetch('prices/week.json').then(response => response.json()),
+                    fetch('prices/month.json').then(response => response.json())
+                ]);
+            })
+            .then(data => {
+                pricingData = data[0].pricing_data;
+                dayPricingData = data[1].pricing_data;
+                weekPricingData = data[2].pricing_data;
+                monthPricingData = data[3].pricing_data;
+
+                // Call the searchItem function after all data is loaded
                 searchItem();
             })
             .catch(error => {
-                console.error("Error fetching items data: ", error);
+                console.error("Error fetching data: ", error);
             });
 
         // Function to format currency as gold, silver, and copper
@@ -150,19 +165,11 @@
 
         // Function to create line charts for each item
         function createLineCharts() {
-            fetch('prices/latest.json')
-            .then(response => response.json())
-            .then(jsonData => {
-                pricingData = jsonData.pricing_data;
-                itemsData.forEach(item => {
-                    const itemPricing = pricingData.find(pricing => pricing.itemId === item.entry);
-                    if (itemPricing) {
-                        createPriceChart(item.entry, itemPricing.minBuyout);
-                    }
-                });
-            })
-            .catch(error => {
-                console.error("Error fetching pricing data: ", error);
+            itemsData.forEach(item => {
+                const itemPricing = pricingData.find(pricing => pricing.itemId === item.entry);
+                if (itemPricing) {
+                    createPriceChart(item.entry, itemPricing.minBuyout);
+                }
             });
         }
 
