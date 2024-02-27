@@ -8,7 +8,6 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
   <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
   <script src="https://wow.zamimg.com/js/tooltips.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 </head>
 <body class="bg-dark text-white">
   <div class="container mt-5">
@@ -19,7 +18,7 @@
         <button id="searchButton" class="btn btn-outline-secondary">Search</button>
       </div>
     </div>
-     
+     
     <table id="resultsTable" class="table table-dark table-striped">
       <thead>
         <tr>
@@ -33,16 +32,26 @@
         </tr>
       </thead>
       <tbody>
-        </tbody>
+        <!-- The table content will be filled using JavaScript -->
+      </tbody>
     </table>
+
+    <!-- Canvas elements for charts -->
+    <canvas id="chart1" width="400" height="200"></canvas>
+    <canvas id="chart2" width="400" height="200"></canvas>
+    <!-- Add more canvas elements for each item if needed -->
   </div>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-   
+   
+  <!-- DataTables JS and its Bootstrap 4 integration -->
   <script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script>
     let itemsData = [];
@@ -50,6 +59,7 @@
     let dayPricingData = [];
     let weekPricingData = [];
     let monthPricingData = [];
+    let historicPricingData = []; // Add historic pricing data array
 
     // Load items data from items.json
     fetch('items.json')
@@ -92,3 +102,149 @@
     fetch('prices/month.json')
       .then(response => response.json())
       .then(jsonData => {
+        monthPricingData = jsonData.pricing_data;
+      })
+      .catch(error => {
+        console.error("Error fetching month pricing data: ", error);
+      });
+
+    // Load historic pricing data
+    fetch('historic_prices.json')
+      .then(response => response.json())
+      .then(jsonData => {
+        historicPricingData = jsonData.historic_prices;
+      })
+      .catch(error => {
+        console.error("Error fetching historic pricing data: ", error);
+      });
+
+    // Function to create a chart for an item
+    function createChart(itemName, historicPrices) {
+        const ctx = document.getElementById(`${itemName}-chart`).getContext('2d');
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: historicPrices.map(entry => entry.date),
+                datasets: [{
+                    label: 'Price History',
+                    data: historicPrices.map(entry => entry.price),
+                    borderColor: 'rgb(75, 192, 192)',
+                    fill: false
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'time',
+                        time: {
+                            unit: 'day'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Price'
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    function searchItem() {
+      // Resetting the DataTable and table content
+      if ($.fn.dataTable.isDataTable('#resultsTable')) {
+        $('#resultsTable').DataTable().clear().destroy();
+      }
+
+      let searchInput = document.getElementById("searchInput").value.toLowerCase();
+
+      let tableContent = '';
+
+      itemsData.forEach(item => {
+        const itemPricingLatest = pricingData.find(pricing => pricing.itemId === item.entry);
+        const itemPricingDay = dayPricingData.find(pricing => pricing.itemId === item.entry);
+        const itemPricingWeek = weekPricingData.find(pricing => pricing.itemId === item.entry);
+        const itemPricingMonth = monthPricingData.find(pricing => pricing.itemId === item.entry);
+
+        if (itemPricingLatest && itemPricingDay && itemPricingWeek && itemPricingMonth && item.name.toLowerCase().includes(searchInput)) {
+          const minBuyoutLatest = itemPricingLatest.minBuyout;
+          const minBuyoutDay = itemPricingDay.minBuyout;
+          const minBuyoutWeek = itemPricingWeek.minBuyout;
+          const minBuyoutMonth = itemPricingMonth.minBuyout;
+
+          // Prepare historic pricing data
+          const historicPrices = [];
+          historicPricingData.forEach(entry => {
+            if (entry.itemId === item.entry) {
+              historicPrices.push({
+                date: new Date(entry.timestamp),
+                price: entry.price
+              });
+            }
+          });
+
+          // Create chart for the item
+          createChart(item.name.replace(/\s/g, ''), historicPrices);
+
+          const percentageChangeDay = ((minBuyoutLatest - minBuyoutDay) / minBuyoutDay) * 100;
+          const percentageChangeWeek = ((minBuyoutLatest - minBuyoutWeek) / minBuyoutWeek) * 100;
+          const percentageChangeMonth = ((minBuyoutLatest - minBuyoutMonth) / minBuyoutMonth) * 100;
+
+          const dayChangeClass = percentageChangeDay < 0 ? 'text-danger' : 'text-success';
+          const weekChangeClass = percentageChangeWeek < 0 ? 'text-danger' : 'text-success';
+          const monthChangeClass = percentageChangeMonth < 0 ? 'text-danger' : 'text-success';
+
+          const minBuyoutGold = Math.floor(minBuyoutLatest / 10000);
+          const minBuyoutSilver = Math.floor((minBuyoutLatest % 10000) / 100);
+          const minBuyoutCopper = minBuyoutLatest % 100;
+
+          const minBuyoutFormatted = `<span style="color:gold">${minBuyoutGold}g</span><span style="color:silver">${minBuyoutSilver}s</span><span style="color:chocolate">${minBuyoutCopper}c</span>`;
+
+          const wowheadLink = `<a href="https://www.wowhead.com/wotlk/item=${item.entry}" data-wowhead="item=${item.entry}" target="_blank">${item.name}</a>`;
+
+          tableContent += `<tr>
+            <td>${wowheadLink}</td>
+            <td>${minBuyoutFormatted}</td>
+            <td class="${dayChangeClass}">${percentageChangeDay.toFixed(2)}%</td>
+            <td class="${weekChangeClass}">${percentageChangeWeek.toFixed(2)}%</td>
+            <td class="${monthChangeClass}">${percentageChangeMonth.toFixed(2)}%</td>
+            <td>${itemPricingLatest.quantity}</td>
+            <td>${itemPricingLatest.numAuctions}</td>
+          </tr>`;
+        }
+      });
+
+      $('#resultsTable tbody').html(tableContent);
+
+      // Initialize the DataTable
+      $('#resultsTable').DataTable();
+    }
+
+    // Function to format currency as gold, silver, and copper
+    function formatCurrency(amount) {
+      const gold = Math.floor(amount / 10000);
+      const silver = Math.floor((amount % 10000) / 100);
+      const copper = amount % 100;
+      return `${gold}g${silver.toString().padStart(2, '0')}s${copper.toString().padStart(2, '0')}c`;
+    }
+     
+    // Set up the Enter key event listener here, outside of the searchPlayer function
+    document.getElementById("searchInput").addEventListener("keyup", function(event) {
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+        // Cancel the default action (if any)
+        event.preventDefault();
+        // Trigger the search function
+        searchItem();
+      }
+    });
+
+    // Add event listener for search button click
+    document.getElementById("searchButton").addEventListener("click", function() {
+      searchItem();
+    });
+  </script>
+</body>
+</html>
