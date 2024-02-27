@@ -180,13 +180,13 @@
             if (entry.itemId === item.entry) {
               historicPrices.push({
                 date: new Date(entry.timestamp),
-                price: entry.price
+                price: entry.minBuyout // Assuming this is the historic price
               });
             }
           });
 
           // Create chart for the item
-          createChart(item.name.replace(/\s/g, ''), historicPrices);
+          createChart(item.name, historicPrices);
 
           const percentageChangeDay = ((minBuyoutLatest - minBuyoutDay) / minBuyoutDay) * 100;
           const percentageChangeWeek = ((minBuyoutLatest - minBuyoutWeek) / minBuyoutWeek) * 100;
@@ -205,13 +205,13 @@
           const wowheadLink = `<a href="https://www.wowhead.com/wotlk/item=${item.entry}" data-wowhead="item=${item.entry}" target="_blank">${item.name}</a>`;
 
           tableContent += `<tr>
-            <td>${wowheadLink}</td>
-            <td>${minBuyoutFormatted}</td>
-            <td class="${dayChangeClass}">${percentageChangeDay.toFixed(2)}%</td>
-            <td class="${weekChangeClass}">${percentageChangeWeek.toFixed(2)}%</td>
-            <td class="${monthChangeClass}">${percentageChangeMonth.toFixed(2)}%</td>
-            <td>${itemPricingLatest.quantity}</td>
-            <td>${itemPricingLatest.numAuctions}</td>
+              <td>${wowheadLink}</td>
+              <td>${minBuyoutFormatted}</td>
+              <td class="${dayChangeClass}">${percentageChangeDay.toFixed(2)}%</td>
+              <td class="${weekChangeClass}">${percentageChangeWeek.toFixed(2)}%</td>
+              <td class="${monthChangeClass}">${percentageChangeMonth.toFixed(2)}%</td>
+              <td>${itemPricingLatest.quantity}</td>
+              <td>${itemPricingLatest.numAuctions}</td>
           </tr>`;
         }
       });
@@ -222,14 +222,6 @@
       $('#resultsTable').DataTable();
     }
 
-    // Function to format currency as gold, silver, and copper
-    function formatCurrency(amount) {
-      const gold = Math.floor(amount / 10000);
-      const silver = Math.floor((amount % 10000) / 100);
-      const copper = amount % 100;
-      return `${gold}g${silver.toString().padStart(2, '0')}s${copper.toString().padStart(2, '0')}c`;
-    }
-     
     // Set up the Enter key event listener here, outside of the searchPlayer function
     document.getElementById("searchInput").addEventListener("keyup", function(event) {
       // Number 13 is the "Enter" key on the keyboard
