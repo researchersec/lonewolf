@@ -29,7 +29,6 @@
                     <th>Month % Change</th>
                     <th>Quantity</th>
                     <th>Num Auctions</th>
-                    <th>Price Over Time</th> <!-- New column for the line chart -->
                 </tr>
             </thead>
             <tbody>
@@ -45,9 +44,6 @@
     <!-- DataTables JS and its Bootstrap 4 integration -->
     <script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap4.min.js"></script>
-    
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script>
         let itemsData = [];
@@ -56,56 +52,52 @@
         let weekPricingData = [];
         let monthPricingData = [];
 
-        // Load items data from items.json and fetch pricing data
+        // Load items data from items.json
         fetch('items.json')
             .then(response => response.json())
             .then(data => {
                 itemsData = data.items;
-
-                // Fetch pricing data for all items
-                return Promise.all([
-                    fetch('prices/latest.json').then(response => response.json()),
-                    fetch('prices/day.json').then(response => response.json()),
-                    fetch('prices/week.json').then(response => response.json()),
-                    fetch('prices/month.json').then(response => response.json())
-                ]);
-            })
-            .then(data => {
-                pricingData = data[0].pricing_data;
-                dayPricingData = data[1].pricing_data;
-                weekPricingData = data[2].pricing_data;
-                monthPricingData = data[3].pricing_data;
-
-                // Call the searchItem function after all data is loaded
-                searchItem();
             })
             .catch(error => {
-                console.error("Error fetching data: ", error);
+                console.error("Error fetching items data: ", error);
             });
 
-        // Function to format currency as gold, silver, and copper
-        function formatCurrency(amount) {
-            const gold = Math.floor(amount / 10000);
-            const silver = Math.floor((amount % 10000) / 100);
-            const copper = amount % 100;
-            return `${gold}g${silver.toString().padStart(2, '0')}s${copper.toString().padStart(2, '0')}c`;
-        }
+        // Load pricing data from the JSON files
+        fetch('prices/latest.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                pricingData = jsonData.pricing_data;
+            })
+            .catch(error => {
+                console.error("Error fetching pricing data: ", error);
+            });
 
-        // Set up the Enter key event listener here, outside of the searchPlayer function
-        document.getElementById("searchInput").addEventListener("keyup", function(event) {
-            // Number 13 is the "Enter" key on the keyboard
-            if (event.keyCode === 13) {
-                // Cancel the default action (if any)
-                event.preventDefault();
-                // Trigger the search function
-                searchItem();
-            }
-        });
+        fetch('prices/day.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                dayPricingData = jsonData.pricing_data;
+            })
+            .catch(error => {
+                console.error("Error fetching day pricing data: ", error);
+            });
 
-        // Add event listener for search button click
-        document.getElementById("searchButton").addEventListener("click", function() {
-            searchItem();
-        });
+        fetch('prices/week.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                weekPricingData = jsonData.pricing_data;
+            })
+            .catch(error => {
+                console.error("Error fetching week pricing data: ", error);
+            });
+
+        fetch('prices/month.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                monthPricingData = jsonData.pricing_data;
+            })
+            .catch(error => {
+                console.error("Error fetching month pricing data: ", error);
+            });
 
         function searchItem() {
             // Resetting the DataTable and table content
@@ -137,7 +129,11 @@
                     const weekChangeClass = percentageChangeWeek < 0 ? 'text-danger' : 'text-success';
                     const monthChangeClass = percentageChangeMonth < 0 ? 'text-danger' : 'text-success';
 
-                    const minBuyoutFormatted = formatCurrency(minBuyoutLatest);
+                    const minBuyoutGold = Math.floor(minBuyoutLatest / 10000);
+                    const minBuyoutSilver = Math.floor((minBuyoutLatest % 10000) / 100);
+                    const minBuyoutCopper = minBuyoutLatest % 100;
+
+                    const minBuyoutFormatted = `<span style="color:gold">${minBuyoutGold}g</span><span style="color:silver">${minBuyoutSilver}s</span><span style="color:chocolate">${minBuyoutCopper}c</span>`;
 
                     const wowheadLink = `<a href="https://www.wowhead.com/wotlk/item=${item.entry}" data-wowhead="item=${item.entry}" target="_blank">${item.name}</a>`;
 
@@ -149,57 +145,39 @@
                         <td class="${monthChangeClass}">${percentageChangeMonth.toFixed(2)}%</td>
                         <td>${itemPricingLatest.quantity}</td>
                         <td>${itemPricingLatest.numAuctions}</td>
-                        <td><canvas class="priceChart" id="priceChart-${item.entry}" width="100" height="50"></canvas></td>
                     </tr>`;
                 }
             });
 
             $('#resultsTable tbody').html(tableContent);
 
-            // Create line charts after fetching the pricing data
-            createLineCharts();
-
             // Initialize the DataTable
             $('#resultsTable').DataTable();
         }
 
-        // Function to create line charts for each item
-        function createLineCharts() {
-            itemsData.forEach(item => {
-                const itemPricing = pricingData.find(pricing => pricing.itemId === item.entry);
-                if (itemPricing) {
-                    createPriceChart(item.entry, itemPricing.minBuyout);
-                }
-            });
+        // Function to format currency as gold, silver, and copper
+        function formatCurrency(amount) {
+            const gold = Math.floor(amount / 10000);
+            const silver = Math.floor((amount % 10000) / 100);
+            const copper = amount % 100;
+            return `${gold}g${silver.toString().padStart(2, '0')}s${copper.toString().padStart(2, '0')}c`;
         }
+        
+        // Set up the Enter key event listener here, outside of the searchPlayer function
+        document.getElementById("searchInput").addEventListener("keyup", function(event) {
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+                // Cancel the default action (if any)
+                event.preventDefault();
+                // Trigger the search function
+                searchItem();
+            }
+        });
 
-        // Function to create a line chart for an item
-        function createPriceChart(itemEntry, minBuyoutLatest) {
-            var prices = [...Array(7).keys()].map(day => minBuyoutLatest);
-
-            var ctx = document.getElementById(`priceChart-${itemEntry}`).getContext('2d');
-
-            var priceChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: [...Array(7).keys()].map(day => `Day ${day + 1}`),
-                    datasets: [{
-                        label: 'Price Over Time',
-                        data: prices,
-                        borderColor: 'rgb(255, 99, 132)',
-                        borderWidth: 1,
-                        fill: false
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: false
-                        }
-                    }
-                }
-            });
-        }
+        // Add event listener for search button click
+        document.getElementById("searchButton").addEventListener("click", function() {
+            searchItem();
+        });
     </script>
 </body>
 </html>
