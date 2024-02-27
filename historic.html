@@ -36,10 +36,8 @@
       </tbody>
     </table>
 
-    <!-- Canvas elements for charts -->
-    <canvas id="chart1" width="400" height="200"></canvas>
-    <canvas id="chart2" width="400" height="200"></canvas>
-    <!-- Add more canvas elements for each item if needed -->
+    <!-- Container for dynamically generated charts -->
+    <div id="chartContainer"></div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -59,7 +57,6 @@
     let dayPricingData = [];
     let weekPricingData = [];
     let monthPricingData = [];
-    let historicPricingData = []; // Add historic pricing data array
 
     // Load items data from items.json
     fetch('items.json')
@@ -110,7 +107,17 @@
 
     // Function to create a chart for an item
     function createChart(itemName, historicPrices) {
-        const ctx = document.getElementById(`${itemName}-chart`).getContext('2d');
+        // Create canvas element
+        const canvas = document.createElement('canvas');
+        canvas.width = 400;
+        canvas.height = 200;
+        canvas.id = `${itemName}-chart`;
+
+        // Append canvas to a container div
+        const container = document.getElementById('chartContainer');
+        container.appendChild(canvas);
+
+        const ctx = canvas.getContext('2d');
 
         new Chart(ctx, {
             type: 'line',
@@ -164,20 +171,6 @@
           const minBuyoutWeek = itemPricingWeek.minBuyout;
           const minBuyoutMonth = itemPricingMonth.minBuyout;
 
-          // Prepare historic pricing data
-          const historicPrices = [];
-          historicPricingData.forEach(entry => {
-            if (entry.itemId === item.entry) {
-              historicPrices.push({
-                date: new Date(entry.timestamp),
-                price: entry.minBuyout // Assuming this is the historic price
-              });
-            }
-          });
-
-          // Create chart for the item
-          createChart(item.name, historicPrices);
-
           const percentageChangeDay = ((minBuyoutLatest - minBuyoutDay) / minBuyoutDay) * 100;
           const percentageChangeWeek = ((minBuyoutLatest - minBuyoutWeek) / minBuyoutWeek) * 100;
           const percentageChangeMonth = ((minBuyoutLatest - minBuyoutMonth) / minBuyoutMonth) * 100;
@@ -195,14 +188,17 @@
           const wowheadLink = `<a href="https://www.wowhead.com/wotlk/item=${item.entry}" data-wowhead="item=${item.entry}" target="_blank">${item.name}</a>`;
 
           tableContent += `<tr>
-              <td>${wowheadLink}</td>
-              <td>${minBuyoutFormatted}</td>
-              <td class="${dayChangeClass}">${percentageChangeDay.toFixed(2)}%</td>
-              <td class="${weekChangeClass}">${percentageChangeWeek.toFixed(2)}%</td>
-              <td class="${monthChangeClass}">${percentageChangeMonth.toFixed(2)}%</td>
-              <td>${itemPricingLatest.quantity}</td>
-              <td>${itemPricingLatest.numAuctions}</td>
+            <td>${wowheadLink}</td>
+            <td>${minBuyoutFormatted}</td>
+            <td class="${dayChangeClass}">${percentageChangeDay.toFixed(2)}%</td>
+            <td class="${weekChangeClass}">${percentageChangeWeek.toFixed(2)}%</td>
+            <td class="${monthChangeClass}">${percentageChangeMonth.toFixed(2)}%</td>
+            <td>${itemPricingLatest.quantity}</td>
+            <td>${itemPricingLatest.numAuctions}</td>
           </tr>`;
+
+          // Create chart for the item
+          createChart(item.name, historicPrices);
         }
       });
 
