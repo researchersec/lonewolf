@@ -39,6 +39,9 @@
 
     <!-- Container for dynamically generated charts -->
     <div id="chartContainer"></div>
+
+    <!-- Console logs container -->
+    <div id="consoleLogs" class="mt-5"></div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -53,6 +56,16 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script>
+    // Function to log messages to the console and display them in the logs container
+    function logToConsole(message) {
+      console.log(message); // Log to console
+      const logsContainer = document.getElementById('consoleLogs');
+      logsContainer.innerHTML += `<p>${message}</p>`; // Display in logs container
+    }
+
+    // Redirect console.log to logToConsole function
+    console.log = logToConsole;
+
     let itemsData = [];
     let pricingData = [];
     let dayPricingData = [];
