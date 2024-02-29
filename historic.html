@@ -128,7 +128,7 @@
             });
 
         function searchItem() {
-            // Show loading spinner
+            // Show loading spinner while searching
             showLoadingSpinner();
 
             // Resetting the DataTable and table content
@@ -177,7 +177,7 @@
                         <td class="${monthChangeClass}">${percentageChangeMonth.toFixed(2)}%</td>
                         <td>${itemPricingLatest.quantity}</td>
                         <td>${itemPricingLatest.numAuctions}</td>
-                        <td><canvas id="${item.name.replace(/\s/g, '')}Chart" width="400" height="200"></canvas></td>
+                        <td><canvas id="${item.name.replace(/\s/g, '')}Chart" width="200" height="100"></canvas></td>
                     </tr>`;
 
                     // Prepare data for chart
@@ -214,7 +214,13 @@
                 canvas.id = item.label.replace(/\s/g, ''); // Remove spaces from label for canvas ID
                 canvas.width = 400;
                 canvas.height = 200;
-                document.getElementById('chartContainer').appendChild(canvas);
+
+                // Find the corresponding table row and append the canvas to the last cell
+                const tableRow = document.getElementById(item.label.replace(/\s/g, '') + 'Row');
+                if (tableRow) {
+                    const lastCell = tableRow.cells[tableRow.cells.length - 1];
+                    lastCell.appendChild(canvas);
+                }
 
                 // Generate chart
                 new Chart(canvas.getContext('2d'), {
