@@ -19,26 +19,29 @@
             </div>
         </div>
         
-        <table id="resultsTable" class="table table-dark table-striped">
-            <thead>
-                <tr>
-                    <th>Item Name</th>
-                    <th>Min Buyout (Latest)</th>
-                    <th>Day % Change</th>
-                    <th>Week % Change</th>
-                    <th>Month % Change</th>
-                    <th>Quantity</th>
-                    <th>Num Auctions</th>
-                    <th>Price History Chart</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- The table content will be filled using JavaScript -->
-            </tbody>
-        </table>
-
-        <!-- Container for dynamically generated charts -->
-        <div id="chartContainer"></div>
+        <div class="row">
+            <div class="col-md-8">
+                <table id="resultsTable" class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Min Buyout (Latest)</th>
+                            <th>Day % Change</th>
+                            <th>Week % Change</th>
+                            <th>Month % Change</th>
+                            <th>Quantity</th>
+                            <th>Num Auctions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- The table content will be filled using JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <div id="chartContainer"></div>
+            </div>
+        </div>
 
         <!-- Console logs container -->
         <div id="consoleLogs" class="mt-5"></div>
@@ -156,7 +159,7 @@
                         <td class="${monthChangeClass}">${percentageChangeMonth.toFixed(2)}%</td>
                         <td>${itemPricingLatest.quantity}</td>
                         <td>${itemPricingLatest.numAuctions}</td>
-                        <td><canvas id="${item.name.replace(/\s/g, '')}Chart" width="400" height="200"></canvas></td>
+                        <td><canvas id="${item.name.replace(/\s/g, '')}Chart" width="200" height="100"></canvas></td>
                     </tr>`;
 
                     // Prepare data for chart
@@ -187,9 +190,9 @@
             // Create chart canvas elements
             data.forEach(item => {
                 const canvas = document.createElement('canvas');
-                canvas.id = item.label.replace(/\s/g, ''); // Remove spaces from label for canvas ID
-                canvas.width = 400;
-                canvas.height = 200;
+                canvas.id = item.label.replace(/\s/g, '') + 'Chart'; // Remove spaces from label for canvas ID
+                canvas.width = 200;
+                canvas.height = 100;
                 document.getElementById('chartContainer').appendChild(canvas);
 
                 // Generate chart
