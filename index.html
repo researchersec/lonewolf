@@ -84,7 +84,7 @@
                     const minBuyoutSilver = Math.floor((itemPricing.minBuyout % 10000) / 100);
                     const minBuyoutCopper = itemPricing.minBuyout % 100;
 
-                    const wowheadLink = `<a href="https://www.wowhead.com/wotlk/item=${item.entry}" data-wowhead="item=${item.entry}" target="_blank">${item.name}</a>`;
+                    const wowheadLink = `<a href="https://www.wowhead.com/classic/item=${item.entry}" data-wh-icon-size="tiny" data-wowhead="item=${item.entry}" target="_blank">${item.name}</a>`;
 
                     tableContent += `<tr><td>${wowheadLink}</td><td>${formatCurrency(minBuyoutGold, minBuyoutSilver, minBuyoutCopper)}</td><td>${itemPricing.quantity}</td><td>${itemPricing.numAuctions}</td></tr>`;
                 }
