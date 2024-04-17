@@ -1,6 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lonewolf Auctionhouse</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <script>const whTooltips = {colorLinks: true, iconSize: 'small', renameLinks: false};</script>
+    <script src="https://wow.zamimg.com/js/tooltips.js"></script>
+</head>
+<body class="bg-dark text-white">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Lonewolf</h1>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="searchInput" placeholder="Search for an item">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" onclick="searchItem()">Search</button>
+            </div>
+        </div>
+        
+        <table id="resultsTable" class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Min Buyout</th>
+                    <th>Quantity</th>
+                    <th>Num Auctions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- The table content will be filled using JavaScript -->
+            </tbody>
+        </table>
+    </div>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- DataTables JS and its Bootstrap 4 integration -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap4.min.js"></script>
 
-<script>const whTooltips = {colorLinks: true, iconSize: true, renameLinks: false};</script>
-<script src="https://wow.zamimg.com/js/tooltips.js"></script>
-<a href="https://classic.wowhead.com/item=769" data-wh-icon-size="tiny">Chunk of Boar Meat</a>
-<!--<a href="https://classic.wowhead.com/item=769">Chunk of Boar Meat</a>
+    <script>
+        let itemsData = [];
+        let pricingData = [];
+
+        // Load items data from items.json
+        fetch('items.json')
+            .then(response => response.json())
+            .then(data => {
+                itemsData = data.items;
+            })
+            .catch(error => {
+                console.error("Error fetching items data: ", error);
+            });
+
+        // Load pricing data from the JSON file
+        fetch('prices/latest.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                pricingData = jsonData.pricing_data;
+            })
+            .catch(error => {
+                console.error("Error fetching pricing data: ", error);
+            });
+
+        function searchItem() {
+            if ($.fn.dataTable.isDataTable('#resultsTable')) {
+                $('#resultsTable').DataTable().clear().destroy();
+            }
+
+            let searchInput = document.getElementById("searchInput").value.toLowerCase();
+            let tableContent = '';
+
+            itemsData.forEach(item => {
+                const itemPricing = pricingData.find(pricing => pricing.itemId === item.entry);
+                if (itemPricing && item.name.toLowerCase().includes(searchInput)) {
+                    const minBuyoutGold = Math.floor(itemPricing.minBuyout / 10000);
+                    const minBuyoutSilver = Math.floor((itemPricing.minBuyout % 10000) / 100);
+                    const minBuyoutCopper = itemPricing.minBuyout % 100;
+                    const wowheadLink = `<a href="https://www.wowhead.com/classic/item=${item.entry}" data-wowhead="item=${item.entry}" data-wh-icon-size="tiny" target="_blank">${item.name}</a>`;
+
+                    tableContent += `<tr><td>${wowheadLink}</td><td>${formatCurrency(minBuyoutGold, minBuyoutSilver, minBuyoutCopper)}</td><td>${itemPricing.quantity}</td><td>${itemPricing.numAuctions}</td></tr>`;
+                }
+            });
+
+            $('#resultsTable tbody').html(tableContent);
+
+            $('#resultsTable').DataTable();
+
+            if (window.wowhead_tooltips) {
+                wowhead_tooltips.refreshLinks();
+            }
+        }
+
+        function formatCurrency(gold, silver, copper) {
+            return `${gold}g${silver.toString().padStart(2, '0')}s${copper.toString().padStart(2, '0')}c`;
+        }
+
+        document.getElementById("searchInput").addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                searchItem();
+            }
+        });
+    </script>
+</body>
+</html>
