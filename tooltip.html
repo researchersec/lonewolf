@@ -6,7 +6,7 @@
     <title>Lonewolf Auctionhouse</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
-    <script>const whTooltips = {colorLinks: true, iconSize: "small", renameLinks: false};</script>
+    <script>const whTooltips = { colorLinks: true, iconizeLinks: true, renameLinks: true, iconSize: 'tiny'};</script>
     <script src="https://wow.zamimg.com/js/tooltips.js"></script>
 </head>
 <body class="bg-dark text-white">
@@ -80,7 +80,7 @@
                     const minBuyoutGold = Math.floor(itemPricing.minBuyout / 10000);
                     const minBuyoutSilver = Math.floor((itemPricing.minBuyout % 10000) / 100);
                     const minBuyoutCopper = itemPricing.minBuyout % 100;
-                    const wowheadLink = `<a href="https://www.wowhead.com/classic/item=${item.entry}" data-wowhead="item=${item.entry}" data-wh-icon-size="tiny" target="_blank">${item.name}</a>`;
+                    const wowheadLink = `<a href="https://www.wowhead.com/classic/item=${item.entry}" data-wowhead="item=${item.entry}" data-wh-iconize-link="true" target="_blank">${item.name}</a>`;
 
                     tableContent += `<tr><td>${wowheadLink}</td><td>${formatCurrency(minBuyoutGold, minBuyoutSilver, minBuyoutCopper)}</td><td>${itemPricing.quantity}</td><td>${itemPricing.numAuctions}</td></tr>`;
                 }
