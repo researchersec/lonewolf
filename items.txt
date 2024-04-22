@@ -18188,6 +18188,7 @@ entry,name
 212160,Chronoboon Displacer
 212225,Neverending Soul Vessel
 212230,Schematic: Soul Vessel
+212549,Rune of the Trapper
 212580,Lorekeeper's Staff
 212581,Outrunner's Bow
 212582,Protector's Sword
@@ -18367,6 +18368,7 @@ entry,name
 215126,UNUSED Flask of Merciless Pursuit
 215129,Formula: Enchant Weapon - Dismantle
 215138,Formula: Enchant Chest - Retricutioner
+215141,Enchanted Sigil: Innovation
 215149,Pattern: Gneuro-Linked Arcano-Filament Monocle
 215152,Pattern: Glowing Gneuro-Linked Cowl
 215153,Schematic: Whirling Truesilver Gearwall
@@ -18650,6 +18652,9 @@ entry,name
 217337,Supply Shipment
 217338,Supply Shipment
 217339,Supply Shipment
+217345,Sebacious Poison
+217346,Numbing Poison
+217347,Atrophic Poison
 217350,Thermaplugg's Engineering Notes
 217351,Thermaplugg's Engineering Notes
 217398,Lesser Arcane Elixir
@@ -18657,29 +18662,975 @@ entry,name
 217495,Scroll of Cryoblast
 217496,Scroll of the Blade
 217497,Narpas Sword
+217609,Talisman of Kazdor
 217693,Invisibility Potion
 217704,Ironshod Bludgeon
-213132,Rune of the Guardian
-211527,Cozy Sleeping Bag
-213422,Illegible Recipe
-213110,Rune of the Commander
-213111,Rune of Intervention
-212553,Jewel-Encrusted Box
-213104,Rune of Ruthless Precision
-212347,Illari's Key
-212562,Rune of Healing Rage
-212551,Rune of Warfare
-212552,Psychosophic Epiphany
-216483,Witherbark Mallet
-213118,Rune of the Jungle King
-213449,Divine Prayer Bead II
-213112,Spell Notes: Missile Barrage
-215168,Ez-Thro Radiation Bomb
-215127,High-Yield Radiation Bomb
-213137,Rune of the Assailant
-215167,Reflective Truesilver Braincage
+217717,Hollow Emblem
+217718,Emblem of Blood Magic
+217719,Blood Magic Essence
+217720,Offering of Flesh
+217721,Offering of Bone
+217727,Ward of the Dead
+217736,Rune of the Coterie
+217737,Modified Talisman
+220775,Engineering Exchange Ticket
+219021,Hefty Courier Pack
+219022,Hauler's Ring
+219023,Clerk's Ring
+219024,Messenger's Ring
+219135,Curiosity Pendant
+219136,Tenacity Pendant
+219137,Initiative Pendant
+219223,Blademaster's Fury
+219326,Seed of Renewal
+219343,Filcher's Cowl
+219345,Infernal Lasso
+219399,Nightmare Moss
+219401,Cold Iron Ore
+219402,Dream-Touched Dragonscale
+219404,Shadowscythe
+219405,Ogre Magi Text
+219406,Unhatched Green Dragon Egg
+219414,Shattered Eggshells
+219444,Dreamroot
+219445,Fool's Gold Dust
+219446,Dream-Infused Dragonscale
+219447,Dream-Touched Dragon Egg
+219448,Dreamengine
+219449,Azsharan Prophecy
+219454,Star Lotus
+219486,Starsilver Ore
+219487,Starshell
+219488,Star-Touched Dragonegg
+219490,Elunar Relic
+219491,Dreampearl
+219514,Moonroot
+219515,Greater Moonstone
+219517,Moondragon Scale
+219518,Harpy Screed
+219519,Mad Keeper's Notes
+219520,Moonglow Dragonegg
+219526,Mission Brief: Duskwood
+219759,Charla's Field Report
+219770,Gemeron's Field Report
+219771,Thandros' Field Report
+219772,Fallia's Field Report
+219773,Mission Brief: Ashenvale
+219774,Mission Brief: Hinterlands
+219775,Mission Brief: Feralas
+219776,Intelligence Report: Vul'gol Ogre Mound
+219778,Intelligence Report: Rotting Orchard
+219803,Intelligence Report: Yorgen Farmstead
+219918,Bloody Missive
+219924,Intelligence Report: Forest Song
+219925,Intelligence Report: Satyrnaar
+219926,Intelligence Report: Warsong Lumber Camp
+219927,Emerald Chip
+219928,Intelligence Report: Agol'watha
+219929,Bloody Missive
+219930,Bloody Missive
+219935,Kajind's Blade
+219937,Intelligence Report: Shaol'watha
+219938,Intelligence Report: Skulk Rock
+219957,Intelligence Report: Oneiros
+219958,Intelligence Report: Twin Colossals
+219959,Intelligence Report: Ruins of Ravenwind
+219962,Nightmare Incursions: Duskwood Mission I
+219963,Deputization Authorization: Duskwood Mission I
+219965,Deputization Authorization: Duskwood Mission II
+219966,Nightmare Incursions: Duskwood Mission II
+219967,Nightmare Incursions: Duskwood Mission III
+219968,Nightmare Incursions: Duskwood Mission IV
+219969,Nightmare Incursions: Duskwood Mission V
+219970,Nightmare Incursions: Duskwood Mission VI
+219971,Nightmare Incursions: Duskwood Mission VII
+219972,Nightmare Incursions: Duskwood Mission VIII
+219973,Nightmare Incursions: Duskwood Mission IX
+219974,Nightmare Incursions: Duskwood Mission X
+219975,Nightmare Incursions: Duskwood Mission XI
+219976,Nightmare Incursions: Duskwood Mission XII
+219977,Nightmare Incursions: Duskwood Mission XIII
+219978,Nightmare Incursions: Duskwood Mission XIV
+219979,Nightmare Incursions: Duskwood Mission XV
+219980,Nightmare Incursions: Duskwood Mission XVI
+219981,Nightmare Incursions: Duskwood Mission XVII
+219982,Nightmare Incursions: Duskwood Mission XVIII
+219983,Deputization Authorization: Duskwood Mission III
+219984,Deputization Authorization: Duskwood Mission IV
+219985,Deputization Authorization: Duskwood Mission V
+219986,Deputization Authorization: Duskwood Mission VI
+219987,Deputization Authorization: Duskwood Mission VII
+219988,Deputization Authorization: Duskwood Mission VIII
+219989,Deputization Authorization: Duskwood Mission IX
+219990,Deputization Authorization: Duskwood Mission X
+219991,Deputization Authorization: Duskwood Mission XI
+219992,Deputization Authorization: Duskwood Mission XII
+219993,Deputization Authorization: Duskwood Mission XIII
+219994,Deputization Authorization: Duskwood Mission XIV
+219995,Deputization Authorization: Duskwood Mission XV
+219996,Deputization Authorization: Duskwood Mission XVI
+219997,Deputization Authorization: Duskwood Mission XVII
+219998,Deputization Authorization: Duskwood Mission XVIII
+219999,Nightmare Incursions: Ashenvale Mission I
+220000,Nightmare Incursions: Ashenvale Mission II
+220001,Nightmare Incursions: Ashenvale Mission III
+220002,Nightmare Incursions: Ashenvale Mission IV
+220003,Nightmare Incursions: Ashenvale Mission V
+220004,Nightmare Incursions: Ashenvale Mission VI
+220005,Nightmare Incursions: Ashenvale Mission VII
+220006,Nightmare Incursions: Ashenvale Mission VIII
+220007,Nightmare Incursions: Ashenvale Mission IX
+220008,Nightmare Incursions: Ashenvale Mission X
+220009,Nightmare Incursions: Ashenvale Mission XI
+220010,Nightmare Incursions: Ashenvale Mission XII
+220011,Nightmare Incursions: Ashenvale Mission XIII
+220012,Nightmare Incursions: Ashenvale Mission XIV
+220013,Nightmare Incursions: Ashenvale Mission XV
+220014,Nightmare Incursions: Ashenvale Mission XVI
+220015,Nightmare Incursions: Ashenvale Mission XVII
+220016,Nightmare Incursions: Ashenvale Mission XVIII
+220017,Nightmare Incursions: Hinterlands Mission I
+220018,Nightmare Incursions: Hinterlands Mission II
+220019,Nightmare Incursions: Hinterlands Mission III
+220020,Nightmare Incursions: Hinterlands Mission IV
+220021,Nightmare Incursions: Hinterlands Mission V
+220022,Nightmare Incursions: Hinterlands Mission VI
+220023,Nightmare Incursions: Hinterlands Mission VII
+220024,Nightmare Incursions: Hinterlands Mission VIII
+220025,Nightmare Incursions: Hinterlands Mission IX
+220026,Nightmare Incursions: Hinterlands Mission X
+220027,Nightmare Incursions: Hinterlands Mission XI
+220028,Nightmare Incursions: Hinterlands Mission XII
+220029,Nightmare Incursions: Hinterlands Mission XIII
+220030,Nightmare Incursions: Hinterlands Mission XIV
+220031,Nightmare Incursions: Hinterlands Mission XV
+220032,Nightmare Incursions: Hinterlands Mission XVI
+220033,Nightmare Incursions: Hinterlands Mission XVII
+220034,Nightmare Incursions: Hinterlands Mission XVIII
+220035,Nightmare Incursions: Feralas Mission I
+220036,Nightmare Incursions: Feralas Mission II
+220037,Nightmare Incursions: Feralas Mission III
+220038,Nightmare Incursions: Feralas Mission IV
+220039,Nightmare Incursions: Feralas Mission V
+220040,Nightmare Incursions: Feralas Mission VI
+220041,Nightmare Incursions: Feralas Mission VII
+220042,Nightmare Incursions: Feralas Mission VIII
+220043,Nightmare Incursions: Feralas Mission IX
+220044,Nightmare Incursions: Feralas Mission X
+220045,Nightmare Incursions: Feralas Mission XI
+220046,Nightmare Incursions: Feralas Mission XII
+220047,Nightmare Incursions: Feralas Mission XIII
+220048,Nightmare Incursions: Feralas Mission XIV
+220049,Nightmare Incursions: Feralas Mission XV
+220050,Nightmare Incursions: Feralas Mission XVI
+220051,Nightmare Incursions: Feralas Mission XVII
+220052,Nightmare Incursions: Feralas Mission XVIII
+220053,Deputization Authorization: Ashenvale Mission I
+220054,Deputization Authorization: Ashenvale Mission II
+220055,Deputization Authorization: Ashenvale Mission III
+220056,Deputization Authorization: Ashenvale Mission IV
+220057,Deputization Authorization: Ashenvale Mission V
+220058,Deputization Authorization: Ashenvale Mission VI
+220059,Deputization Authorization: Ashenvale Mission VII
+220060,Deputization Authorization: Ashenvale Mission VIII
+220061,Deputization Authorization: Ashenvale Mission IX
+220062,Deputization Authorization: Ashenvale Mission X
+220063,Deputization Authorization: Ashenvale Mission XI
+220064,Deputization Authorization: Ashenvale Mission XII
+220065,Deputization Authorization: Ashenvale Mission XIII
+220066,Deputization Authorization: Ashenvale Mission XIV
+220067,Deputization Authorization: Ashenvale Mission XV
+220068,Deputization Authorization: Ashenvale Mission XVI
+220069,Deputization Authorization: Ashenvale Mission XVII
+220070,Deputization Authorization: Ashenvale Mission XVIII
+220071,Deputization Authorization: Hinterlands Mission I
+220072,Deputization Authorization: Hinterlands Mission II
+220073,Deputization Authorization: Hinterlands Mission III
+220074,Deputization Authorization: Hinterlands Mission IV
+220075,Deputization Authorization: Hinterlands Mission V
+220076,Deputization Authorization: Hinterlands Mission VI
+220077,Deputization Authorization: Hinterlands Mission VII
+220078,Deputization Authorization: Hinterlands Mission VIII
+220079,Deputization Authorization: Hinterlands Mission IX
+220080,Deputization Authorization: Hinterlands Mission X
+220081,Deputization Authorization: Hinterlands Mission XI
+220082,Deputization Authorization: Hinterlands Mission XII
+220083,Deputization Authorization: Hinterlands Mission XIII
+220084,Deputization Authorization: Hinterlands Mission XIV
+220085,Deputization Authorization: Hinterlands Mission XV
+220086,Deputization Authorization: Hinterlands Mission XVI
+220087,Deputization Authorization: Hinterlands Mission XVII
+220088,Deputization Authorization: Hinterlands Mission XVIII
+220089,Deputization Authorization: Feralas Mission I
+220090,Deputization Authorization: Feralas Mission II
+220091,Deputization Authorization: Feralas Mission III
+220092,Deputization Authorization: Feralas Mission IV
+220093,Deputization Authorization: Feralas Mission V
+220094,Deputization Authorization: Feralas Mission VI
+220095,Deputization Authorization: Feralas Mission VII
+220096,Deputization Authorization: Feralas Mission VIII
+220097,Deputization Authorization: Feralas Mission IX
+220098,Deputization Authorization: Feralas Mission X
+220099,Deputization Authorization: Feralas Mission XI
+220100,Deputization Authorization: Feralas Mission XII
+220101,Deputization Authorization: Feralas Mission XIII
+220102,Deputization Authorization: Feralas Mission XIV
+220103,Deputization Authorization: Feralas Mission XV
+220104,Deputization Authorization: Feralas Mission XVI
+220105,Deputization Authorization: Feralas Mission XVII
+220106,Deputization Authorization: Feralas Mission XVIII
+220164,Rune of the Gladiator
+220166,Fiery Infernal Core
+220167,Shimmering Grave Dust
+220168,Triple-Brewed Molten Lager
+220169,Symbol of Faith
+220173,Parasomnia
+220213,Fel Lifeblood
+220214,Infernal Chain Link
+220216,Infernal Lasso
+220217,Rune of the Ravenous
+220345,Sanguine Sorcery
+220346,Legends of the Tidesages
+220347,The Liminal and the Arcane
+220348,Everyday Etiquette
+220349,Stonewrought Design
+220350,Venomous Journeys
+220351,Murky Air Sapta
+220352,A Mind of Metal
+220353,Conjurer's Codex
+220360,Rune of Efflorescence
+220375,Fragment of Air
+220379,Torn Shaman's Notes
+220446,Otherworldly Treasure
+220510,Elemental Essence
+220511,Greathelm of the Nightmare
+220512,Immaculate Goldsteel Helmet
+220514,Visor of Verdant Feathers
+220515,Enchanted Emerald Helmet
+220516,Gasher's Forgotten Visor
+220518,Ba'ham's Dusty Hat
+220519,Voodoo Feathered Headdress
+220521,Hakkari Ritualist's Headdress
+220522,Soulcatcher Crown
+220523,Visage of the Exiled
+220525,Glowing Fragment of Air
+220526,Sludge-Covered G-7 C.O.R.E. Processor
+220527,Atal'ai Berserker's Mantle
+220528,Atal'ai Huntsman's Shoulders
+220529,Spaulders of Fanaticism
+220530,Will of the Atal'ai Warrior
+220531,Undulating Purple Flower
+220532,Reinforced Atal'ai Spaulders
+220533,Reforged Atal'ai Breastplate
+220534,Eternal Embrace of the Wind Serpent
+220535,Garments of the Atal'ai Prophet
+220536,Atal'ai Medicine Man's Wrists
+220537,Dreamer's Darkwater Bracers
+220538,Cursed Slimescale Bracers
+220539,Warbands of Sacrifice
+220540,Corruption Laden Handguards
+220541,Disease-Ridden Plate Fists
+220542,Polluted Murkwater Gauntlets
+220543,Emerald Scalemail Gloves
+220544,Bloodflare Talons
+220545,Foul Smelling Fighter's Gloves
+220546,Hands of the Tormented
+220547,Gloves of the Fallen Atal'ai Prophet
+220548,Atal'ai Hexxer's Gloves
+220549,Dawnspire Strap
+220550,Temple Looter's Waistband
+220551,Devotee's Sash of the Emerald Dream
+220552,Waistguard of Pain
+220553,Belt of the Forsaken Worshipper
+220554,Atal'alarion's Tusk Band
+220555,Atal'ai Serpentscale Girdle
+220556,Kilt of the Fallen Atal'ai Prophet
+220557,Cursed Windscale Sarong
+220558,Atal'ai Assassin's Leggings
+220559,Revitalized Drake Scale Leggings
+220560,Silvershell Legplates
+220561,Tenacious Troll Kickers
+220562,Bloodshot Battle Greaves
+220563,Boots of the Atal'ai Blood Shaman
+220564,Restored Slitherscale Boots
+220565,Ethereal Mistwalker Boots
+220566,Smolder Claw
+220567,Bloodied Headspike
+220568,Temple Explorer's Gun Axe
+220569,Blistering Ragehammer
+220570,Mantle of Nightmares
+220571,Stinging Longbow
+220572,Rinzo's Rapid Repeater
+220573,Dreadstalker's Hunting Bow
+220574,Sharpened Tooth of Eranikus
+220575,Eater of the Damned
+220576,Axe of the Atal'ai Executioner
+220577,Might of the Blood Loa
+220578,Fist of the Forsaken
+220579,Witch Doctor's Stick of Mojo
+220580,Madness of the Avatar
+220581,Snake Clobberer
+220582,Dragon's Cry
+220583,Vile Blade of the Wretched
+220584,Flamebreath Blade
+220585,Degraded Dire Nail
+220586,Hubris, the Bandit Brander
+220587,Sacrificial Dream Dagger
+220588,Cobra Fang Claw
+220589,Serpent's Striker
+220590,Spire of Hakkari Worship
+220591,Mijan's Restorative Rod
+220594,Scythe of the Dream
+220595,Nightmare Focus Staff
+220596,Ancient Divining Rod
+220597,Drakestone of the Dream Harbinger
+220598,Drakestone of the Nightmare Harbinger
+220599,Drakestone of the Blood Prophet
+220600,Crest of Preeminence
+220601,Hakkari Witch Doctor's Guard
+220602,Sewer Turtle Half-Shell
+220603,Rod of Irreversible Corrosion
+220604,Nightmare Trophy
+220605,Libram of Sacrilege
+220606,Idol of the Dream
+220607,Totem of Tormented Ancestry
+220608,Featherskin Drape
+220609,Drape of Nightfall
+220611,Hukku's Hex Cape
+220615,Panther Fur Cloak
+220619,Atal'ai Blood Ceremony
+220620,Wind Serpent Skull
+220621,Nightmare Resonance Crystal
+220622,Perfectly Preserved Dragon's Eye
+220623,Jin'do's Lost Locket
+220624,Bloodstained Charm of Valor
+220625,Resilience of the Exiled
+220626,Drakeclaw Band of the Berserker
+220627,Drakeclaw Band of the Stalker
+220628,Drakeclaw Band of the Harbinger
+220629,Drakeclaw Band of the Blood Prophet
+220630,Drakeclaw Band of the Juggernaut
+220632,Atal'ai Blood Ritual Medallion
+220633,Atal'ai Blood Ritual Badge
+220634,Atal'ai Blood Ritual Charm
+220635,Atal'alarion's Enchanted Boulder
+220636,Atal'ai Blood Icon
+220637,Atal'ai Ritual Token
+220638,Unorthodox Hex Stick
+220639,Lledra's Inanimator
+220642,Banished Martyr's Plate Armor
+220643,Banished Martyr's Plate Legguards
+220648,Banished Martyr's Plate Boots
+220649,Merithra's Inheritence
+220650,Obsessed Prophet's Chestplate
+220651,Obsessed Prophet's Legguards
+220652,Obsessed Prophet's Ornate Boots
+220653,Wailing Berserker's Chestplate
+220654,Wailing Berserker's Legplates
+220656,Wailing Berserker's Battleboots
+220657,Ostracized Berserker's Hauberk
+220658,Ostracized Berserker's Legplates
+220659,Ostracized Berserker's Chain Greaves
+220660,Shunned Devotee's Chainshirt
+220661,Shunned Devotee's Legguards
+220662,Shunned Devotee's Scale Boots
+220663,Corrupted Spiritweaver's Leggings
+220664,Corrupted Spiritweaver's Sabatons
+220665,Corrupted Spiritweaver's Breastplate
+220666,Dread Hunter's Chainmail
+220667,Dread Hunter's Chausses
+220668,Dread Hunter's Greaves
+220669,Exiled Prophet's Jerkin
+220670,Exiled Prophet's Slippers
+220671,Exiled Prophet's Leather Pants
+220672,Lost Worshipper's Harness
+220673,Lost Worshipper's Leggings
+220674,Debased Stealthblade
+220675,Lost Worshipper's Treads
+220676,Blood Corrupted Tunic
+220677,Blood Corrupted Boots
+220678,Blood Corrupted Pants
+220679,Malevolent Prophet's Leggings
+220680,Malevolent Prophet's Vest
+220681,Malevolent Prophet's Sandals
+220682,Rune of the Unbridled
+220683,Benevolent Prophet's Vest
+220684,Benevolent Prophet's Leggings
+220685,Benevolent Prophet's Sandals
+220686,Chieftain's Bane
+220687,Rune of the Raptor
+220688,Inert Mantle of Nightmares
+220689,Void-Powered Vambraces
+220738,Shoulderplates of Dread
+220739,Baleful Pauldrons
+220740,Fearmonger's Shoulderguards
+220741,Screaming Chain Pauldrons
+220742,Shrieking Spaulders
+220743,Cacophonous Chain Shoulderguards
+220744,Wailing Chain Mantle
+220745,Membrane of Dark Neurosis
+220747,Paranoia Mantle
+220748,Shoulderpads of Obsession
+220749,Mantle of Insanity
+220750,Fractured Mind Pauldrons
+220751,Shoulderpads of the Deranged
+220754,Rune of the Windstorm
+220778,Coagulated Bloodguard Pants
+220779,Coagulated Bloodguard Tunic
+220780,Coagulated Bloodguard Boots
+220781,Nightmare Prophet's Leggings
+220783,Nightmare Prophet's Vestments
+220784,Nightmare Prophet's Sandals
+220791,Rune of the Jungle Cat
+220792,Scroll of Spatial Mending
+220794,Knight's Plate Hauberk
+220795,Knight-Lieutenant's Plate Pauldrons
+220796,Blood Guard's Plate Pauldrons
+220797,Knight's Plate Leggings
+220798,Stone Guard's Plate Leggings
+220799,Sergeant Major's Plate Greaves
+220800,First Sergeant's Plate Greaves
+220801,Stone Guard's Plate Armor
+220803,Blood Guard's Plate Helm
+220804,Knight-Lieutenant's Plate Helm
+220806,Sergeant Major's Plate Gauntlets
+220807,First Sergeant's Plate Gauntlets
+220808,Knight-Lieutenant's Imbued Pauldrons
+220809,Knight's Imbued Leggings
+220810,Knight-Lieutenant's Imbued Helmet
+220811,Sergeant Major's Imbued Greaves
+220812,Sergeant Major's Imbued Gauntlets
+220813,Knight's Imbued Armor
+220814,Sergeant Major's Lamellar Boots
+220815,Knight's Lamellar Chestplate
+220816,Knight's Lamellar Legplates
+220817,Sergeant Major's Lamellar Gauntlets
+220818,Knight-Lieutenant's Lamellar Pauldrons
+220819,Knight-Lieutenant's Lamellar Helm
+220820,Blood Guard's Mail Helmet
+220821,Blood Guard's Chain Helmet
+220822,Knight-Lieutenant's Chain Helmet
+220823,Blood Guard's Mail Epaulets
+220824,Blood Guard's Chain Epaulets
+220825,Knight-Lieutenant's Chain Epaulets
+220826,Stone Guard's Mail Armor
+220827,Stone Guard's Chain Armor
+220828,Knight's Chain Armor
+220829,Sergeant Major's Chain Gauntlets
+220830,First Sergeant's Chain Gauntlets
+220831,First Sergeant's Mail Gauntlets
+220832,Knight's Chain Legplates
+220833,Stone Guard's Chain Legplates
+220834,Stone Guard's Mail Legplates
+220835,First Sergeant's Mail Sabatons
+220836,First Sergeant's Chain Sabatons
+220837,Sergeant Major's Chain Sabatons
+220838,Stone Guard's Inscribed Chestpiece
+220839,Stone Guard's Inscribed Legplates
+220840,First Sergeant's Inscribed Sabatons
+220841,Blood Guard's Inscribed Shoulder Pads
+220842,Blood Guard's Inscribed Skullcap
+220843,First Sergeant's Inscribed Gauntlets
+220844,Stone Guard's Pulsing Breastplate
+220845,First Sergeant's Pulsing Gauntlets
+220846,First Sergeant's Pulsing Greaves
+220847,Stone Guard's Pulsing Legplates
+220848,Blood Guard's Pulsing Helmet
+220849,Blood Guard's Pulsing Shoulders
+220850,Knight-Lieutenant's Leather Headband
+220851,Blood Guard's Leather Headband
+220852,Knight-Lieutenant's Leather Shoulders
+220853,Blood Guard's Leather Shoulders
+220854,Knight's Leather Armor
+220855,Stone Guard's Leather Armor
+220856,Sergeant Major's Leather Gauntlets
+220857,First Sergeant's Leather Gauntlets
+220858,Knight's Leather Pants
+220859,Stone Guard's Leather Pants
+220860,Sergeant Major's Leather Boots
+220861,First Sergeant's Leather Boots
+220862,Sergeant Major's Crackling Leather Boots
+220863,First Sergeant's Crackling Leather Boots
+220864,Knight's Crackling Leather Leggings
+220865,Stone Guard's Crackling Leather Leggings
+220866,Sergeant Major's Crackling Leather Gauntlets
+220867,First Sergeant's Crackling Leather Gauntlets
+220868,Knight's Crackling Leather Tunic
+220869,Stone Guard's Crackling Leather Tunic
+220870,Knight-Lieutenant's Crackling Leather Spaulders
+220871,Blood Guard's Crackling Leather Spaulders
+220872,Knight-Lieutenant's Crackling Leather Helmet
+220873,Blood Guard's Crackling Leather Helmet
+220874,Knight-Lieutenant's Restored Leather Helm
+220875,Blood Guard's Restored Leather Helm
+220876,Knight-Lieutenant's Restored Leather Spaulders
+220877,Blood Guard's Restored Leather Spaulders
+220878,Knight's Restored Leather Jerkin
+220879,Stone Guard's Restored Leather Jerkin
+220880,Sergeant Major's Restored Leather Gloves
+220881,First Sergeant's Restored Leather Gloves
+220882,Knight's Restored Leather Leggings
+220883,Stone Guard's Restored Leather Leggings
+220884,Sergeant Major's Restored Leather Boots
+220885,First Sergeant's Restored Leather Boots
+220886,Knight's Dreadweave Vest
+220887,Knight-Lieutenant's Dreadweave Mantle
+220888,Knight's Dreadweave Leggings
+220889,Knight-Lieutenant's Dreadweave Hat
+220890,Sergeant Major's Dreadweave Gloves
+220891,Sergeant Major's Dreadweave Boots
+220892,Knight's Satin Armor
+220893,Knight's Satin Leggings
+220894,Knight-Lieutenant's Satin Pads
+220895,Sergeant Major's Satin Boots
+220896,Knight-Lieutenant's Satin Cover
+220897,Sergeant Major's Satin Gloves
+220898,First Sergeant's Satin Gloves
+220899,Blood Guard's Satin Cover
+220900,First Sergeant's Satin Boots
+220901,Blood Guard's Satin Pads
+220902,Stone Guard's Satin Leggings
+220903,Stone Guard's Satin Armor
+220904,Stone Guard's Dreadweave Vest
+220905,Blood Guard's Dreadweave Mantle
+220906,Stone Guard's Dreadweave Leggings
+220907,Blood Guard's Dreadweave Hat
+220908,First Sergeant's Dreadweave Gloves
+220909,First Sergeant's Dreadweave Boots
+220912,Geode Hammer
+220913,Rune of Demolition
+220914,Broken Geode Hammer
+220915,Idol of the Raging Shambler
+220918,Waylaid Supplies: Undermine Clam Chowder
+220919,Waylaid Supplies: Nightfin Soup
+220920,Waylaid Supplies: Tender Wolf Steaks
+220921,Waylaid Supplies: Heavy Mageweave Bandages
+220922,Waylaid Supplies: Sungrass
+220923,Waylaid Supplies: Dreamfoil
+220924,Waylaid Supplies: Truesilver Bars
+220925,Waylaid Supplies: Thorium Bars
+220926,Waylaid Supplies: Rugged Leather
+220927,Waylaid Supplies: Thick Hide
+220928,Waylaid Supplies: Enchanted Thorium Bars
+220929,Waylaid Supplies: Superior Mana Potions
+220930,Waylaid Supplies: Major Healing Potions
+220931,Waylaid Supplies: Hi-Explosive Bombs
+220932,Waylaid Supplies: Thorium Grenades
+220933,Waylaid Supplies: Thorium Rifles
+220934,Waylaid Supplies: Mithril Coifs
+220935,Waylaid Supplies: Thorium Belts
+220936,Waylaid Supplies: Truesilver Gauntlets
+220937,Waylaid Supplies: Rugged Armor Kits
+220938,Waylaid Supplies: Wicked Leather Bracers
+220939,Waylaid Supplies: Runic Leather Bracers
+220940,Waylaid Supplies: Black Mageweave Headbands
+220941,Waylaid Supplies: Runecloth Belts
+220942,Waylaid Supplies: Tuxedo Shirts
+220964,Decharged Void-Powered Vambraces
+220965,Scalebane Greataxe
+221008,Supply Shipment
+221009,Supply Shipment
+221010,Supply Shipment
+221017,Keldara's Log
+221018,Field Medicine Kit
+221019,Satyrweed Sample
+221020,Rune of the Moon Goddess
+221021,Nightmare Seed
+221024,Flask of Everlasting Nightmares
+221025,Void-Powered Invoker's Vambraces
+221026,Void-Powered Slayer's Vambraces
+221027,Void-Powered Protector's Vambraces
+221028,Enchanted Sigil: Living Dreams
+221030,Atal'ai Mojo of Forbidden Magic
+221191,Dreamstone
+221192,Dream Journal
+221193,Emerald Ring
+221196,Atal'ai Mojo of War
+221199,Satyrweed Tincture
+221256,Right Arm of the Obliterator
+221257,Left Arm of the Obliterator
+221258,Right Foot of the Obliterator
+221259,Left Foot of the Obliterator
+221260,Head of the Obliterator
+221261,Wildwhisper Draught
+221262,Wild Offering
+221267,Rune of the Bloodthirsty
+221271,Ace of Wilds
+221272,Wilds Deck
+221273,Two of Wilds
+221274,Three of Wilds
+221275,Four of Wilds
+221276,Five of Wilds
+221277,Six of Wilds
+221278,Seven of Wilds
+221279,Eight of Wilds
+221280,Plagues Deck
+221281,Ace of Plagues
+221282,Two of Plagues
+221283,Three of Plagues
+221284,Four of Plagues
+221285,Five of Plagues
+221286,Six of Plagues
+221287,Seven of Plagues
+221288,Eight of Plagues
+221289,Dunes Deck
+221290,Ace of Dunes
+221291,Two of Dunes
+221292,Three of Dunes
+221293,Four of Dunes
+221294,Five of Dunes
+221295,Six of Dunes
+221296,Seven of Dunes
+221297,Eight of Dunes
+221298,Ace of Nightmares
+221299,Nightmares Deck
+221300,Two of Nightmares
+221301,Three of Nightmares
+221302,Four of Nightmares
+221303,Five of Nightmares
+221304,Six of Nightmares
+221305,Seven of Nightmares
+221306,Eight of Nightmares
+221307,Darkmoon Card: Decay
+221308,Darkmoon Card: Overgrowth
+221309,Darkmoon Card: Sandstorm
+221310,Darkmoon Card: Torment
+221311,Atal'ai Mojo of Life
+221312,Flask of Atal'ai Mojo
+221313,Flask of Nightmarish Mojo
+221314,Wanted Notice
+221315,Rainbow Generator
+221316,Premo's Poise-Demanding Uniform
+221317,Feralas Leycryst
+221318,Azshara Leycryst
+221319,Blackrock Leycryst
+221320,Hinterlands Leycryst
+221321,Atal'ai Signet of Might
+221322,Atal'ai Signet of Mojo
+221323,Atal'ai Signet of Serenity
+221324,Brittle Shadowforge Key
+221325,EZ-Splode Blasting Charge
+221326,Sacred Stag Heart
+221327,Schematic: Gnomish Shrink Ray
+221328,Schematic: Gnomish Goggles
+221329,Schematic: Gnomish Net-o-matic Projector
+221330,Schematic: Gnomish Harm Prevention Belt
+221331,Schematic: Gnomish Rocket Boots
+221332,Schematic: Gnomish Battle Chicken
+221333,Schematic: Gnomish Mind Control Cap
+221334,Schematic: Gnomish Death Ray
+221335,Schematic: Goblin Construction Helmet
+221336,Schematic: Goblin Mining Helmet
+221337,Schematic: Goblin Mortar
+221338,Schematic: Goblin Sapper Charge
+221339,Schematic: Goblin Rocket Boots
+221340,Schematic: Goblin Bomb Dispenser
+221341,Schematic: The Big One
+221342,Schematic: Goblin Dragon Gun
+221343,Schematic: Goblin Rocket Helmet
+221344,Personal Spellbook
+221345,Corrupted Blood of Eranikus
+221346,Scapula of the Fallen Avatar
+221347,Murky Fire Sapta
+221348,Murky Water Sapta
+221349,Murky Earth Sapta
+221350,Charred Shaman's Notes
+221351,Waterlogged Shaman's Notes
+221352,Smudged Shaman's Notes
+221353,Fragment of Fire
+221354,Fragment of Water
+221355,Fragment of Earth
+221356,Glowing Fragment of Fire
+221357,Glowing Fragment of Water
+221358,Glowing Fragment of Earth
+221359,Pristine Owlbeast Quill
+221360,Farraki Papyrus
+221361,Zukk'ash Resin
+221362,Weapon Cleaning Cloth
+221363,Scapula of the Fallen Avatar
+221364,Copper Massacre Coin
+221365,Silver Massacre Coin
+221366,Gold Massacre Coin
+221367,Satchel of Copper Massacre Coins
+221368,Satchel of Silver Massacre Coins
+221369,Nightmare Siphon
+221370,Precious Medallion
+221371,Kidnapper's Coin Purse
+221372,Mangled Coin Purse
+221374,Anguish of the Dream
+221376,Emerald Dream Helm
+221377,Emerald Dream Legplates
+221378,Emerald Dream Gauntlets
+221379,Emerald Dream Sabatons
+221380,Emerald Dream Breastplate
+221381,Emerald Dream Pauldrons
+221382,Emerald Encrusted Battleplate
+221383,Emerald Encrusted Handguards
+221384,Emerald Encrusted Helmet
+221385,Emerald Encrusted Legplates
+221386,Emerald Encrusted Spaulders
+221387,Emerald Encrusted Plate Boots
+221388,Emerald Scalemail Leggings
+221389,Emerald Scalemail Gauntlets
+221390,Emerald Scalemail Breastplate
+221391,Emerald Scalemail Helmet
+221392,Emerald Scalemail Shoulders
+221393,Emerald Scalemail Boots
+221394,Emerald Laden Boots
+221395,Emerald Laden Breastplate
+221396,Emerald Laden Gauntlets
+221397,Emerald Laden Helmet
+221398,Emerald Laden Leggings
+221399,Emerald Laden Shoudlers
+221400,Emerald Chain Shoudlers
+221401,Emerald ChainLeggings
+221402,Emerald Chain Helmet
+221403,Emerald Chain Gauntlets
+221404,Emerald Chain Breastplate
+221405,Emerald Chain Boots
+221406,Emerald Leather Vest
+221407,Emerald Leather Gloves
+221408,Emerald Leather Helm
+221409,Emerald Leather Sabatons
+221410,Emerald Leather Pants
+221411,Emerald Leather Shoulders
+221412,Emerald Dreamkeeper Gloves
+221413,Emerald Dreamkeeper Helm
+221414,Emerald Dreamkeeper Pants
+221415,Emerald Dreamkeeper Boots
+221416,Emerald Dreamkeeper Shoulders
+221417,Emerald Dreamkeeper Chest
+221418,Agamaggan's Roar
+221419,Emerald Watcher Vest
+221420,Emerald Watcher Boots
+221421,Emerald Watcher Gloves
+221422,Emerald Watcher Helm
+221423,Emerald Watcher Leggings
+221424,Emerald Watcher Shoulders
+221425,Emerald Enchanted Circlet
+221426,Emerald Enchanted Boots
+221427,Emerald Enchanted Gloves
+221428,Rune of Foul Play
+221429,Emerald Enchanted Pants
+221430,Emerald Enchanted Robes
+221431,Emerald Enchanted Shoulders
+221432,Emerald Woven Mantle
+221433,Rune of Focus
+221434,Emerald Woven Robes
+221435,Emerald Woven Pants
+221436,Emerald Woven Gloves
+221437,Emerald Woven Circlet
+221438,Emerald Woven Boots
+221439,Armor of the Emerald Slumber
+221440,Roar of the Dream
+221441,Warden of the Dream
+221442,Roar of the Guardian
+221443,Roar of the Grove
+221444,Jungle Durian
+221445,Rune of Focused Fire
+221446,Ritualist's Hammer
+221447,Ritualist's Bloodmoon Grimoire
+221448,Talisman of the Corrupted Grove
+221450,Gurubashi Pit Fighter's Bow
+221451,Bloodthirst Crossbow
+221452,Bloodfocused Arcane Band
+221453,Band of Boiling Blood
+221454,Glacial Blood Band
+221455,Bloodlight Reverence
+221456,Eclipsed Sanguine Saber
+221457,Libram of Draconic Destruction
+221458,Shadowy Band of Victory
+221459,Seal of the Sacrificed
+221460,Gurubashi Backstabber
+221461,Rune of Carnage
+221462,Bloodied Sword of Speed
+221463,Ancestral Voodoo Doll
+221464,Totem of Fiery Precision
+221465,Corrupted Smashbringer
+221466,Loop of Burning Blood
+221467,Eye of the Bloodmoon
+221468,Wall of Whispers
+221469,Headhunter's Barbed Spear
+221470,Dream Emerald
+221471,Emerald Wardens Chest
+221473,Rune of the Watchman
+221474,Chained Essence of Eranikus
+221475,Essence of Eranikus
+221480,Spell Notes: Molten Armor
+221481,Nihilist Epiphany
+221482,Rune of Affliction
+221483,Rune of Burn
+221484,Witch Doctor's Hex Stick
+221487,Spell Notes: Advanced Warding
+221488,Resolute Epiphany
+221489,Rune of Vengeance
+221490,Rune of Riptide
+221491,Shadowtooth Bag
+221497,Old Key
+221498,Sturdy Lunchbox
+221499,Rune of the Felguard
+221510,Rune of the Knight
+221511,Rune of the Protector
+221512,Rune of Alacrity
+221513,Rune of Potency
+221514,Rune of Firepower
+221515,Rune of Detonation
+221516,Rune of Primal Energy
+221517,Rune of Bloodshed
+221518,Whisper
+221519,Mannoroc Orb
+221544,Stormcrow Egg
+221545,Deciphered Warlock Notes
+221547,Coded Warlock Notes
+221549,Wastewander Cipher
+221780,Princess Theradras' Scepter
+221781,Avenguard Helm
+221782,Helm of Exile
+221971,Dreamsworn Horn
+221972,Dreampyre Fire
+221973,Dreamhunter Fang
+221974,Grimtotem Necklace
+221975,Broken Woodpaw Staff
+221976,Diseased Nature Staff
+221978,Explorer's Soul
+221979,Prophecy of Verdant Winter
+221980,Prophecy of Awakened Chaos
+221981,Prophecy of the Lost Tribe
+222952,Flask of Restless Dreams
+222962,Hyjal's Wisdom
+223073,Knight-Lieutenant's Mail Epaulets
+223074,Knight's Mail Legplates
+223075,Knight-Lieutenant's Mail Helmet
+223076,Sergeant Major's Mail Gauntlets
+223077,Sergeant Major's Mail Sabatons
+223078,Knight's Mail Armor
+223147,Spell Notes: Balefire Bolt
+223148,Otherworldly Treasure
+223149,Otherworldly Treasure
+223150,Otherworldly Treasure
+223151,Otherworldly Treasure
+223160,Bargain Bush
+223161,Empty Supply Crate
+223162,Handy Courier Haversack
+223163,Formula: Scroll of Spatial Mending
+223164,Curiosity Cowl
+223167,Initiative Cap
+223168,Worldcore Fragment
+223169,Tenacity Cap
+223171,Scroll of Geomancy
+223172,Tenacity Chain
+223173,Geomancer's Cord
+223174,Geomancer's Boots
+223175,Geomancer's Cloak
+223177,Geomancer's Cap
+223178,Geomancer's Bracers
+223180,Geomancer's Gloves
+223181,Geomancer's Spaulders
+223182,Geomancer's Trousers
+223183,Geomancer's Wraps
+223186,Supply Expediter
+223192,Cord of the Untamed
+223193,Crown of the Dreamweaver
+223194,Band of the Wilds
+223195,Breadth of the Beast
+223196,Godslayer's Greaves
+223197,Defender of the Wilds
+223198,Modas Karkun
+223214,Zila Gular
+223215,Orah Raka
+223216,Rakkan Archim
+223217,Rakkas Lek
+223218,Tor Kieldaz
+223219,Fel Cloth Wristbands
+223221,Fel Leather Wristbands
+223222,Fel Mail Wristbands
+223237,Fel Cloth Shoulder Pads
+223238,Fel Leather Shoulder Pads
+223239,Fel Mail Shoulders
+223240,Fel Cloth Hood
+223241,Fel Leather Hat
+223242,Fel Mail Coif
+223248,Fel Cloth Legs
+223249,Fel Leather Legs
+223250,Fel Mail Legs
+223251,Fel Plate Legs
+223256,Fel Cloth Robes
+223261,Fel Leather Chest
+223262,Fel Mail Chest
+223263,Fel Plate Chest
+223283,Bloodstained Commendation
+223323,Premo's Poise-Demanding Uniform
+223324,Rainstrider Leggings
+223325,Hakkari Breastplate
+223326,Hakkari Shroud
+223327,Mark of Hakkar
+223328,Gemburst Circlet
+223329,Lifeforce Dirk
+223330,Pulsating Eye
+223331,Pulsating Eye
+223332,Vibrating Eye
+223333,Baleful Eye
+223334,Glowing Eye
+223335,Oozing Eye
+223336,Piercing Eye
+223337,Burning Eye
 215161,Tempered Interference-Negating Helmet
-213122,Rune of Steady Shot
-213125,Rune of Invigoration
-213126,Rune of the Scrapper
-212982,Squall-breakers Potion
+211527,Cozy Sleeping Bag
+215167,Reflective Truesilver Braincage
+220165,Rune of Wrath
+215168,Ez-Thro Radiation Bomb
+216483,Witherbark Mallet
+217716,Vile Concoction
+215127,High-Yield Radiation Bomb
+220916,Thunderstomp Stegodon Horn
+220917,Box of Scarlet Dye
+223518,Charstone Dirk
+223519,Eye of Theradras
+223520,Inventor's Focal Sword
+223521,Rotgrip Mantle
+223522,Helm of the Mountain
+223523,Cloud Stone
+223524,Fist of Stone
+223525,Soothsayer's Headdress
+223527,Gahz'rilla Fang
+223528,Gahz'rilla Scale Armor
+223529,Jinxed Hoodoo Skin
+223530,Jinxed Hoodoo Kilt
+223531,Big Bad Pauldrons
+223532,Lifeblood Amulet
+223533,Desertwalker Cane
+223534,Jumanza Grips
+223535,Grimlok's Tribal Vestments
+223536,Grimlok's Charge
+223537,Skullplate Bracers
+223538,Kindling Stave
+223539,Enthralled Sphere
+223541,Gemshard Heart
+223542,Megashot Rifle
+223543,Vinerot Sandals
+223544,Dregmetal Spaulders
+212568,Wolfshead Trophy
+213407,Catnip
+223648,Dream Imbued Arrow
+223288,Rune of the Hammer
+223912,Purification Potion
+223913,Major Healing Potion
+223914,Greater Healing Potion
+223526,Sul'thraze the Lasher
+223540,Houndmaster's Bow
+223545,Gizlock's Hypertech Buckler
+223962,Sandstalker Ankleguards
+223963,Embrace of the Lycan
+223964,Blade of Eternal Darkness
+223980,Searingscale Leggings
+223981,Flamestrider Robes
+223982,Houndmaster's Rifle
+223983,Arbiter's Blade
+223984,Silkweb Gloves
+223985,Cyclopean Band
+223986,Graverot Cape
+223987,Splinthide Shoulders
+224004,Emerald Ring
+224005,Emerald Ring
+224006,Emerald Ring
+224409,Serpent's Striker
