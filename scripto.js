@@ -15,5 +15,5 @@ function displayData(data) {
 }
 
 // Replace 'yourusername' and 'repo' with your GitHub username and repo name
-const repoUrl = 'https://raw.githubusercontent.com/researchersec/lomewolf/prices/latest.json';
+const repoUrl = 'https://raw.githubusercontent.com/researchersec/lonewolf/prices/latest.json';
 fetchJSONData(repoUrl);
