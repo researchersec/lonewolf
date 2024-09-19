@@ -7,7 +7,7 @@ import shutil
 api_key = os.environ['API_KEY']
 # Endpoint URLs
 auth_url = 'https://auth.tradeskillmaster.com/oauth2/token'
-pricing_url = 'https://pricing-api.tradeskillmaster.com/ah/512'
+pricing_url = 'https://pricing-api.tradeskillmaster.com/ah/514'
 realm_url = 'https://realm-api.tradeskillmaster.com/regions'
 
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
