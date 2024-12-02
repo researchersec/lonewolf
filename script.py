@@ -33,7 +33,7 @@ if response.status_code == 201:
 
     # Make GET request for pricing data
     headers = {'Authorization': f'Bearer {access_token}'}
-    pricing_response = requests.get(pricing_url, headers=headers)
+    pricing_response = requests.get(realm_url, headers=headers)
     if pricing_response.status_code == 200:
         pricing_data = pricing_response.json()
         print("Pricing data obtained successfully")
