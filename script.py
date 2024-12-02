@@ -35,6 +35,9 @@ if response.status_code == 201:
         print("Pricing data obtained successfully")
 
         # Save pricing data to items.json
+        with open("latest.json", 'w') as file:
+            json.dump({"pricing_data": pricing_data}, file, indent=4)
+        print("latest.json has been updated with the same data as timestamp.json.")
         with open("horde.json", 'w') as file:
             json.dump({"pricing_data": pricing_data}, file, indent=4)
         print("latest.json has been updated with the same data as timestamp.json.")
