@@ -9,6 +9,7 @@ api_key = os.environ['API_KEY']
 auth_url = 'https://auth.tradeskillmaster.com/oauth2/token'
 pricing_url = 'https://pricing-api.tradeskillmaster.com/ah/514'
 realm_url = 'https://realm-api.tradeskillmaster.com/regions'
+realm_data = 'https://realm-api.tradeskillmaster.com/regions/22'
 
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 filename = f'{timestamp}.json'
@@ -33,7 +34,7 @@ if response.status_code == 201:
 
     # Make GET request for pricing data
     headers = {'Authorization': f'Bearer {access_token}'}
-    pricing_response = requests.get(realm_url, headers=headers)
+    pricing_response = requests.get(realm_data, headers=headers)
     if pricing_response.status_code == 200:
         pricing_data = pricing_response.json()
         print("Pricing data obtained successfully")
