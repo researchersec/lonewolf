@@ -9,7 +9,7 @@ api_key = os.environ['API_KEY']
 auth_url = 'https://auth.tradeskillmaster.com/oauth2/token'
 pricing_url = 'https://pricing-api.tradeskillmaster.com/ah/514'
 realm_url = 'https://realm-api.tradeskillmaster.com/regions'
-realm_data = 'https://realm-api.tradeskillmaster.com/regions/22'
+realm_data = 'https://realm-api.tradeskillmaster.com/regions/22/realms'
 
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 filename = f'{timestamp}.json'
