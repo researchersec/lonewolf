@@ -5,19 +5,14 @@ import os
 import shutil
 
 api_key = os.environ['API_KEY']
-# Endpoint URLs
+
 auth_url = 'https://auth.tradeskillmaster.com/oauth2/token'
-pricing_url = 'https://pricing-api.tradeskillmaster.com/ah/514'
-realm_url = 'https://realm-api.tradeskillmaster.com/regions'
-realm_data = 'https://realm-api.tradeskillmaster.com/regions/22/realms'
+alli_pricing_url = 'https://pricing-api.tradeskillmaster.com/ah/513'
+horde_pricing_url = 'https://pricing-api.tradeskillmaster.com/ah/514'
 
-timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-filename = f'{timestamp}.json'
-directory = 'prices'
+#realm_url = 'https://realm-api.tradeskillmaster.com/regions'
+#realm_data = 'https://realm-api.tradeskillmaster.com/regions/22/realms'
 
-# Specify the full path for the file
-file_path = os.path.join(directory, filename)
-# Request body for access token
 payload = {
     "client_id": "c260f00d-1071-409a-992f-dda2e5498536",
     "grant_type": "api_token",
@@ -25,7 +20,7 @@ payload = {
     "token": api_key
 }
 
-# Get access token
+
 response = requests.post(auth_url, json=payload)
 if response.status_code == 201:
     auth_data = response.json()
@@ -34,25 +29,27 @@ if response.status_code == 201:
 
     # Make GET request for pricing data
     headers = {'Authorization': f'Bearer {access_token}'}
-    pricing_response = requests.get(realm_data, headers=headers)
-    if pricing_response.status_code == 200:
-        pricing_data = pricing_response.json()
+    horde_pricing_response = requests.get(horde_pricing_url, headers=headers)
+    if horde_pricing_response.status_code == 200:
+        pricing_data = horde_pricing_response.json()
         print("Pricing data obtained successfully")
 
         # Save pricing data to items.json
-        with open(file_path, 'w') as file:
+        with open("horde.json", 'w') as file:
             json.dump({"pricing_data": pricing_data}, file, indent=4)
-
-        # Specify the path for the latest file
-        latest_file_path = os.path.join(directory, 'latest.json')
-
-        # Copy the content of timestamp.json to latest.json
-        try:
-            shutil.copy(file_path, latest_file_path)
-            print("latest.json has been updated with the same data as timestamp.json.")
-        except FileNotFoundError:
-            print(f"Error: File {file_path} not found.")
+        print("latest.json has been updated with the same data as timestamp.json.")
     else:
-        print("Failed to fetch pricing data")
+        print("Failed to fetch horde pricing data")
+    alli_pricing_response = requests.get(alli_pricing_url, headers=headers)
+    if alli_pricing_response.status_code == 200:
+        pricing_data = alli_pricing_response.json()
+        print("Pricing data obtained successfully")
+
+        # Save pricing data to items.json
+        with open("alli.json", 'w') as file:
+            json.dump({"pricing_data": pricing_data}, file, indent=4)
+        print("latest.json has been updated with the same data as timestamp.json.")
+    else:
+        print("Failed to fetch horde pricing data")
 else:
-    print("Failed to obtain access token")
+    print("Failed to obtain horde access token")
