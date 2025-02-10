@@ -55392,1153 +55392,433 @@
         },
         {
             "auctionHouseId": 513,
-            "itemId": 1251,
+            "itemId": 21306,
             "petSpeciesId": null,
-            "minBuyout": 1897,
-            "quantity": 1471,
-            "marketValue": 2846,
-            "historical": 939,
-            "numAuctions": 13
+            "minBuyout": 898900,
+            "quantity": 2,
+            "marketValue": 285181,
+            "historical": 133307,
+            "numAuctions": 2
         },
         {
             "auctionHouseId": 513,
-            "itemId": 1263,
+            "itemId": 21307,
             "petSpeciesId": null,
-            "minBuyout": 149987,
-            "quantity": 6,
-            "marketValue": 344954,
-            "historical": 471556.25,
+            "minBuyout": 179982,
+            "quantity": 1,
+            "marketValue": 229012,
+            "historical": 179944,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21308,
+            "petSpeciesId": null,
+            "minBuyout": 9958,
+            "quantity": 4,
+            "marketValue": 12283,
+            "historical": 8669.5,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21309,
+            "petSpeciesId": null,
+            "minBuyout": 9995,
+            "quantity": 3,
+            "marketValue": 7833,
+            "historical": 8498.5,
+            "numAuctions": 2
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21340,
+            "petSpeciesId": null,
+            "minBuyout": 240018,
+            "quantity": 2,
+            "marketValue": 291683,
+            "historical": 399995,
+            "numAuctions": 2
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21341,
+            "petSpeciesId": null,
+            "minBuyout": 2376222,
+            "quantity": 3,
+            "marketValue": 3477510,
+            "historical": 3999996,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21342,
+            "petSpeciesId": null,
+            "minBuyout": 6990866,
+            "quantity": 2,
+            "marketValue": 8069180,
+            "historical": 7898066,
+            "numAuctions": 2
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21358,
+            "petSpeciesId": null,
+            "minBuyout": 73392,
+            "quantity": 4,
+            "marketValue": 81735,
+            "historical": 109999,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21371,
+            "petSpeciesId": null,
+            "minBuyout": 991041,
+            "quantity": 2,
+            "marketValue": 485401,
+            "historical": 159990,
+            "numAuctions": 2
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21536,
+            "petSpeciesId": null,
+            "minBuyout": 59972,
+            "quantity": 16,
+            "marketValue": 66582,
+            "historical": 89971,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21542,
+            "petSpeciesId": null,
+            "minBuyout": 199798,
+            "quantity": 3,
+            "marketValue": 259691,
+            "historical": 199998,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21546,
+            "petSpeciesId": null,
+            "minBuyout": 68594,
+            "quantity": 283,
+            "marketValue": 61815,
+            "historical": 56017,
+            "numAuctions": 10
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21547,
+            "petSpeciesId": null,
+            "minBuyout": 3500,
+            "quantity": 9,
+            "marketValue": 5965,
+            "historical": 6003.25,
+            "numAuctions": 4
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21548,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 779736,
+            "historical": 762006,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21552,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 8665,
+            "historical": 10001,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21557,
+            "petSpeciesId": null,
+            "minBuyout": 2190,
+            "quantity": 4,
+            "marketValue": 1216,
+            "historical": 1999,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21558,
+            "petSpeciesId": null,
+            "minBuyout": 12184,
+            "quantity": 4,
+            "marketValue": 1474,
+            "historical": 1999,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21559,
+            "petSpeciesId": null,
+            "minBuyout": 102121,
+            "quantity": 4,
+            "marketValue": 1487,
+            "historical": 1999,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21561,
+            "petSpeciesId": null,
+            "minBuyout": 100584,
+            "quantity": 4,
+            "marketValue": 4452,
+            "historical": 4974,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21562,
+            "petSpeciesId": null,
+            "minBuyout": 100790,
+            "quantity": 4,
+            "marketValue": 6184,
+            "historical": 6498,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21569,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 2375,
+            "historical": 4491,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21570,
+            "petSpeciesId": null,
+            "minBuyout": 499883,
+            "quantity": 13,
+            "marketValue": 816722,
+            "historical": 999941.75,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21571,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 1989,
+            "historical": 1990,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21574,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 1918,
+            "historical": 2000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21576,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 998,
+            "historical": 998,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21589,
+            "petSpeciesId": null,
+            "minBuyout": 104972,
+            "quantity": 2,
+            "marketValue": 6487,
+            "historical": 14979,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21590,
+            "petSpeciesId": null,
+            "minBuyout": 3750,
+            "quantity": 9,
+            "marketValue": 5883,
+            "historical": 4973,
+            "numAuctions": 2
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21592,
+            "petSpeciesId": null,
+            "minBuyout": 104980,
+            "quantity": 2,
+            "marketValue": 5586,
+            "historical": 4984,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21593,
+            "petSpeciesId": null,
+            "minBuyout": 109875,
+            "quantity": 2,
+            "marketValue": 6854,
+            "historical": 9881,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21595,
+            "petSpeciesId": null,
+            "minBuyout": 109873,
+            "quantity": 2,
+            "marketValue": 6854,
+            "historical": 9879,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21713,
+            "petSpeciesId": null,
+            "minBuyout": 179982,
+            "quantity": 1,
+            "marketValue": 295456,
+            "historical": 490000,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21721,
+            "petSpeciesId": null,
+            "minBuyout": 8204,
+            "quantity": 21,
+            "marketValue": 8968,
+            "historical": 24999,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21722,
+            "petSpeciesId": null,
+            "minBuyout": 1134119,
+            "quantity": 1,
+            "marketValue": 1244911,
+            "historical": 1134127,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21723,
+            "petSpeciesId": null,
+            "minBuyout": 2499998,
+            "quantity": 1,
+            "marketValue": 2060036,
+            "historical": 1350000,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21737,
+            "petSpeciesId": null,
+            "minBuyout": 66568,
+            "quantity": 1,
+            "marketValue": 133925,
+            "historical": 992255,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21738,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 429307,
+            "historical": 8889993,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21747,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 44086,
+            "historical": 28743.5,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21761,
+            "petSpeciesId": null,
+            "minBuyout": 6981,
+            "quantity": 136,
+            "marketValue": 5517,
+            "historical": 86353,
+            "numAuctions": 30
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 21762,
+            "petSpeciesId": null,
+            "minBuyout": 254995,
+            "quantity": 82,
+            "marketValue": 99032,
+            "historical": 1605484,
             "numAuctions": 6
         },
         {
             "auctionHouseId": 513,
-            "itemId": 1265,
+            "itemId": 21830,
             "petSpeciesId": null,
-            "minBuyout": 299999,
-            "quantity": 3,
-            "marketValue": 509403,
-            "historical": 413412.5,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1274,
-            "petSpeciesId": null,
-            "minBuyout": 6993,
-            "quantity": 77,
-            "marketValue": 414,
-            "historical": 135.5,
-            "numAuctions": 12
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1280,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 169997,
-            "historical": 91041,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1287,
-            "petSpeciesId": null,
-            "minBuyout": 20000,
-            "quantity": 1,
-            "marketValue": 14112,
-            "historical": 17364.5,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1288,
-            "petSpeciesId": null,
-            "minBuyout": 39795,
-            "quantity": 86,
-            "marketValue": 38815,
-            "historical": 54768,
-            "numAuctions": 13
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1296,
-            "petSpeciesId": null,
-            "minBuyout": 4595,
+            "minBuyout": 999999,
             "quantity": 2,
-            "marketValue": 11761,
-            "historical": 8482,
-            "numAuctions": 2
+            "marketValue": 464942,
+            "historical": 549999,
+            "numAuctions": 1
         },
         {
             "auctionHouseId": 513,
-            "itemId": 1297,
+            "itemId": 21939,
             "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 5883,
-            "historical": 10000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1299,
-            "petSpeciesId": null,
-            "minBuyout": 30000,
+            "minBuyout": 880000,
             "quantity": 1,
-            "marketValue": 15302,
-            "historical": 10043.5,
+            "marketValue": 1102598,
+            "historical": 524999,
             "numAuctions": 1
         },
         {
             "auctionHouseId": 513,
-            "itemId": 1300,
+            "itemId": 22202,
             "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 207451,
-            "historical": 30000,
-            "numAuctions": 0
+            "minBuyout": 9498,
+            "quantity": 459,
+            "marketValue": 7088,
+            "historical": 5082.25,
+            "numAuctions": 22
         },
         {
             "auctionHouseId": 513,
-            "itemId": 1314,
+            "itemId": 22203,
             "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 119903,
-            "historical": 69998.5,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1315,
-            "petSpeciesId": null,
-            "minBuyout": 138893,
-            "quantity": 4,
-            "marketValue": 148829,
-            "historical": 212499.5,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1318,
-            "petSpeciesId": null,
-            "minBuyout": 1579000,
-            "quantity": 1,
-            "marketValue": 1555957,
-            "historical": 1990000,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1326,
-            "petSpeciesId": null,
-            "minBuyout": 363,
-            "quantity": 26,
-            "marketValue": 762,
-            "historical": 992.5,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1357,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 49172,
-            "historical": 100000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1370,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 90000,
-            "historical": 90000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1376,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 102811,
-            "historical": 500000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1380,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 90000,
-            "historical": 90000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1387,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 110589,
-            "historical": 55000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1389,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 6216,
-            "historical": 14560,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1391,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 16864,
-            "historical": 10000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1394,
-            "petSpeciesId": null,
-            "minBuyout": 6086,
-            "quantity": 1,
-            "marketValue": 7096,
-            "historical": 8674,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1399,
-            "petSpeciesId": null,
-            "minBuyout": 9092,
-            "quantity": 1,
-            "marketValue": 6905,
-            "historical": 6605.5,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1401,
-            "petSpeciesId": null,
-            "minBuyout": 389,
-            "quantity": 16,
-            "marketValue": 2571,
-            "historical": 2354,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1405,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 10055,
-            "historical": 19950,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1406,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 33163,
-            "historical": 25000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1411,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 50185,
-            "historical": 10099.5,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1412,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 43396,
-            "historical": 100000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1413,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 4893,
-            "historical": 3300,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1414,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 7021,
-            "historical": 5000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1415,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 100,
-            "historical": 9900,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1416,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 2000,
-            "historical": 5000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1417,
-            "petSpeciesId": null,
-            "minBuyout": 4497,
-            "quantity": 1,
-            "marketValue": 9760,
-            "historical": 9000,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1421,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 200,
-            "historical": 200,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1422,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 90000,
-            "historical": 58484.5,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1425,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 100,
-            "historical": 2000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1430,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 100,
-            "historical": 1100,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1440,
-            "petSpeciesId": null,
-            "minBuyout": 6000,
-            "quantity": 2,
-            "marketValue": 7910,
-            "historical": 9999,
-            "numAuctions": 2
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1443,
-            "petSpeciesId": null,
-            "minBuyout": 989999,
-            "quantity": 3,
-            "marketValue": 850891,
-            "historical": 1521175.5,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1445,
-            "petSpeciesId": null,
-            "minBuyout": 4499,
-            "quantity": 3,
-            "marketValue": 11607,
-            "historical": 8000,
-            "numAuctions": 2
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1446,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 17905,
-            "historical": 15000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1447,
-            "petSpeciesId": null,
-            "minBuyout": 804473,
-            "quantity": 1,
-            "marketValue": 1185413,
-            "historical": 1154629,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1448,
-            "petSpeciesId": null,
-            "minBuyout": 21190,
-            "quantity": 3,
-            "marketValue": 27845,
-            "historical": 17642,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1454,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 830028,
-            "historical": 904205,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1455,
-            "petSpeciesId": null,
-            "minBuyout": 5093,
-            "quantity": 3,
-            "marketValue": 9137,
-            "historical": 7998,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1457,
-            "petSpeciesId": null,
-            "minBuyout": 23200,
-            "quantity": 1,
-            "marketValue": 27888,
-            "historical": 12632.5,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1458,
-            "petSpeciesId": null,
-            "minBuyout": 21997,
-            "quantity": 1,
-            "marketValue": 12785,
-            "historical": 13034,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1459,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 7493,
-            "historical": 10000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1460,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 13099,
-            "historical": 19997.5,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1461,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 17371,
-            "historical": 17800,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1462,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 48061,
-            "historical": 50000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1464,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 12839,
-            "historical": 12097,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1465,
-            "petSpeciesId": null,
-            "minBuyout": 49997,
-            "quantity": 3,
-            "marketValue": 56353,
-            "historical": 49996,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1468,
-            "petSpeciesId": null,
-            "minBuyout": 368,
-            "quantity": 90,
-            "marketValue": 359,
-            "historical": 437,
-            "numAuctions": 18
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1469,
-            "petSpeciesId": null,
-            "minBuyout": 9531,
-            "quantity": 1,
-            "marketValue": 12883,
-            "historical": 13999,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1470,
-            "petSpeciesId": null,
-            "minBuyout": 34000,
-            "quantity": 2,
-            "marketValue": 39975,
-            "historical": 39964.5,
-            "numAuctions": 2
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1473,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 23986,
-            "historical": 12000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1475,
-            "petSpeciesId": null,
-            "minBuyout": 4595,
-            "quantity": 48,
-            "marketValue": 3575,
-            "historical": 398.25,
-            "numAuctions": 23
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1477,
-            "petSpeciesId": null,
-            "minBuyout": 14497,
-            "quantity": 8,
-            "marketValue": 3099,
-            "historical": 984.25,
-            "numAuctions": 8
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1478,
-            "petSpeciesId": null,
-            "minBuyout": 77,
-            "quantity": 24,
-            "marketValue": 1735,
-            "historical": 1192.5,
-            "numAuctions": 9
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1481,
-            "petSpeciesId": null,
-            "minBuyout": 457999,
-            "quantity": 1,
-            "marketValue": 458573,
-            "historical": 499997.5,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1482,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 2199563,
-            "historical": 4556694,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1483,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 583198,
-            "historical": 474598,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1484,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 2958775,
-            "historical": 2700000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1486,
-            "petSpeciesId": null,
-            "minBuyout": 999997,
-            "quantity": 1,
-            "marketValue": 1281289,
-            "historical": 1594997,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1488,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 666949,
-            "historical": 675000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1491,
-            "petSpeciesId": null,
-            "minBuyout": 1729804,
-            "quantity": 5,
-            "marketValue": 2431304,
-            "historical": 2589999,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1495,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 2000,
-            "historical": 2000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1497,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 6181,
-            "historical": 2500,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1498,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 1000,
-            "historical": 1000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1499,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 1399,
-            "historical": 1499,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1501,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 1000,
-            "historical": 1500,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1502,
-            "petSpeciesId": null,
-            "minBuyout": 19995,
-            "quantity": 1,
-            "marketValue": 22574,
-            "historical": 30000,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1504,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 10000,
-            "historical": 2500,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1505,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 4534,
-            "historical": 5000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1506,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 1000,
-            "historical": 1000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1510,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 10000,
-            "historical": 5500,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1511,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 900,
-            "historical": 1200,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1512,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 2700,
-            "historical": 10000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1513,
-            "petSpeciesId": null,
-            "minBuyout": 7496,
-            "quantity": 3,
-            "marketValue": 29242,
-            "historical": 38076,
-            "numAuctions": 2
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1514,
-            "petSpeciesId": null,
-            "minBuyout": 13994,
-            "quantity": 2,
-            "marketValue": 13491,
-            "historical": 13090,
-            "numAuctions": 2
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1516,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 7358,
-            "historical": 10000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1520,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 564,
-            "historical": 6500,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1521,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 115177,
-            "historical": 180000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1522,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 111098,
-            "historical": 49998,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1523,
-            "petSpeciesId": null,
-            "minBuyout": 20000,
-            "quantity": 2,
-            "marketValue": 72442,
-            "historical": 30098,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1529,
-            "petSpeciesId": null,
-            "minBuyout": 4480,
-            "quantity": 85,
-            "marketValue": 2122,
-            "historical": 1137,
-            "numAuctions": 38
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1560,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 6771,
-            "historical": 15099,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1602,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 701350,
-            "historical": 1700812,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1604,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 532372,
-            "historical": 250000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1607,
-            "petSpeciesId": null,
-            "minBuyout": 132926,
-            "quantity": 7,
-            "marketValue": 228123,
-            "historical": 199999.5,
-            "numAuctions": 7
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1608,
-            "petSpeciesId": null,
-            "minBuyout": 109998,
-            "quantity": 2,
-            "marketValue": 73435,
-            "historical": 59900,
-            "numAuctions": 2
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1613,
-            "petSpeciesId": null,
-            "minBuyout": 39997,
-            "quantity": 7,
-            "marketValue": 44808,
-            "historical": 49912.5,
-            "numAuctions": 7
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1624,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 33333,
-            "historical": 39900,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1625,
-            "petSpeciesId": null,
-            "minBuyout": 30000,
-            "quantity": 3,
-            "marketValue": 50555,
-            "historical": 49998.5,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1639,
-            "petSpeciesId": null,
-            "minBuyout": 327600,
-            "quantity": 1,
-            "marketValue": 83423,
-            "historical": 82690,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1640,
-            "petSpeciesId": null,
-            "minBuyout": 45383,
-            "quantity": 3,
-            "marketValue": 43263,
-            "historical": 42444,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1645,
-            "petSpeciesId": null,
-            "minBuyout": 2010,
-            "quantity": 48,
-            "marketValue": 7701,
-            "historical": 1479.5,
-            "numAuctions": 5
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1652,
-            "petSpeciesId": null,
-            "minBuyout": 69996,
-            "quantity": 3,
-            "marketValue": 60081,
-            "historical": 60033,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1664,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 79999,
-            "historical": 210000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1677,
-            "petSpeciesId": null,
-            "minBuyout": 8349931,
-            "quantity": 1,
-            "marketValue": 5078829,
-            "historical": 410193.5,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1678,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 748454,
-            "historical": 776949.5,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1679,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 209535,
-            "historical": 100000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1685,
-            "petSpeciesId": null,
-            "minBuyout": 129955,
-            "quantity": 1,
-            "marketValue": 149878,
-            "historical": 169500,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1686,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 34971,
-            "historical": 14999,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1696,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 27103,
-            "historical": 18570.5,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1701,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 999,
-            "historical": 999,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1703,
-            "petSpeciesId": null,
-            "minBuyout": 4963,
-            "quantity": 22,
-            "marketValue": 5729,
-            "historical": 7727.25,
-            "numAuctions": 5
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1705,
-            "petSpeciesId": null,
-            "minBuyout": 7798,
-            "quantity": 36,
-            "marketValue": 4095,
-            "historical": 7998.5,
-            "numAuctions": 16
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1706,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 4078,
-            "historical": 4130,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1707,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 29993,
-            "historical": 178,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1708,
-            "petSpeciesId": null,
-            "minBuyout": 3092,
-            "quantity": 3,
-            "marketValue": 527,
-            "historical": 214.5,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1710,
-            "petSpeciesId": null,
-            "minBuyout": 986,
-            "quantity": 248,
-            "marketValue": 1417,
-            "historical": 853.5,
-            "numAuctions": 16
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 1711,
-            "petSpeciesId": null,
-            "minBuyout": 1566,
-            "quantity": 25,
-            "marketValue": 6998,
-            "historical": 4525,
-            "numAuctions": 10
+            "minBuyout": 639998,
+            "quantity": 76,
+            "marketValue": 502600,
+            "historical": 638459.25,
+            "numAuctions": 43
         },
         {
             "auctionHouseId": 513,
@@ -58132,433 +57412,63 @@
         },
         {
             "auctionHouseId": 513,
-            "itemId": 21306,
+            "itemId": 217263,
             "petSpeciesId": null,
-            "minBuyout": 898900,
-            "quantity": 2,
-            "marketValue": 285181,
-            "historical": 133307,
-            "numAuctions": 2
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 71439,
+            "historical": 76770,
+            "numAuctions": 0
         },
         {
             "auctionHouseId": 513,
-            "itemId": 21307,
+            "itemId": 217264,
             "petSpeciesId": null,
-            "minBuyout": 179982,
+            "minBuyout": 19792,
+            "quantity": 5,
+            "marketValue": 18881,
+            "historical": 13732.25,
+            "numAuctions": 5
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 217265,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 47760,
+            "historical": 47760,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 217266,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 397801,
+            "historical": 1200000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 217267,
+            "petSpeciesId": null,
+            "minBuyout": 72249,
             "quantity": 1,
-            "marketValue": 229012,
-            "historical": 179944,
+            "marketValue": 80717,
+            "historical": 83801.5,
             "numAuctions": 1
         },
         {
             "auctionHouseId": 513,
-            "itemId": 21308,
+            "itemId": 217268,
             "petSpeciesId": null,
-            "minBuyout": 9958,
-            "quantity": 4,
-            "marketValue": 12283,
-            "historical": 8669.5,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21309,
-            "petSpeciesId": null,
-            "minBuyout": 9995,
+            "minBuyout": 98221,
             "quantity": 3,
-            "marketValue": 7833,
-            "historical": 8498.5,
+            "marketValue": 139929,
+            "historical": 208812,
             "numAuctions": 2
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21340,
-            "petSpeciesId": null,
-            "minBuyout": 240018,
-            "quantity": 2,
-            "marketValue": 291683,
-            "historical": 399995,
-            "numAuctions": 2
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21341,
-            "petSpeciesId": null,
-            "minBuyout": 2376222,
-            "quantity": 3,
-            "marketValue": 3477510,
-            "historical": 3999996,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21342,
-            "petSpeciesId": null,
-            "minBuyout": 6990866,
-            "quantity": 2,
-            "marketValue": 8069180,
-            "historical": 7898066,
-            "numAuctions": 2
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21358,
-            "petSpeciesId": null,
-            "minBuyout": 73392,
-            "quantity": 4,
-            "marketValue": 81735,
-            "historical": 109999,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21371,
-            "petSpeciesId": null,
-            "minBuyout": 991041,
-            "quantity": 2,
-            "marketValue": 485401,
-            "historical": 159990,
-            "numAuctions": 2
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21536,
-            "petSpeciesId": null,
-            "minBuyout": 59972,
-            "quantity": 16,
-            "marketValue": 66582,
-            "historical": 89971,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21542,
-            "petSpeciesId": null,
-            "minBuyout": 199798,
-            "quantity": 3,
-            "marketValue": 259691,
-            "historical": 199998,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21546,
-            "petSpeciesId": null,
-            "minBuyout": 68594,
-            "quantity": 283,
-            "marketValue": 61815,
-            "historical": 56017,
-            "numAuctions": 10
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21547,
-            "petSpeciesId": null,
-            "minBuyout": 3500,
-            "quantity": 9,
-            "marketValue": 5965,
-            "historical": 6003.25,
-            "numAuctions": 4
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21548,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 779736,
-            "historical": 762006,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21552,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 8665,
-            "historical": 10001,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21557,
-            "petSpeciesId": null,
-            "minBuyout": 2190,
-            "quantity": 4,
-            "marketValue": 1216,
-            "historical": 1999,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21558,
-            "petSpeciesId": null,
-            "minBuyout": 12184,
-            "quantity": 4,
-            "marketValue": 1474,
-            "historical": 1999,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21559,
-            "petSpeciesId": null,
-            "minBuyout": 102121,
-            "quantity": 4,
-            "marketValue": 1487,
-            "historical": 1999,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21561,
-            "petSpeciesId": null,
-            "minBuyout": 100584,
-            "quantity": 4,
-            "marketValue": 4452,
-            "historical": 4974,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21562,
-            "petSpeciesId": null,
-            "minBuyout": 100790,
-            "quantity": 4,
-            "marketValue": 6184,
-            "historical": 6498,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21569,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 2375,
-            "historical": 4491,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21570,
-            "petSpeciesId": null,
-            "minBuyout": 499883,
-            "quantity": 13,
-            "marketValue": 816722,
-            "historical": 999941.75,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21571,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 1989,
-            "historical": 1990,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21574,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 1918,
-            "historical": 2000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21576,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 998,
-            "historical": 998,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21589,
-            "petSpeciesId": null,
-            "minBuyout": 104972,
-            "quantity": 2,
-            "marketValue": 6487,
-            "historical": 14979,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21590,
-            "petSpeciesId": null,
-            "minBuyout": 3750,
-            "quantity": 9,
-            "marketValue": 5883,
-            "historical": 4973,
-            "numAuctions": 2
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21592,
-            "petSpeciesId": null,
-            "minBuyout": 104980,
-            "quantity": 2,
-            "marketValue": 5586,
-            "historical": 4984,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21593,
-            "petSpeciesId": null,
-            "minBuyout": 109875,
-            "quantity": 2,
-            "marketValue": 6854,
-            "historical": 9881,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21595,
-            "petSpeciesId": null,
-            "minBuyout": 109873,
-            "quantity": 2,
-            "marketValue": 6854,
-            "historical": 9879,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21713,
-            "petSpeciesId": null,
-            "minBuyout": 179982,
-            "quantity": 1,
-            "marketValue": 295456,
-            "historical": 490000,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21721,
-            "petSpeciesId": null,
-            "minBuyout": 8204,
-            "quantity": 21,
-            "marketValue": 8968,
-            "historical": 24999,
-            "numAuctions": 3
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21722,
-            "petSpeciesId": null,
-            "minBuyout": 1134119,
-            "quantity": 1,
-            "marketValue": 1244911,
-            "historical": 1134127,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21723,
-            "petSpeciesId": null,
-            "minBuyout": 2499998,
-            "quantity": 1,
-            "marketValue": 2060036,
-            "historical": 1350000,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21737,
-            "petSpeciesId": null,
-            "minBuyout": 66568,
-            "quantity": 1,
-            "marketValue": 133925,
-            "historical": 992255,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21738,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 429307,
-            "historical": 8889993,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21747,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 44086,
-            "historical": 28743.5,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21761,
-            "petSpeciesId": null,
-            "minBuyout": 6981,
-            "quantity": 136,
-            "marketValue": 5517,
-            "historical": 86353,
-            "numAuctions": 30
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21762,
-            "petSpeciesId": null,
-            "minBuyout": 254995,
-            "quantity": 82,
-            "marketValue": 99032,
-            "historical": 1605484,
-            "numAuctions": 6
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21830,
-            "petSpeciesId": null,
-            "minBuyout": 999999,
-            "quantity": 2,
-            "marketValue": 464942,
-            "historical": 549999,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 21939,
-            "petSpeciesId": null,
-            "minBuyout": 880000,
-            "quantity": 1,
-            "marketValue": 1102598,
-            "historical": 524999,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 22202,
-            "petSpeciesId": null,
-            "minBuyout": 9498,
-            "quantity": 459,
-            "marketValue": 7088,
-            "historical": 5082.25,
-            "numAuctions": 22
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 22203,
-            "petSpeciesId": null,
-            "minBuyout": 639998,
-            "quantity": 76,
-            "marketValue": 502600,
-            "historical": 638459.25,
-            "numAuctions": 43
         },
         {
             "auctionHouseId": 513,
@@ -61272,66 +60182,6 @@
         },
         {
             "auctionHouseId": 513,
-            "itemId": 217263,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 71439,
-            "historical": 76770,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 217264,
-            "petSpeciesId": null,
-            "minBuyout": 19792,
-            "quantity": 5,
-            "marketValue": 18881,
-            "historical": 13732.25,
-            "numAuctions": 5
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 217265,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 47760,
-            "historical": 47760,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 217266,
-            "petSpeciesId": null,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 397801,
-            "historical": 1200000,
-            "numAuctions": 0
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 217267,
-            "petSpeciesId": null,
-            "minBuyout": 72249,
-            "quantity": 1,
-            "marketValue": 80717,
-            "historical": 83801.5,
-            "numAuctions": 1
-        },
-        {
-            "auctionHouseId": 513,
-            "itemId": 217268,
-            "petSpeciesId": null,
-            "minBuyout": 98221,
-            "quantity": 3,
-            "marketValue": 139929,
-            "historical": 208812,
-            "numAuctions": 2
-        },
-        {
-            "auctionHouseId": 513,
             "itemId": 234008,
             "petSpeciesId": null,
             "minBuyout": 821,
@@ -62039,6 +60889,1156 @@
             "marketValue": 1433024,
             "historical": 2208152.5,
             "numAuctions": 26
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1251,
+            "petSpeciesId": null,
+            "minBuyout": 1897,
+            "quantity": 1471,
+            "marketValue": 2846,
+            "historical": 939,
+            "numAuctions": 13
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1263,
+            "petSpeciesId": null,
+            "minBuyout": 149987,
+            "quantity": 6,
+            "marketValue": 344954,
+            "historical": 471556.25,
+            "numAuctions": 6
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1265,
+            "petSpeciesId": null,
+            "minBuyout": 299999,
+            "quantity": 3,
+            "marketValue": 509403,
+            "historical": 413412.5,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1274,
+            "petSpeciesId": null,
+            "minBuyout": 6993,
+            "quantity": 77,
+            "marketValue": 414,
+            "historical": 135.5,
+            "numAuctions": 12
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1280,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 169997,
+            "historical": 91041,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1287,
+            "petSpeciesId": null,
+            "minBuyout": 20000,
+            "quantity": 1,
+            "marketValue": 14112,
+            "historical": 17364.5,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1288,
+            "petSpeciesId": null,
+            "minBuyout": 39795,
+            "quantity": 86,
+            "marketValue": 38815,
+            "historical": 54768,
+            "numAuctions": 13
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1296,
+            "petSpeciesId": null,
+            "minBuyout": 4595,
+            "quantity": 2,
+            "marketValue": 11761,
+            "historical": 8482,
+            "numAuctions": 2
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1297,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 5883,
+            "historical": 10000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1299,
+            "petSpeciesId": null,
+            "minBuyout": 30000,
+            "quantity": 1,
+            "marketValue": 15302,
+            "historical": 10043.5,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1300,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 207451,
+            "historical": 30000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1314,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 119903,
+            "historical": 69998.5,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1315,
+            "petSpeciesId": null,
+            "minBuyout": 138893,
+            "quantity": 4,
+            "marketValue": 148829,
+            "historical": 212499.5,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1318,
+            "petSpeciesId": null,
+            "minBuyout": 1579000,
+            "quantity": 1,
+            "marketValue": 1555957,
+            "historical": 1990000,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1326,
+            "petSpeciesId": null,
+            "minBuyout": 363,
+            "quantity": 26,
+            "marketValue": 762,
+            "historical": 992.5,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1357,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 49172,
+            "historical": 100000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1370,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 90000,
+            "historical": 90000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1376,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 102811,
+            "historical": 500000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1380,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 90000,
+            "historical": 90000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1387,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 110589,
+            "historical": 55000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1389,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 6216,
+            "historical": 14560,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1391,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 16864,
+            "historical": 10000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1394,
+            "petSpeciesId": null,
+            "minBuyout": 6086,
+            "quantity": 1,
+            "marketValue": 7096,
+            "historical": 8674,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1399,
+            "petSpeciesId": null,
+            "minBuyout": 9092,
+            "quantity": 1,
+            "marketValue": 6905,
+            "historical": 6605.5,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1401,
+            "petSpeciesId": null,
+            "minBuyout": 389,
+            "quantity": 16,
+            "marketValue": 2571,
+            "historical": 2354,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1405,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 10055,
+            "historical": 19950,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1406,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 33163,
+            "historical": 25000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1411,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 50185,
+            "historical": 10099.5,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1412,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 43396,
+            "historical": 100000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1413,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 4893,
+            "historical": 3300,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1414,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 7021,
+            "historical": 5000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1415,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 100,
+            "historical": 9900,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1416,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 2000,
+            "historical": 5000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1417,
+            "petSpeciesId": null,
+            "minBuyout": 4497,
+            "quantity": 1,
+            "marketValue": 9760,
+            "historical": 9000,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1421,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 200,
+            "historical": 200,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1422,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 90000,
+            "historical": 58484.5,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1425,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 100,
+            "historical": 2000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1430,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 100,
+            "historical": 1100,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1440,
+            "petSpeciesId": null,
+            "minBuyout": 6000,
+            "quantity": 2,
+            "marketValue": 7910,
+            "historical": 9999,
+            "numAuctions": 2
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1443,
+            "petSpeciesId": null,
+            "minBuyout": 989999,
+            "quantity": 3,
+            "marketValue": 850891,
+            "historical": 1521175.5,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1445,
+            "petSpeciesId": null,
+            "minBuyout": 4499,
+            "quantity": 3,
+            "marketValue": 11607,
+            "historical": 8000,
+            "numAuctions": 2
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1446,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 17905,
+            "historical": 15000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1447,
+            "petSpeciesId": null,
+            "minBuyout": 804473,
+            "quantity": 1,
+            "marketValue": 1185413,
+            "historical": 1154629,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1448,
+            "petSpeciesId": null,
+            "minBuyout": 21190,
+            "quantity": 3,
+            "marketValue": 27845,
+            "historical": 17642,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1454,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 830028,
+            "historical": 904205,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1455,
+            "petSpeciesId": null,
+            "minBuyout": 5093,
+            "quantity": 3,
+            "marketValue": 9137,
+            "historical": 7998,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1457,
+            "petSpeciesId": null,
+            "minBuyout": 23200,
+            "quantity": 1,
+            "marketValue": 27888,
+            "historical": 12632.5,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1458,
+            "petSpeciesId": null,
+            "minBuyout": 21997,
+            "quantity": 1,
+            "marketValue": 12785,
+            "historical": 13034,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1459,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 7493,
+            "historical": 10000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1460,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 13099,
+            "historical": 19997.5,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1461,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 17371,
+            "historical": 17800,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1462,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 48061,
+            "historical": 50000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1464,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 12839,
+            "historical": 12097,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1465,
+            "petSpeciesId": null,
+            "minBuyout": 49997,
+            "quantity": 3,
+            "marketValue": 56353,
+            "historical": 49996,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1468,
+            "petSpeciesId": null,
+            "minBuyout": 368,
+            "quantity": 90,
+            "marketValue": 359,
+            "historical": 437,
+            "numAuctions": 18
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1469,
+            "petSpeciesId": null,
+            "minBuyout": 9531,
+            "quantity": 1,
+            "marketValue": 12883,
+            "historical": 13999,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1470,
+            "petSpeciesId": null,
+            "minBuyout": 34000,
+            "quantity": 2,
+            "marketValue": 39975,
+            "historical": 39964.5,
+            "numAuctions": 2
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1473,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 23986,
+            "historical": 12000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1475,
+            "petSpeciesId": null,
+            "minBuyout": 4595,
+            "quantity": 48,
+            "marketValue": 3575,
+            "historical": 398.25,
+            "numAuctions": 23
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1477,
+            "petSpeciesId": null,
+            "minBuyout": 14497,
+            "quantity": 8,
+            "marketValue": 3099,
+            "historical": 984.25,
+            "numAuctions": 8
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1478,
+            "petSpeciesId": null,
+            "minBuyout": 77,
+            "quantity": 24,
+            "marketValue": 1735,
+            "historical": 1192.5,
+            "numAuctions": 9
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1481,
+            "petSpeciesId": null,
+            "minBuyout": 457999,
+            "quantity": 1,
+            "marketValue": 458573,
+            "historical": 499997.5,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1482,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 2199563,
+            "historical": 4556694,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1483,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 583198,
+            "historical": 474598,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1484,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 2958775,
+            "historical": 2700000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1486,
+            "petSpeciesId": null,
+            "minBuyout": 999997,
+            "quantity": 1,
+            "marketValue": 1281289,
+            "historical": 1594997,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1488,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 666949,
+            "historical": 675000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1491,
+            "petSpeciesId": null,
+            "minBuyout": 1729804,
+            "quantity": 5,
+            "marketValue": 2431304,
+            "historical": 2589999,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1495,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 2000,
+            "historical": 2000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1497,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 6181,
+            "historical": 2500,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1498,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 1000,
+            "historical": 1000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1499,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 1399,
+            "historical": 1499,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1501,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 1000,
+            "historical": 1500,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1502,
+            "petSpeciesId": null,
+            "minBuyout": 19995,
+            "quantity": 1,
+            "marketValue": 22574,
+            "historical": 30000,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1504,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 10000,
+            "historical": 2500,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1505,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 4534,
+            "historical": 5000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1506,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 1000,
+            "historical": 1000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1510,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 10000,
+            "historical": 5500,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1511,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 900,
+            "historical": 1200,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1512,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 2700,
+            "historical": 10000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1513,
+            "petSpeciesId": null,
+            "minBuyout": 7496,
+            "quantity": 3,
+            "marketValue": 29242,
+            "historical": 38076,
+            "numAuctions": 2
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1514,
+            "petSpeciesId": null,
+            "minBuyout": 13994,
+            "quantity": 2,
+            "marketValue": 13491,
+            "historical": 13090,
+            "numAuctions": 2
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1516,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 7358,
+            "historical": 10000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1520,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 564,
+            "historical": 6500,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1521,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 115177,
+            "historical": 180000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1522,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 111098,
+            "historical": 49998,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1523,
+            "petSpeciesId": null,
+            "minBuyout": 20000,
+            "quantity": 2,
+            "marketValue": 72442,
+            "historical": 30098,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1529,
+            "petSpeciesId": null,
+            "minBuyout": 4480,
+            "quantity": 85,
+            "marketValue": 2122,
+            "historical": 1137,
+            "numAuctions": 38
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1560,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 6771,
+            "historical": 15099,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1602,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 701350,
+            "historical": 1700812,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1604,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 532372,
+            "historical": 250000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1607,
+            "petSpeciesId": null,
+            "minBuyout": 132926,
+            "quantity": 7,
+            "marketValue": 228123,
+            "historical": 199999.5,
+            "numAuctions": 7
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1608,
+            "petSpeciesId": null,
+            "minBuyout": 109998,
+            "quantity": 2,
+            "marketValue": 73435,
+            "historical": 59900,
+            "numAuctions": 2
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1613,
+            "petSpeciesId": null,
+            "minBuyout": 39997,
+            "quantity": 7,
+            "marketValue": 44808,
+            "historical": 49912.5,
+            "numAuctions": 7
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1624,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 33333,
+            "historical": 39900,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1625,
+            "petSpeciesId": null,
+            "minBuyout": 30000,
+            "quantity": 3,
+            "marketValue": 50555,
+            "historical": 49998.5,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1639,
+            "petSpeciesId": null,
+            "minBuyout": 327600,
+            "quantity": 1,
+            "marketValue": 83423,
+            "historical": 82690,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1640,
+            "petSpeciesId": null,
+            "minBuyout": 45383,
+            "quantity": 3,
+            "marketValue": 43263,
+            "historical": 42444,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1645,
+            "petSpeciesId": null,
+            "minBuyout": 2010,
+            "quantity": 48,
+            "marketValue": 7701,
+            "historical": 1479.5,
+            "numAuctions": 5
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1652,
+            "petSpeciesId": null,
+            "minBuyout": 69996,
+            "quantity": 3,
+            "marketValue": 60081,
+            "historical": 60033,
+            "numAuctions": 3
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1664,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 79999,
+            "historical": 210000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1677,
+            "petSpeciesId": null,
+            "minBuyout": 8349931,
+            "quantity": 1,
+            "marketValue": 5078829,
+            "historical": 410193.5,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1678,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 748454,
+            "historical": 776949.5,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1679,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 209535,
+            "historical": 100000,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1685,
+            "petSpeciesId": null,
+            "minBuyout": 129955,
+            "quantity": 1,
+            "marketValue": 149878,
+            "historical": 169500,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1686,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 34971,
+            "historical": 14999,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1696,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 27103,
+            "historical": 18570.5,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1701,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 999,
+            "historical": 999,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1703,
+            "petSpeciesId": null,
+            "minBuyout": 4963,
+            "quantity": 22,
+            "marketValue": 5729,
+            "historical": 7727.25,
+            "numAuctions": 5
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1705,
+            "petSpeciesId": null,
+            "minBuyout": 7798,
+            "quantity": 36,
+            "marketValue": 4095,
+            "historical": 7998.5,
+            "numAuctions": 16
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1706,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 4078,
+            "historical": 4130,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1707,
+            "petSpeciesId": null,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 29993,
+            "historical": 178,
+            "numAuctions": 0
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1708,
+            "petSpeciesId": null,
+            "minBuyout": 3092,
+            "quantity": 3,
+            "marketValue": 527,
+            "historical": 214.5,
+            "numAuctions": 1
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1710,
+            "petSpeciesId": null,
+            "minBuyout": 986,
+            "quantity": 248,
+            "marketValue": 1417,
+            "historical": 853.5,
+            "numAuctions": 16
+        },
+        {
+            "auctionHouseId": 513,
+            "itemId": 1711,
+            "petSpeciesId": null,
+            "minBuyout": 1566,
+            "quantity": 25,
+            "marketValue": 6998,
+            "historical": 4525,
+            "numAuctions": 10
         }
     ]
 }
