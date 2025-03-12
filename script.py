@@ -25,11 +25,15 @@ def load_item_names(filename="items.txt"):
     item_map = {}
     if os.path.exists(filename):  # Ensure file exists
         with open(filename, "r", encoding="utf-8") as file:
+            next(file)  # Skip header line
             for line in file:
                 parts = line.strip().split(",", 1)  # Split only on first comma
                 if len(parts) == 2:
-                    item_id, name = parts
-                    item_map[int(item_id)] = name  # Convert item_id to int for matching
+                    try:
+                        item_id = int(parts[0])  # Convert item_id to int
+                        item_map[item_id] = parts[1]  # Store item name
+                    except ValueError:
+                        print(f"Skipping invalid line: {line.strip()}")  # Debugging invalid lines
     return item_map
 
 # Load item names
