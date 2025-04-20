@@ -581,13 +581,13 @@ entry,name
 1350,Deprecated Hex Doll
 1351,Fingerbone Bracers
 1352,Cracked Skull Mortar
+1359,Lion-stamped Gloves
 1353,Shaw's Report
 1354,Deprecated Homespun Shawl
 1355,Buckskin Cape
 1356,Commendation - Elwynn Forest
 1357,Captain Sander's Treasure Map
 1358,A Clue to Sander's Treasure
-1359,Lion-stamped Gloves
 1360,Stormwind Chain Gloves
 1361,Another Clue to Sander's Treasure
 1362,Final Clue to Sander's Treasure
@@ -1719,6 +1719,7 @@ entry,name
 2790,Deprecated Straight Copper Lockpick
 2791,Deprecated Fine Copper Lockpick
 2792,Deprecated Worn Bronze Lockpick
+2801,Blade of Hanna
 2793,Deprecated Book: The History of Stormwind
 2794,An Old History Book
 2795,Book: Stresses of Iron
@@ -1726,7 +1727,6 @@ entry,name
 2798,Rethban Ore
 2799,Gorilla Fang
 2800,Black Velvet Robes
-2801,Blade of Hanna
 2802,Blazing Emblem
 2803,Deprecated Static Charm
 2804,Deprecated Freezing Talisman
@@ -4850,29 +4850,17 @@ entry,name
 6097,Acolyte's Shirt
 6098,Neophyte's Robe
 6116,Apprentice's Robe
-6117,Squire's Shirt
-6118,Squire's Pants
-6119,Neophyte's Robe
-6120,Recruit's Shirt
 6121,Recruit's Pants
-6122,Recruit's Boots
 6123,Novice's Robe
 6124,Novice's Pants
 6125,Brawler's Harness
 6126,Trapper's Pants
 6127,Trapper's Boots
-6129,Acolyte's Robe
 6130,Trapper's Shirt
 6131,Trapper's Pants
 6132,Libram: Seal of Wisdom
 6133,Libram: Seal of Fury
-6134,Primitive Mantle
-6135,Primitive Kilt
 6136,Thug Shirt
-6137,Thug Pants
-6138,Thug Boots
-6139,Novice's Robe
-6140,Apprentice's Robe
 6144,Neophyte's Robe
 6145,Clarice's Pendant
 6146,Sundried Driftwood
@@ -8504,6 +8492,7 @@ entry,name
 11227,Piece of Krom'zar's Banner
 11228,Frenzied Dragonflight Molt
 11229,Brightscale Girdle
+11265,Cragwood Maul
 11230,Encased Fiery Essence
 11231,Altered Black Dragonflight Molt
 11242,Evoroot
@@ -8511,7 +8500,6 @@ entry,name
 11262,Orb of Lorica
 11263,Nether Force Wand
 11264,Monster - Mace, Baron Silverlaine
-11265,Cragwood Maul
 11266,Fractured Elemental Shard
 11267,Elemental Shard Sample
 11268,Head of Argelmach
@@ -8694,10 +8682,6 @@ entry,name
 11643,Lesser Arcanum of Tenacity
 11644,Lesser Arcanum of Resilience
 11645,Lesser Arcanum of Voracity
-11646,Lesser Arcanum of Voracity
-11647,Lesser Arcanum of Voracity
-11648,Lesser Arcanum of Voracity
-11649,Lesser Arcanum of Voracity
 11662,Ban'thok Sash
 11663,[PH] Greater Arcane Amalgamation (MANA/FR)
 11664,[PH] Greater Arcane Amalgamation (HP/FR)
@@ -10229,7 +10213,6 @@ entry,name
 13749,[PH] Leather Bracers of the Rising Dawn
 13750,Monster - Staff, Jeweled Blue Staff
 13751,Monster - Staff, Jeweled Yellow Staff
-13752,Soulbound Keepsake
 13753,Monster - Staff, Jeweled Green Staff
 13754,Raw Glossy Mightfish
 13755,Winter Squid
@@ -10435,7 +10418,6 @@ entry,name
 13986,Crown of Caer Darrow
 14002,Darrowshire Strongguard
 14022,Barov Peasant Caller
-14023,Barov Peasant Caller
 14024,Frightalon
 14025,Mystic's Belt
 14042,Cindercloth Vest
@@ -12114,19 +12096,8 @@ entry,name
 15908,Taming Rod
 15909,Left-Handed Blades
 15910,Monster - Trident, Dark Ornate
-15911,Taming Rod
 15912,Buccaneer's Orb
-15913,Taming Rod
-15914,Taming Rod
-15915,Taming Rod
-15916,Taming Rod
-15917,Taming Rod
 15918,Conjurer's Sphere
-15919,Taming Rod
-15920,Taming Rod
-15921,Taming Rod
-15922,Taming Rod
-15923,Taming Rod
 15924,Soft-shelled Clam Meat
 15925,Journeyman's Stave
 15926,Spellbinder Orb
@@ -13176,8 +13147,6 @@ entry,name
 17354,Master Ryson's All Seeing Eye
 17355,Rabine's Letter
 17362,Ryson's Beacon
-17363,Ryson's Beacon
-17364,Scrying Scope
 17382,Monster - Glaive - 2 Blade Purple
 17383,Monster - Axe, 2H Horde Black War Axe
 17384,Zinfizzlex's Portable Shredder Unit
@@ -13189,7 +13158,6 @@ entry,name
 17407,Graccu's Homemade Meat Pie
 17408,Spicy Beefstick
 17409,Encrusted Crystal Fragment
-17410,Zinfizzlex's Portable Shredder Unit
 17411,Steamsaw
 17413,Codex: Prayer of Fortitude
 17414,Codex: Prayer of Fortitude II
@@ -13483,9 +13451,7 @@ entry,name
 18147,Forsaken Heart
 18148,Skull of Korrak
 18149,Rune of Recall
-18150,Rune of Recall
 18151,Filled Amethyst Phial
-18152,Amethyst Phial
 18153,Red Moro'gai Gem
 18154,Blizzard Stationery
 18155,Blue Moro'gai Gem
@@ -13524,13 +13490,13 @@ entry,name
 18227,Nubless Pacifier
 18228,Autographed Picture of Tigule
 18229,Nat Pagle's Guide to Extreme Anglin'
+18236,Gordok Chew Toy
 18230,Broken I.W.I.N. Button
 18231,Sleeveless T-Shirt
 18232,Field Repair Bot 74A
 18233,Tear Stained Handkerchief
 18234,Document from Boomstick Imports
 18235,Schematic: Field Repair Bot 74A
-18236,Gordok Chew Toy
 18237,Mastiff Jawbone
 18238,Shadowskin Gloves
 18239,Pattern: Shadowskin Gloves
@@ -13642,13 +13608,13 @@ entry,name
 18357,Codex of Defense
 18358,The Arcanist's Cookbook
 18359,The Light and How to Swing It
+18366,Gordok's Handguards
 18360,Harnessing Shadows
 18361,The Greatest Race of Hunters
 18362,Holy Bologna: What the Light Won't Tell You
 18363,Frost Shock and You
 18364,The Emerald Dream
 18365,A Thoroughly Read Copy of "Nat Pagle's Extreme' Anglin."
-18366,Gordok's Handguards
 18367,Gordok's Gauntlets
 18368,Gordok's Gloves
 18369,Gordok's Handwraps
@@ -13746,13 +13712,13 @@ entry,name
 18465,Royal Seal of Eldre'Thalas
 18466,Royal Seal of Eldre'Thalas
 18467,Royal Seal of Eldre'Thalas
+18475,Oddly Magical Belt
 18468,Royal Seal of Eldre'Thalas
 18469,Royal Seal of Eldre'Thalas
 18470,Royal Seal of Eldre'Thalas
 18471,Royal Seal of Eldre'Thalas
 18472,Royal Seal of Eldre'Thalas
 18473,Royal Seal of Eldre'Thalas
-18475,Oddly Magical Belt
 18476,Mud Stained Boots
 18477,Shaggy Leggings
 18478,Hyena Hide Jerkin
@@ -14158,16 +14124,6 @@ entry,name
 18987,Blackhand's Command
 19002,Head of Nefarian
 19003,Head of Nefarian
-19004,Minor Healthstone
-19005,Minor Healthstone
-19006,Lesser Healthstone
-19007,Lesser Healthstone
-19008,Healthstone
-19009,Healthstone
-19010,Greater Healthstone
-19011,Greater Healthstone
-19012,Major Healthstone
-19013,Major Healthstone
 19014,Monster - Item, 2H Horde Wood Axe
 19015,Monster - Item, 2H Alliance Wood Axe
 19016,Vessel of Rebirth
@@ -15370,13 +15326,13 @@ entry,name
 20399,Hallowed Wand - Leper Gnome
 20400,Pumpkin Bag
 20401,Restored Twilight Tablet
+20408,Twilight Cultist Cowl
 20402,Agent of Nozdormu
 20403,Proxy of Nozdormu
 20404,Encrypted Twilight Text
 20405,Decoded Tablet Transcription
 20406,Twilight Cultist Mantle
 20407,Twilight Cultist Robe
-20408,Twilight Cultist Cowl
 20409,Hallowed Wand - Ghost
 20410,Hallowed Wand - Bat
 20411,Hallowed Wand - Skeleton
@@ -15483,24 +15439,15 @@ entry,name
 20522,Feral Staff
 20524,Shadowhide Leggings
 20525,Earthen Sigil
-20526,Scroll: Create Crest of Beckoning
-20527,Scroll: Create Crest of Beckoning
-20528,Scroll: Create Crest of Beckoning
 20530,Robes of Servitude
 20531,Scroll: Create Signet of Beckoning
-20532,Scroll: Create Signet of Beckoning
-20533,Scroll: Create Signet of Beckoning
 20534,Abyss Shard
-20535,Scroll: Create Signet of Beckoning
 20536,Soul Harvester
 20537,Runed Stygian Boots
 20538,Runed Stygian Leggings
 20539,Runed Stygian Belt
 20540,Scroll: Create Scepter of Beckoning
 20541,Decoded Twilight Text
-20542,Scroll: Create Scepter of Beckoning
-20543,Scroll: Create Scepter of Beckoning
-20544,Scroll: Create Scepter of Beckoning
 20545,Decoded Twilight Text
 20546,Pattern: Runed Stygian Leggings
 20547,Pattern: Runed Stygian Boots
@@ -15662,8 +15609,6 @@ entry,name
 20703,Cenarion Reservist's Leggings
 20704,Cenarion Reservist's Leggings
 20705,Cenarion Reservist's Pants
-20706,Cenarion Reservist's Pants
-20707,Cenarion Reservist's Pants
 20708,Tightly Sealed Trunk
 20709,Rumsey Rum Light
 20710,Crystal Encrusted Greaves
@@ -15855,6 +15800,7 @@ entry,name
 21144,Demon Summoning Torch
 21145,Essence of Xandivious
 21146,Fragment of the Nightmare's Corruption
+21154,Festival Dress
 21147,Fragment of the Nightmare's Corruption
 21148,Fragment of the Nightmare's Corruption
 21149,Fragment of the Nightmare's Corruption
@@ -15862,7 +15808,6 @@ entry,name
 21151,Rumsey Rum Black Label
 21152,The Nightmare's Corruption
 21153,Raw Greater Sagefish
-21154,Festival Dress
 21155,Timbermaw Offering of Peace
 21156,Scarab Bag
 21157,Festive Green Dress
@@ -15904,6 +15849,7 @@ entry,name
 21196,Signet Ring of the Bronze Dragonflight
 21197,Signet Ring of the Bronze Dragonflight
 21198,Signet Ring of the Bronze Dragonflight
+21217,Sagefish Delight
 21199,Signet Ring of the Bronze Dragonflight
 21200,Signet Ring of the Bronze Dragonflight
 21201,Signet Ring of the Bronze Dragonflight
@@ -15922,7 +15868,6 @@ entry,name
 21214,Tome of Frostbolt XI
 21215,Graccu's Mince Meat Fruitcake
 21216,Smokywood Pastures Extra-Special Gift
-21217,Sagefish Delight
 21218,Blue Qiraji Resonating Crystal
 21219,Recipe: Sagefish Delight
 21220,Head of Ossirian the Unscarred
@@ -15967,19 +15912,17 @@ entry,name
 21263,Logistics Task Briefing VII
 21264,Logistics Task Briefing VII
 21265,Logistics Task Briefing IX
-21266,Logistics Assignment
 21267,Toasting Goblet
 21268,Blessed Qiraji War Hammer
 21269,Blessed Qiraji Bulwark
 21270,Gently Shaken Gift
-21271,Gently Shaken Gift
+21278,Stormshroud Gloves
 21272,Blessed Qiraji Musket
 21273,Blessed Qiraji Acolyte Staff
 21274,Test Stackable Items
 21275,Blessed Qiraji Augur Staff
 21276,Blessed Qiraji Naturalist Staff UNUSED
 21277,Tranquil Mechanical Yeti
-21278,Stormshroud Gloves
 21279,Tome of Fireball XII
 21280,Tome of Arcane Missiles VIII
 21281,Grimoire of Shadow Bolt X
@@ -16087,7 +16030,6 @@ entry,name
 21383,Winterfall Spirit Beads
 21384,Logistics Task Briefing VIII
 21385,Logistics Task Briefing X
-21386,Followup Logistics Assignment
 21387,Avenger's Crown
 21388,Avenger's Greaves
 21389,Avenger's Breastplate
@@ -16571,10 +16513,6 @@ entry,name
 22047,Top Piece of Lord Valthalak's Amulet
 22048,Lord Valthalak's Amulet
 22049,Brazier of Beckoning
-22050,Brazier of Beckoning
-22051,Brazier of Beckoning
-22052,Brazier of Beckoning
-22056,Brazier of Beckoning
 22057,Brazier of Invocation
 22058,Valentine's Day Stationery
 22059,Valentine's Day Card
@@ -17179,7 +17117,6 @@ entry,name
 22819,Shield of Condemnation
 22820,Wand of Fates
 22821,Doomfinger
-22822,iCoke Prize Voucher
 22843,Blood Guard's Chain Greaves
 22852,Blood Guard's Dragonhide Treads
 22855,Blood Guard's Dreadweave Walkers
@@ -17381,7 +17318,6 @@ entry,name
 23201,Libram of Divinity
 23203,Libram of Fervor
 23206,Mark of the Champion
-23207,Mark of the Champion
 23211,Toasted Smorc
 23215,Bag of Smorc Ingredients
 23219,Girdle of the Mentor
@@ -17566,6 +17502,7 @@ entry,name
 190307,Unlit Torch
 190308,Burning Torch
 190309,Wooden Figurine
+190325,Monster - Incubus Whip Mace1H
 191204,Lesser Deathstone
 191249,Greater Deathstone
 191267,Rune of Teleportation: Antechamber
@@ -17758,6 +17695,7 @@ entry,name
 208183,Apothecary Notes
 208185,The Apothecary's Metaphysical Primer
 208192,Dun Morogh Pig Meat
+208196,Moa'kin Band
 208205,Blackrat's Note
 208213,Top-Right Map Piece
 208215,Top-Left Map Piece
@@ -17768,6 +17706,8 @@ entry,name
 208223,Acolyte's Knapsack
 208224,Acolyte's Note
 208414,Lunar Idol
+208425,Shiny Archaic Vestige
+208484,Sunlight
 208601,Top-Right Map Piece
 208602,Top-Left Map Piece
 208603,Bottom-Right Map Piece
@@ -17964,26 +17904,26 @@ entry,name
 210177,Ataeric: On Arcane Curiosities
 210178,Schematic: Shredder Autosalvage Unit
 210179,Spell Notes: ILMEGAI SARRBES
+210499,Marshroom
 210183,Horn of Xelthos
 210186,Breaching Charge
 210187,Venture Co. Work Order
 210188,Shredded Work Order
 210195,Unbalanced Idol
 210209,Twin Key
+210252,Rune of Shiving
 210210,Grizzwerks Defense Industries Founder's Certificate
 210212,Brother's Half-Key
 210213,Sister's Half-Key
 210229,Rune of Mutilation
 210250,Engraved Gold Ring
 210251,Engraved Silver Ring
-210252,Rune of Shiving
 210253,Rot Totem
 210322,Rune of Venom
 210323,Safe Combination
 210329,Hillsbrad Treasure Map
 210330,Hot Tip
 210410,Freshwater Snapper Bait
-210499,Marshroom
 210500,Rune of the Stars
 210534,Idol of the Wild
 210568,Decrepit Phylactery
@@ -18003,13 +17943,13 @@ entry,name
 210712,Elixir of Insight
 210713,Tortured Soul
 210724,Hirzek's Staff
+210773,Mantle of the Second War
 210741,Automatic Crowd Pummeler
 210746,Rune of Earth Shield
 210763,Bough of Altek
 210765,Orb of Des
 210771,Waylaid Supplies: Copper Bars
 210772,Supply Shipment: Copper Bars
-210773,Mantle of the Second War
 210779,Plans: Mantle of the Second War
 210781,Phoenix Bindings
 210794,Shifting Silver Breastplate
@@ -18119,6 +18059,7 @@ entry,name
 211511,Twilight Slayer's Footpads
 211512,Twilight Slayer's Tunic
 211514,Spell Notes: Mass Regeneration
+211527,Cozy Sleeping Bag
 211528,Dark Insight
 211530,Prophecy of a City Enthralled
 211531,Prophecy of Seven Visitors
@@ -18213,18 +18154,49 @@ entry,name
 212994,Stormchaser's Bindings
 212996,Lightningcaller's Bindings
 212997,Tidecaller's Bindings
+213074,Rune of Nourishing
+213086,Rune of the Storm
 213087,Sergeant's Cloak
 213088,Sergeant's Cloak
+213090,Rune of Synergy
+213093,Rune of Power
+213094,Rune of Fire Nova
+213096,Rune of Decoys
+213098,Rune of Invocation
 213100,Rune of Forbidden Knowledge
+213101,Rune of Shadowflames
+213102,Rune of Wickedness
+213103,Rune of Blood Surge
 213104,Rune of Ruthless Precision
 213105,Shawarmageddon
+213109,Rune of Focused Rage
+213110,Rune of the Commander
+213111,Rune of Intervention
 213112,Spell Notes: Missile Barrage
+213117,Rune of Berserk
 213118,Rune of the Jungle King
+213119,Rune of Instinct
+213120,Rune of the Dreamer
 213121,Preserved Holly
+213122,Rune of Steady Shot
+213123,Rune of Exposure
 213124,Rune of Close Combat
+213125,Rune of Invigoration
+213126,Rune of the Scrapper
 213127,Spell Notes: PELFRB STOLLOTS
+213128,Rune of Piety
+213129,Rune of Light's Embrace
 213130,Rune of Infusions
+213131,Rune of Sacred Shields
+213132,Rune of the Guardian
+213136,Rune of Subtlety
 213137,Rune of the Assailant
+213138,Rune of the Southpaw
+213139,Rune of the Assassin
+213140,Prophecy of the Quickened Path
+213141,Rune of Hope
+213142,Prophecy of Imprisoned Malice
+213143,Apocryphal Epiphany
 213144,Luminous Epiphany
 213165,Basilisks: Should Petrification be Feared?
 213168,Copper Blood Coin
@@ -18310,13 +18282,13 @@ entry,name
 213355,Falco's Sting
 213356,Thermaplugg's Custom Blaster
 213369,Faintly Glowing Leather
+213379,Hyperconductive Arcano-Filament
 213370,Irradiated Leather Scraps
 213371,Crate of Tainted Gniodine Solution
 213372,Insulating Gniodine
 213373,Reflective Scrapmetal
 213376,Low-Background Truesilver Plates
 213378,Unstable Microfilament
-213379,Hyperconductive Arcano-Filament
 213381,Pile of Tarnished Gears
 213383,Polished Truesilver Gears
 213390,Whirling Truesilver Gearwall
@@ -18706,6 +18678,7 @@ entry,name
 219135,Curiosity Pendant
 219136,Tenacity Pendant
 219137,Initiative Pendant
+219147,Rune of Grace
 219223,Blademaster's Fury
 219326,Seed of Renewal
 219343,Filcher's Cowl
@@ -18737,12 +18710,14 @@ entry,name
 219520,Moonglow Dragonegg
 219526,Mission Brief: Duskwood
 219759,Charla's Field Report
+220216,Infernal Lasso
 219770,Gemeron's Field Report
 219771,Thandros' Field Report
 219772,Fallia's Field Report
 219773,Mission Brief: Ashenvale
 219774,Mission Brief: Hinterlands
 219775,Mission Brief: Feralas
+220165,Rune of Wrath
 219776,Intelligence Report: Vul'gol Ogre Mound
 219778,Intelligence Report: Rotting Orchard
 219803,Intelligence Report: Yorgen Farmstead
@@ -18755,6 +18730,7 @@ entry,name
 219929,Bloody Missive
 219930,Bloody Missive
 219935,Kajind's Blade
+220166,Fiery Infernal Core
 219937,Intelligence Report: Shaol'watha
 219938,Intelligence Report: Skulk Rock
 219957,Intelligence Report: Oneiros
@@ -18905,14 +18881,12 @@ entry,name
 220105,Deputization Authorization: Feralas Mission XVII
 220106,Deputization Authorization: Feralas Mission XVIII
 220164,Rune of the Gladiator
-220166,Fiery Infernal Core
 220167,Shimmering Grave Dust
 220168,Triple-Brewed Molten Lager
 220169,Symbol of Faith
 220173,Parasomnia
 220213,Fel Lifeblood
 220214,Infernal Chain Link
-220216,Infernal Lasso
 220217,Rune of the Ravenous
 220345,Sanguine Sorcery
 220346,Legends of the Tidesages
@@ -19028,13 +19002,13 @@ entry,name
 220614,Rune of Static Shock
 220615,Panther Fur Cloak
 220616,Rune of Overcharged
+220623,Jin'do's Lost Locket
 220617,Rune of Pandemic
 220618,Rune of Immolation Aura
 220619,Atal'ai Blood Ceremony
 220620,Wind Serpent Skull
 220621,Nightmare Resonance Crystal
 220622,Perfectly Preserved Dragon's Eye
-220623,Jin'do's Lost Locket
 220624,Bloodstained Charm of Valor
 220625,Resilience of the Exiled
 220626,Drakeclaw Band of the Berserker
@@ -19263,13 +19237,13 @@ entry,name
 220942,Waylaid Supplies: Tuxedo Shirts
 220964,Decharged Void-Powered Vambraces
 220965,Scalebane Greataxe
+221020,Rune of the Moon Goddess
 221008,Supply Shipment
 221009,Supply Shipment
 221010,Supply Shipment
 221017,Keldara's Log
 221018,Field Medicine Kit
 221019,Satyrweed Sample
-221020,Rune of the Moon Goddess
 221021,Nightmare Seed
 221024,Flask of Everlasting Nightmares
 221025,Void-Powered Invoker's Vambraces
@@ -19597,7 +19571,7 @@ entry,name
 223263,Fel Plate Chest
 223283,Bloodstained Commendation
 223288,Rune of the Hammer
-223323,Premo's Poise-Demanding Uniform
+223323,Shirt
 223324,Rainstrider Leggings
 223325,Hakkari Breastplate
 223326,Hakkari Shroud
@@ -21194,6 +21168,7 @@ entry,name
 229966,Torque of the Silver Hand
 229971,Staff of Inferno
 229972,Staff of Rime
+230002,Mortal Finisher
 230018,Mannoroc Orb Fragments
 230224,Thunderfury, Blessed Blade of the Windseeker
 230237,Arcane Infused Gem
@@ -21871,6 +21846,8 @@ entry,name
 231799,Soul of Devouring
 231800,Soul of Des'Altek
 231803,Prestor's Talisman of Connivery
+231806,Searing Arrow
+231807,Searing Shot
 231811,Libram of Awe
 231814,Chromatic Heart
 231815,Flashrend
@@ -22122,7 +22099,7 @@ entry,name
 232310,Renataki's Soul Conduit
 232311,Zulian Tigerhide Cloak
 232312,Blood of the Lightbringer
-232324,Whistle
+232324,Bird Whistle
 232343,QAEnchant Shield - Law of Nature
 232344,Vick's VIP Pass
 232357,Draconic Avenger
@@ -22147,13 +22124,13 @@ entry,name
 232438,Smoked Redgill
 232443,Recipe: Smoked Redgill
 232454,Emblem of the Wild Gods
+232461,Rune of Despair
 232455,Emblem of Dishonor
 232456,Emblem of the Violet Eye
 232457,Emblem of the Worldcore
 232458,Rune of Improved Sanctuary
 232459,Rune of Backdraft
 232460,Rune of Displacement
-232461,Rune of Despair
 232462,Rune of Purifying Power
 232549,Logistics Task Briefing VI
 232550,Ashkandi, Greatsword of the Brotherhood
@@ -22413,7 +22390,7 @@ entry,name
 233671,Doomcaller's Shoulderpads
 233672,Doomcaller's Pants
 233673,Doomcaller's Treads
-233674,Enigma Pant
+233674,Enigma Pants
 233675,Enigma Slippers
 233676,Enigma Diadem
 233677,Enigma Mantle
@@ -22814,6 +22791,7 @@ entry,name
 234436,Signet Ring of the Bronze Dragonflight
 234437,Signet Ring of the Bronze Dragonflight
 234438,Signet Ring of the Bronze Dragonflight
+234460,Obsidian Mail Tunic
 234439,Signet Ring of the Bronze Dragonflight
 234440,Signet Ring of the Bronze Dragonflight
 234444,Occult Poison II
@@ -22821,7 +22799,6 @@ entry,name
 234447,Bubbles' Rod of Transformation
 234458,Plans: Jagged Obsidian Shield
 234459,Jagged Obsidian Shield
-234460,Obsidian Mail Tunic
 234461,Plans: Obsidian Mail Tunic
 234462,Earthstrike
 234463,Wrath of Cenarius
@@ -23008,11 +22985,1402 @@ entry,name
 235512,Flawless Green Qiraji Resonating Crystal
 235513,Flawless Blue Qiraji Resonating Crystal
 235514,Flawless Red Qiraji Resonating Crystal
+235517,Torch
 235526,Formula: Enchant Bracer - Spell Power
 235528,Formula: Enchant Bracer - Agility
 235529,Obsidian Scope
 235530,Schematic: Obsidian Scope
-208424,Sun Shades
-215161,Tempered Interference-Negating Helmet
-211527,Cozy Sleeping Bag
-226697,Red Bag
+235583,Test Dagger
+235597,Spell Notes: Deep Freeze
+235598,Spell Notes: Icy Veins
+235599,Spell Notes: Temporal Anomaly
+235600,Rune of Divine Storm
+235601,Rune of Fanaticism
+235602,Rune of Hammer of the Righteous
+235603,Rune of Righteous Vengeance
+235604,Rune of Shield of Righteousness
+235605,Rune of Shock and Awe
+235785,Deadwind Cage "Key"
+235786,Karazhan Curio
+235787,Ancient Ironwood Branch
+235788,Enthusiastic Wisp
+235789,Flame of Life
+235790,Enchanted Firebrand
+235825,Draught of the Sands
+235852,Violet Satchel
+235867,Scrap of Parchment
+235868,Bulwark of Ire
+235869,The Master's Cowl
+235870,Rattlechain Helm
+235871,Clutching Death Helm
+235872,Stalker's Bands
+235873,Crypt's Keepers
+235874,Cultist's Handwraps
+235875,Gravedigger's Gloves
+235876,Sinner's Handguards
+235877,Fanatic's Gauntlets
+235878,Malefic Belt
+235879,Nimble Links
+235880,Pauper Soles
+235881,Dreaded Treaders
+235882,Clattering Steps
+235883,Well Diver's Stumble
+235884,Spectral Signet
+235885,Ghastly Ring
+235886,Kaigy's Clasp
+235887,Barian's Choker
+235888,Clobberclub
+235889,Servant's Quarterstaff
+235890,Shadow Weaver's Needle
+235891,Ol' Reliable
+235892,Darkrider's Spine
+235893,Shadowbound Grimoire
+235894,Doomsayer's Demise
+236002,List of Components
+236005,Dreadnaught Breastplate
+236006,Dreadnaught Legplates
+236007,Dreadnaught Helmet
+236008,Dreadnaught Pauldrons
+236009,Dreadnaught Sabatons
+236010,Dreadnaught Gauntlets
+236011,Dreadnaught Waistguard
+236012,Dreadnaught Bracers
+236013,Ring of the Dreadnaught
+236014,Dreadnaught Cuirass
+236015,Dreadnaught Tassets
+236016,Dreadnaught Horns
+236017,Dreadnaught Shoulders
+236018,Dreadnaught Greaves
+236019,Dreadnaught Grips
+236020,Dreadnaught Belt
+236021,Dreadnaught Wrists
+236022,Band of the Dreadnaught
+236023,Bonescythe Breastplate
+236024,Bonescythe Legplates
+236025,Bonescythe Helmet
+236026,Bonescythe Pauldrons
+236027,Bonescythe Sabatons
+236028,Bonescythe Gauntlets
+236029,Bonescythe Waistguard
+236030,Bonescythe Bracers
+236031,Bonescythe Ring
+236032,Bonescythe Belt
+236033,Bonescythe Treads
+236034,Bonescythe Band
+236035,Bonescythe Mantle
+236036,Bonescythe Leggings
+236037,Bonescythe Mask
+236038,Bonescythe Grips
+236039,Bonescythe Chestguard
+236040,Bonescythe Wristguards
+236041,Ring of the Cryptstalker
+236042,Cryptstalker Wristguards
+236043,Cryptstalker Tunic
+236044,Cryptstalker Spaulders
+236045,Cryptstalker Legguards
+236046,Cryptstalker Headpiece
+236047,Cryptstalker Handguards
+236048,Cryptstalker Girdle
+236049,Cryptstalker Boots
+236050,Cryptstalker Vambraces
+236051,Cryptstalker Belt
+236052,Cryptstalker Pauldrons
+236053,Cryptstalker Leggings
+236054,Cryptstalker Visor
+236055,Cryptstalker Gauntlets
+236056,Band of the Cryptstalker
+236057,Cryptstalker Greaves
+236058,Cryptstalker Breastplate
+236059,Plagueheart Sandals
+236060,Plagueheart Leggings
+236061,Plagueheart Bindings
+236062,Plagueheart Robe
+236063,Plagueheart Gloves
+236064,Plagueheart Circlet
+236065,Plagueheart Shoulderpads
+236066,Plagueheart Belt
+236067,Plagueheart Ring
+236068,Plagueheart Wristguards
+236069,Plagueheart Waistguard
+236070,Plagueheart Mantle
+236071,Plagueheart Pants
+236072,Plagueheart Crown
+236073,Plagueheart Handguards
+236074,Plagueheart Loop
+236075,Plagueheart Boots
+236076,Plagueheart Garb
+236077,Frostfire Bindings
+236078,Frostfire Belt
+236079,Frostfire Leggings
+236080,Frostfire Sandals
+236081,Frostfire Robe
+236082,Frostfire Gloves
+236083,Frostfire Circlet
+236084,Frostfire Shoulderpads
+236085,Frostfire Ring
+236087,Frostfire Wristwraps
+236088,Frostfire Waistguard
+236089,Frostfire Mantle
+236090,Frostfire Pants
+236091,Frostfire Hood
+236092,Frostfire Mitts
+236093,Frostfire Band
+236094,Frostfire Boots
+236095,Frostfire Garb
+236097,Robe of Faith
+236098,Belt of Faith
+236099,Sandals of Faith
+236100,Bindings of Faith
+236101,Leggings of Faith
+236102,Shoulderpads of Faith
+236103,Circlet of Faith
+236104,Gloves of Faith
+236105,Ring of Faith
+236106,Wrists of Faith
+236107,Girdle of Faith
+236108,Mantle of Faith
+236109,Pants of Faith
+236110,Crown of Faith
+236111,Hands of Faith
+236112,Band of Faith
+236113,Boots of Faith
+236114,Garb of Faith
+236115,Redemption Tunic
+236116,Ring of Redemption
+236117,Redemption Headpiece
+236118,Redemption Handguards
+236119,Redemption Wristguards
+236120,Redemption Girdle
+236121,Redemption Legguards
+236122,Redemption Spaulders
+236123,Redemption Boots
+236124,Redemption Vambraces
+236125,Redemption Belt
+236126,Redemption Shoulderplates
+236127,Redemption Leggings
+236128,Redemption Helmet
+236129,Redemption Gloves
+236130,Band of Redemption
+236131,Redemption Greaves
+236132,Redemption Breastplate
+236133,Redemption Bracers
+236134,Redemption Waistguard
+236135,Redemption Pauldrons
+236136,Redemption Legplates
+236137,Redemption Crown
+236138,Redemption Gauntlets
+236139,Loop of Redemption
+236140,Redemption Sabatons
+236141,Redemption Chestguard
+236142,Earthshatter Handguards
+236143,Earthshatter Legguards
+236144,Earthshatter Headpiece
+236145,Earthshatter Spaulders
+236146,Earthshatter Boots
+236147,Earthshatter Tunic
+236148,Earthshatter Girdle
+236149,Earthshatter Wristguards
+236150,Ring of the Earthshatterer
+236151,Earthshatter Bindings
+236152,Earthshatter Cord
+236153,Earthshatter Mantle
+236154,Earthshatter Kilt
+236155,Earthshatter Crown
+236156,Earthshatter Mitts
+236157,Band of the Earthshatterer
+236158,Earthshatter Greaves
+236159,Earthshatter Embrace
+236160,Earthshatter Bracers
+236162,Earthshatter Waistguard
+236163,Earthshatter Pauldrons
+236164,Earthshatter Legplates
+236165,Earthshatter Faceguard
+236166,Earthshatter Gloves
+236167,Loop of the Earthshatterer
+236168,Earthshatter Sabatons
+236169,Earthshatter Chestguard
+236170,Earthshatter Vambraces
+236171,Earthshatter Belt
+236172,Earthshatter Epaulets
+236173,Earthshatter Leggings
+236174,Earthshatter Helmet
+236175,Earthshatter Grips
+236176,Signet of the Earthshatterer
+236177,Earthshatter Treads
+236179,Earthshatter Armor
+236182,Dreamwalker Headpiece
+236183,Dreamwalker Wristguards
+236184,Dreamwalker Handguards
+236185,Dreamwalker Boots
+236186,Dreamwalker Tunic
+236187,Dreamwalker Girdle
+236188,Dreamwalker Legguards
+236189,Dreamwalker Spaulders
+236190,Ring of the Dreamwalker
+236192,Dreamwalker Bindings
+236193,Dreamwalker Cord
+236194,Dreamwalker Mantle
+236195,Dreamwalker Kilt
+236196,Dreamwalker Hood
+236197,Dreamwalker Mitts
+236198,Band of the Dreamwalker
+236199,Dreamwalker Sandals
+236200,Dreamwalker Leathers
+236201,Dreamwalker Bracers
+236202,Dreamwalker Waistguard
+236203,Dreamwalker Pauldrons
+236204,Dreamwalker Leggings
+236205,Dreamwalker Headdress
+236206,Dreamwalker Gauntlets
+236207,Loop of the Dreamwalker
+236208,Dreamwalker Sabatons
+236209,Dreamwalker Armor
+236210,Dreamwalker Wraps
+236211,Dreamwalker Sash
+236212,Dreamwalker Shoulderpads
+236213,Dreamwalker Trousers
+236214,Dreamwalker Cowl
+236215,Dreamwalker Grips
+236216,Signet of the Dreamwalker
+236217,Dreamwalker Stompers
+236218,Dreamwalker Vest
+236219,Harbinger of Doom
+236220,Necro-Knight's Garb
+236221,Misplaced Servo Arm
+236222,Ghoul Skin Tunic
+236223,Ring of the Eternal Flame
+236224,Stygian Buckler
+236225,Girdle of Elemental Fury
+236226,Pauldrons of Elemental Fury
+236227,Belt of the Grand Crusader
+236228,Spaulders of the Grand Crusader
+236229,Leggings of the Grand Crusader
+236230,Leggings of Elemental Fury
+236231,Desecrated Breastplate
+236232,Desecrated Waistguard
+236233,Desecrated Gauntlets
+236234,Desecrated Sabatons
+236235,Desecrated Bracers
+236236,Desecrated Helmet
+236237,Desecrated Pauldrons
+236238,Desecrated Legplates
+236239,Desecrated Sandals
+236240,Desecrated Shoulderpads
+236241,Desecrated Circlet
+236242,Desecrated Robe
+236243,Desecrated Gloves
+236244,Desecrated Belt
+236245,Desecrated Bindings
+236246,Desecrated Leggings
+236247,Desecrated Wristguards
+236248,Desecrated Boots
+236249,Desecrated Headpiece
+236250,Desecrated Handguards
+236251,Desecrated Tunic
+236252,Desecrated Girdle
+236253,Desecrated Legguards
+236254,Desecrated Spaulders
+236255,Wristguards of Vengeance
+236256,Touch of Frost
+236257,Gem of Nerubis
+236258,Cryptfiend Silk Cloak
+236259,Band of Unanswered Prayers
+236260,Icebane Pauldrons
+236261,Malice Stone Pendant
+236262,Polar Shoulder Pads
+236263,Widow's Remorse
+236264,The Widow's Embrace
+236265,Wraith Blade
+236266,Pendant of Forgotten Names
+236267,Crystal Webbed Robe
+236268,Kiss of the Spider
+236269,Maexxna's Fang
+236270,Hatchet of Sundered Bone
+236271,Libram of Light
+236272,Cloak of the Scourge
+236273,Band of the Inevitable
+236274,Hailstone Band
+236275,Noth's Frigid Heart
+236276,Totem of Flowing Water
+236277,Necklace of Necropsy
+236278,Glacial Headdress
+236279,Preceptor's Hat
+236280,Legplates of Carnage
+236281,Icy Scale Coif
+236282,Loatheb's Reflection
+236283,Ring of Spiritual Fervor
+236284,Brimstone Staff
+236285,The Eye of Nerub
+236286,Band of Unnatural Forces
+236287,Severance
+236288,The Plague Bearer
+236289,Cloak of Suturing
+236290,Wand of Fates
+236291,Band of Reanimation
+236292,Midnight Haze
+236293,Toxin Injector
+236294,Icy Scale Spaulders
+236295,Glacial Mantle
+236296,Death's Bargain
+236297,The End of Dreams
+236298,Rime Covered Mantle
+236299,Claymore of Unholy Might
+236300,Gluth's Missing Collar
+236301,Digested Hand of Power
+236302,Eye of Diminution
+236303,Leggings of Polarity
+236304,Plated Abomination Ribcage
+236305,Spire of Twilight
+236306,The Castigator
+236307,Veil of Eclipse
+236308,Idol of Longevity
+236309,Girdle of the Mentor
+236310,Wand of the Whispering Dead
+236311,Signet of the Fallen Defender
+236312,Iblis, Blade of the Fallen Seraph
+236313,The Soul Harvester's Bindings
+236314,Boots of Displacement
+236315,Polar Helmet
+236316,Sadist's Collar
+236317,Vis'era the Gutrender
+236318,Seal of the Damned
+236319,Leggings of Apocalypse
+236320,Warmth of Forgiveness
+236321,Maul of the Redeemed Crusader
+236322,Soulstring
+236323,Resilience of the Scourge
+236324,Power of the Scourge
+236325,Fortitude of the Scourge
+236326,Might of the Scourge
+236327,Cloak of the Necropolis
+236328,Sapphiron's Left Eye
+236329,Eye of the Dead
+236330,Sapphiron's Right Eye
+236331,The Restrained Essence of Sapphiron
+236333,Shroud of Dominion
+236334,Slayer's Crest
+236335,Fists of the Unrelenting
+236336,The Face of Death
+236337,Glyph of Deflection
+236338,Claw of the Frost Wyrm
+236339,Gressil, Dawn of Ruin
+236340,Might of Menethil
+236341,The Hungering Cold
+236342,Stormrage's Talisman of Seething
+236343,Kingsfall
+236344,Nerubian Slavemaker
+236345,Gem of Trapped Innocents
+236346,Soulseeker
+236347,Shield of Condemnation
+236348,Hammer of the Twisting Nether
+236349,Doomfinger
+236350,The Phylactery of Kel'Thuzad
+236351,Mark of the Champion
+236352,Mark of the Champion
+236354,Aspirant's Seal of the Dawn
+236355,Initiate's Seal of the Dawn
+236356,Squire's Seal of the Dawn
+236357,Knight's Seal of the Dawn
+236358,Templar's Seal of the Dawn
+236360,Champion's Seal of the Dawn
+236361,Vanguard's Seal of the Dawn
+236362,Crusader's Seal of the Dawn
+236363,Commander's Seal of the Dawn
+236364,Highlord's Seal of the Dawn
+236374,Commander's Seal of the Dawn
+236375,Highlord's Seal of the Dawn
+236376,Crusader's Seal of the Dawn
+236378,Vanguard's Seal of the Dawn
+236379,Champion's Seal of the Dawn
+236380,Templar's Seal of the Dawn
+236382,Knight's Seal of the Dawn
+236383,Squire's Seal of the Dawn
+236384,Initiate's Seal of the Dawn
+236385,Aspirant's Seal of the Dawn
+236386,Highlord's Seal of the Dawn
+236388,Commander's Seal of the Dawn
+236389,Crusader's Seal of the Dawn
+236390,Vanguard's Seal of the Dawn
+236391,Champion's Seal of the Dawn
+236392,Templar's Seal of the Dawn
+236393,Knight's Seal of the Dawn
+236394,Squire's Seal of the Dawn
+236395,Initiate's Seal of the Dawn
+236396,Aspirant's Seal of the Dawn
+236397,Remnants of Valor
+236398,Atiesh, Greatstaff of the Guardian
+236399,Atiesh, Greatstaff of the Guardian
+236400,Atiesh, Greatstaff of the Guardian
+236401,Atiesh, Greatstaff of the Guardian
+236414,Damaged Undermine Supply Crate
+236417,Soul of the Tactician
+236418,Soul of the War Veteran
+236419,Soul of the Battle Forecaster
+236420,Soul of the Bloodseeker
+236421,Soul of the Titan
+236422,Soul of the Destroyer
+236423,Soul of the Deathbound
+236424,Soul of the Sanguinist
+236425,Soul of the Pristine Blocker
+236426,Soul of the Savage
+236427,Soul of Enmity
+236428,Soul of the Deflective
+236429,Soul of the Revenger
+236430,Soul of the Incessant
+236431,Soul of the Thunderbringer
+236432,Soul of the Sentinel
+236433,Soul of the Southpaw
+236434,Soul of the Gladiator
+236435,Soul of the Aftershock
+236436,Soul of the Avoidant
+236437,Soul of the Toxicologist
+236438,Soul of the Executioner
+236439,Soul of the Opportunist
+236440,Soul of the Butcher
+236441,Soul of the Phantom
+236442,Soul of the Scoundrel
+236443,Soul of the Thrill Seeker
+236444,Soul of the Shiv Savant
+236445,Soul of the Stalker
+236446,Soul of the Efficient
+236447,Soul of the Knife Juggler
+236448,Soul of the Shadow Master
+236449,Soul of the Equilibrist
+236450,Soul of the Poised Brawler
+236451,Soul of the Black Belt
+236452,Soul of the Fencer
+236453,Soul of the Swashbuckler
+236454,Soul of the Bloodthirsty
+236455,Soul of the Transfusionist
+236456,Soul of the Refined
+236457,Soul of the Decimator
+236458,Soul of the Rotbringer
+236459,Soul of the Malevolent
+236460,Soul of the Shadowmancer
+236461,Soul of the Chaos Harbinger
+236462,Soul of the Arsonist
+236463,Soul of the Infernal Shepherd
+236464,Soul of the Demonlord
+236465,Soul of the Demonic Exorcist
+236466,Soul of the Pained
+236467,Soul of the Flamewraith
+236468,Soul of the Fleshfeaster
+236469,Soul of the Abyssal
+236470,Soul of the Voidborne
+236471,Soul of the Umbral Blade
+236472,Soul of the Ritualist
+236473,Soul of the Pain Spreader
+236474,Soul of the Misleader
+236475,Soul of the Preyseeker
+236476,Soul of the Sharpshooter
+236477,Soul of the Hazard Harrier
+236478,Soul of the Alternator
+236479,Soul of the Toxinologist
+236480,Soul of the Bounty Hunter
+236481,Soul of the Trick Shooter
+236482,Soul of the Beast Tender
+236483,Soul of the Hound Master
+236484,Soul of the Alpha Tamer
+236485,Soul of the Huntsman
+236487,Soul of the Retaliator
+236488,Soul of Echoes
+236489,Soul of the Lethal Lasher
+236490,Soul of the Kineticist
+236491,Soul of the Strategist
+236492,Soul of the Deadly Striker
+236493,Soul of the Hastened Healer
+236494,Soul of the Refined
+236495,Soul of the Celebrant
+236496,Soul of the Faithful
+236497,Soul of the Serendipitous
+236498,Soul of the Resonant
+236499,Soul of the Devotee
+236500,Soul of the Archbishop
+236501,Soul of the Penitent
+236502,Soul of the Soul Warder
+236503,Soul of the Twilight Walker
+236504,Soul of the Mind Breaker
+236505,Soul of the Deathdealer
+236506,Soul of the Spirit Font
+236507,Soul of the Zealot
+236508,Soul of the Unwavering Defiler
+236509,Soul of the Contemnor
+236510,Soul of the Plaguebringer
+236511,Soul of the Reverberant
+236512,Soul of the Chronohealer
+236513,Soul of Temporal Longing
+236514,Soul of the Precognitive
+236515,Soul of the Arcanist
+236516,Soul of the Eternal Caretaker
+236517,Soul of the Spellbider
+236518,Soul of the Wardshaper
+236519,Soul of Winter's Grasp
+236520,Soul of the Cryomancer
+236521,Soul of the Evoker
+236522,Soul of the Elementalist
+236523,Soul of the Magical Armorer
+236524,Soul of the Kindler
+236525,Soul of Fiery Convergence
+236526,Soul of the Perpetual Blaze
+236527,Soul of the Pyromaniac
+236528,Soul of the Igniter
+236529,Soul of the Torcher
+236530,Soul of the Pristine Blocker
+236531,Soul of the Lightwarden
+236532,Soul of the Radiant Defender
+236533,Soul of the Shieldbearer
+236534,Soul of the Bastion
+236535,Soul of the Reckoner
+236536,Soul of the Ironclad
+236537,Soul of the Guardian
+236538,Soul of the Peacekeeper
+236539,Soul of the Refined
+236540,Soul of the Exemplar
+236541,Soul of the Inquisitor
+236542,Soul of the Sovereign
+236543,Soul of the Dominus
+236544,Soul of the Vindicator
+236545,Soul of the Altruist
+236546,Soul of the Arbiter
+236547,Soul of the Sealbearer
+236548,Soul of the Justicar
+236549,Soul of the Judicator
+236550,Soul of the Ascendant
+236551,Soul of the Retributor
+236552,Soul of the Excommunicator
+236553,Soul of the Lightbringer
+236554,Soul of the Exile
+236555,Soul of the Templar
+236556,Soul of the Windwalker
+236557,Soul of the Shield Master
+236558,Soul of the Totemic Protector
+236559,Soul of the Shock-Absorber
+236560,Soul of the Spiritual Bulwark
+236561,Soul of the Maelstrombringer
+236562,Soul of the Lavawalker
+236563,Soul of the True Alpha
+236564,Soul of the Totemkeeper
+236565,Soul of the Ancestors
+236566,Soul of the Spiritweaver
+236567,Soul of the Waterwalker
+236568,Soul of the Stormtender
+236569,Soul of the Elemental Seer
+236570,Soul of the Vitalist
+236571,Soul of the Spirithealer
+236572,Soul of the Refined
+236573,Soul of the Chieftain
+236574,Soul of the Furycharged
+236575,Soul of the Stormbreaker
+236576,Soul of the Tempest
+236577,Soul of the Seismic Smasher
+236578,Soul of the Flamebringer
+236579,Soul of the Volcano
+236580,Soul of the Raging Flame
+236581,Soul of the Elemental Master
+236582,Soul of the Tribesman
+236583,Soul of the Spirit Guide
+236584,Soul of the Elder
+236585,Soul of the Elements
+236586,Soul of the Lava Sage
+236587,Soul of the Ancestral Warden
+236588,Soul of the Corrupt
+236589,Soul of the Gentle Paw
+236590,Soul of the Ferocious
+236591,Soul of the Shifter
+236592,Soul of the Territorial
+236593,Soul of the Beast
+236594,Soul of the Lacerator
+236595,Soul of the Furious
+236596,Soul of the Mangler
+236597,Soul of the Innervator
+236598,Soul of the Nurturer
+236599,Soul of the Tranquil
+236600,Soul of the Dreamwalker
+236601,Soul of the Grove Tender
+236602,Soul of the Feathered Sage
+236603,Soul of the Benevolent Seer
+236604,Soul of the Lifeweaver
+236605,Soul of the Illuminator
+236606,Soul of Predatory Instincts
+236607,Soul of the Ripper
+236608,Soul of the Claw
+236609,Soul of the Prideful
+236610,Soul of the Barbaric
+236611,Soul of the Frenetic
+236612,Soul of the Exsanguinator
+236613,Soul of the Thornkeeper
+236614,Soul of the Lunatic
+236615,Soul of the Starcaller
+236616,Soul of the Night
+236617,Soul of the Keepers
+236618,Soul of the Wrathful
+236619,Soul of the Graceful
+236620,Soul of the Astral Ascendant
+236621,Soul of the Cometcaller
+236622,Soul of the Forest
+236623,Soul of Animalistic Expertise
+236642,Mender's Handwraps
+236643,Nightwatcher's Gloves
+236644,Mourner's Handguards
+236645,Lightwielder's Gauntlets
+236656,Frozen Rune
+236657,Bubbles' Rotting Branch
+236658,Bubbles' Spine Trophy
+236660,Bubbles' Troll Tusk
+236661,Bubbles' Ribcage of Ribaldy
+236662,Reins of War
+236663,Reins of Conquest
+236664,Reins of Death
+236665,Reins of Famine
+236690,Glacial Cloak
+236692,Glacial Gloves
+236693,Glacial Wrists
+236694,Glacial Vest
+236695,Icebane Breastplate
+236696,Icebane Bracers
+236697,Icebane Gauntlets
+236698,Icy Scale Bracers
+236699,Icy Scale Breastplate
+236700,Icy Scale Gauntlets
+236701,Polar Bracers
+236702,Polar Tunic
+236703,Polar Gloves
+236704,Frosty Wrists
+236705,Frosty Gloves
+236706,Frosty Vest
+236707,Tunic of Undead Slaying
+236708,Breastplate of Undead Slaying
+236709,Chestguard of Undead Slaying
+236710,Wristguards of Undead Slaying
+236711,Wristwraps of Undead Slaying
+236712,Bracers of Undead Slaying
+236713,Handwraps of Undead Slaying
+236714,Gauntlets of Undead Slaying
+236715,Handguards of Undead Slaying
+236716,Bracers of Undead Cleansing
+236717,Gloves of Undead Cleansing
+236718,Robe of Undead Cleansing
+236719,Bracers of Undead Purification
+236720,Gloves of Undead Purification
+236721,Robe of Undead Purification
+236722,Bracers of Undead Warding
+236723,Gloves of Undead Warding
+236724,Robe of Undead Warding
+236725,Wristwraps of Undead Cleansing
+236726,Handwraps of Undead Cleansing
+236727,Tunic of Undead Cleansing
+236728,Wristwraps of Undead Purification
+236729,Handwraps of Undead Purification
+236730,Tunic of Undead Purification
+236731,Wristwraps of Undead Warding
+236732,Handwraps of Undead Warding
+236733,Tunic of Undead Warding
+236734,Wristguards of Undead Cleansing
+236735,Handguards of Undead Cleansing
+236736,Chestguard of Undead Cleansing
+236737,Wristguards of Undead Warding
+236738,Handguards of Undead Warding
+236739,Chestguard of Undead Warding
+236740,Wristguards of Undead Purification
+236741,Handguards of Undead Purification
+236742,Chestguard of Undead Purification
+236743,Bracers of Undead Purification
+236744,Gauntlets of Undead Purification
+236745,Breastplate of Undead Purification
+236746,Bracers of Undead Warding
+236747,Gauntlets of Undead Warding
+236748,Breastplate of Undead Warding
+236750,Heart of Doom
+236782,Sairuh's Collar
+236786,Heart of Doom
+236864,Soulfrost Quiver
+236869,Soulfrost Ammo Pouch
+236871,Creepy Censor Sensors
+236872,Schematic: Creepy Censor Sensors
+236878,Mysterious Relic
+236879,Mysterious Relic
+236880,Mysterious Relic
+237011,Portcullis Key
+237020,Scarlet Insignia
+237023,Pop-Up Shrub
+237024,Opera Ticket
+237037,Haute Club Membership Card
+237041,Tome of Enchanted Flare
+237143,Orders from the Commander
+237163,Ancient Hero's Skull
+237261,Fine Sand
+237263,Supply Bag
+237275,Icebane Helmet
+237277,Frosty Leggings
+237278,The Purifier
+237279,Amulet of the Dawn
+237280,Medallion of the Dawn
+237281,Bracers of Hope
+237282,Bracers of Subterfuge
+237283,Talisman of Ascendance
+237284,Supply Bag
+237285,Band of Resolution
+237286,Band of Piety
+237287,Verimonde's Last Resort
+237288,Sanctified Leather Helm
+237289,Leggings of the Plague Hunter
+237290,Icebane Leggings
+237291,Glacial Leggings
+237292,Polar Leggings
+237293,Icy Scale Leggings
+237294,Ramaladni's Icy Grasp
+237302,Tabard of the Scarlet Enclave
+237348,Monster - Sword, Short Ornate
+237381,Desecrated Ring
+237386,Wartorn Undermine Supply Crate
+237504,Supply Shipment
+237512,Blade of Inquisition
+237577,Totem of Unholy Might
+237773,Word of Thawing
+237810,Weighted Consecrated Sharpening Stone
+237814,Sentinel's Lamellar Legguards
+237815,Sentinel's Silk Leggings
+237817,Sentinel's Lizardhide Pants
+237818,Sentinel's Leather Pants
+237819,Sentinel's Chain Leggings
+237820,Outrider's Silk Leggings
+237821,Outrider's Lizardhide Pants
+237822,Outrider's Leather Pants
+237823,Outrider's Mail Leggings
+237824,Outrider's Chain Leggings
+237825,Sentinel's Plate Legguards
+237826,Outrider's Plate Legguards
+238234,Blessed Wizard Oil
+238241,Consecrated Sharpening Stone
+238264,Scarlet Augur's Hood
+238265,Scarlet Augur's Mantle
+238266,Scarlet Augur's Vestaments
+238267,Scarlet Augur's Cuffs
+238268,Scarlet Augur's Mitts
+238269,Scarlet Augur's Strap
+238270,Scarlet Augur's Leggings
+238271,Scarlet Augur's Soles
+238272,Scarlet Infiltrator's Bandana
+238273,Scarlet Infiltrator's Shoulderpads
+238274,Scarlet Infiltrator's Vest
+238275,Scarlet Infiltrator's Bracers
+238276,Scarlet Infiltrator's Gloves
+238277,Scarlet Infiltrator's Belt
+238278,Scarlet Infiltrator's Trousers
+238279,Scarlet Infiltrator's Shoes
+238280,Scarlet Huntsman's Coif
+238281,Scarlet Huntsman's Pauldrons
+238282,Scarlet Huntsman's Chain
+238283,Scarlet Huntsman's Wristguards
+238284,Scarlet Huntsman's Handguards
+238285,Scarlet Huntsman's Clasp
+238286,Scarlet Huntsman's Legguards
+238287,Scarlet Huntsman's Boots
+238288,Scarlet Soldier's Helmet
+238289,Scarlet Soldier's Spaulders
+238290,Scarlet Soldier's Chestplate
+238291,Scarlet Soldier's Protectors
+238292,Scarlet Soldier's Grips
+238293,Scarlet Soldier's Waistguard
+238294,Scarlet Soldier's Legplates
+238295,Scarlet Soldier's Stompers
+238298,Pattern: Scarlet Augur's Hood
+238299,Pattern: Scarlet Augur's Mantle
+238300,Pattern: Scarlet Augur's Vestaments
+238301,Pattern: Scarlet Augur's Cuffs
+238302,Pattern: Scarlet Augur's Mitts
+238303,Pattern: Scarlet Augur's Strap
+238304,Pattern: Scarlet Augur's Leggings
+238305,Pattern: Scarlet Augur's Soles
+238306,Pattern: Scarlet Infiltrator's Bandana
+238307,Pattern: Scarlet Infiltrator's Shoulderpads
+238308,Pattern: Scarlet Infiltrator's Vest
+238309,Pattern: Scarlet Infiltrator's Bracers
+238310,Pattern: Scarlet Infiltrator's Gloves
+238311,Pattern: Scarlet Infiltrator's Belt
+238312,Pattern: Scarlet Infiltrator's Trousers
+238313,Pattern: Scarlet Infiltrator's Shoes
+238314,Pattern: Scarlet Huntsman's Coif
+238315,Pattern: Scarlet Huntsman's Pauldrons
+238316,Pattern: Scarlet Huntsman's Chain
+238317,Pattern: Scarlet Huntsman's Wristguards
+238318,Pattern: Scarlet Huntsman's Handguards
+238319,Pattern: Scarlet Huntsman's Clasp
+238320,Pattern: Scarlet Huntsman's Legguards
+238321,Pattern: Scarlet Huntsman's Boots
+238322,Plans: Scarlet Soldier's Helmet
+238323,Plans: Scarlet Soldier's Spaulders
+238324,Plans: Scarlet Soldier's Chestplate
+238325,Plans: Scarlet Soldier's Protectors
+238326,Plans: Scarlet Soldier's Grips
+238327,Plans: Scarlet Soldier's Waistguard
+238328,Plans: Scarlet Soldier's Legplates
+238329,Plans: Scarlet Soldier's Stompers
+238348,The Axe of Severing
+238349,Abomination Skin Leggings
+238350,Scorn's Focal Dagger
+238351,The Frozen Clutch
+238352,Scorn's Icy Choker
+238353,Mantle of Lady Falther'ess
+238354,Lady Falther'ess' Finger
+238355,Chains of the Lich
+238356,Waistband of Balzaphon
+238357,Staff of Balzaphon
+238358,Blackwood's Thigh
+238360,Lord Blackwood's Buckler
+238361,Lord Blackwood's Blade
+238362,Bracers of Mending
+238363,The Shadow's Grasp
+238364,Cloak of Revanchion
+238637,Prowler Steak
+238638,Filet o' Flank
+238639,Sunrise Omelette
+238641,Specklefin Feast
+238642,Grand Lobster Banquet
+238645,Recipe: Prowler Steak
+238646,Recipe: Filet o' Flank
+238647,Recipe: Sunrise Omelette
+238649,Recipe: Specklefin Feast
+238650,Recipe: Grand Lobster Banquet
+238681,Dusty Bag
+238687,Maul of Onslaught
+238734,Tinkerbox: Teleport
+238735,Tinkerbox: Nitro Boosts
+238736,Tinkerbox: Magnetic Displacement
+238737,Tinkerbox
+238781,Semisafe Transporter: New Avalon
+238782,Schematic: Tinkerbox
+238783,Schematic: Tinkerbox: Teleport
+238784,Schematic: Tinkerbox: Nitro Boosts
+238785,Schematic: Tinkerbox: Magnetic Displacement
+238786,Schematic: Tinker: Teleport
+238787,Schematic: Tinker: Nitro Boosts
+238788,Schematic: Tinker: Magnetic Displacement
+238789,Schematic: Semisafe Transporter: New Avalon
+238794,Unappetizing Leftovers
+238811,Juicy Apple
+238830,Apple Scope
+238831,Apple Rope
+238899,Assorted Fish
+238925,Scarlet Quiver
+238926,Scarlet Ammo Pouch
+238927,Pattern: Scarlet Quiver
+238928,Pattern: Scarlet Ammo Pouch
+238935,Gently Plagued Meat
+238945,Caladboulder
+238960,Quartermaster's Crate
+238961,Caladbolg
+238985,Heavy Crate
+239010,Hilt of the Ashbringer
+239011,Shard of Crystallized Light
+239012,Splinter of Crystallized Light
+239013,Crystalline Axe
+239016,Holy Salts
+239017,Exquisite Spices
+239021,Carrie's Cookbook
+239060,Will of the Mountain
+239092,Preposterously Prosed Postage
+239097,Key to the Cathedral
+239117,Crusader's Chalice
+239119,Holy Arrow
+239123,Monster - BOW_1H_STANDARD_C_01 - Red
+239147,Crusader's Knapsack
+239148,Crimson Dawnwoven Bag
+239149,Pattern: Crusader's Knapsack
+239150,Pattern: Crimson Dawnwoven Bag
+239159,S03 - Scarlet Enclave - Captains Shield
+239196,Ruined Lightforged Blade
+239197,Reforged Blade of the Ashbringer
+239215,Charred Emblem
+239216,Lightforged Iron
+239512,Lightbreaker Wrists
+239218,Stoneshaper's Notes
+239219,Emblem of the Ashbringer
+239221,Monster - Sword1H, Basic
+239222,Schematic: Pop-Up Shrub
+239223,House Prop
+239225,Classy Quill
+239246,Fizzlefuse's Shopping List
+239248,Scarlet Junkbox
+239292,Forgewright's Notes
+239301,Corrupted Ashbringer
+239302,Scarlet Uniform Belt
+239316,Triangulation Samophlange
+239513,Lightbreaker Belt
+239514,Lightbreaker Grips
+239515,Lightbreaker Greaves
+239516,Lightbreaker Shoulders
+239517,Lightbreaker Greathelm
+239518,Lightbreaker Tassets
+239519,Lightbreaker Cuirass
+239520,Lightbreaker Bracers
+239521,Lightbreaker Waistguard
+239522,Lightbreaker Gauntlets
+239523,Lightbreaker Sabatons
+239524,Lightbreaker Pauldrons
+239525,Lightbreaker Helmet
+239526,Lightbreaker Legplates
+239527,Lightbreaker Breastplate
+239529,Dawnstalker Breastplate
+239530,Dawnstalker Greaves
+239531,Dawnstalker Gauntlets
+239532,Dawnstalker Visor
+239533,Dawnstalker Leggings
+239534,Dawnstalker Pauldrons
+239535,Dawnstalker Belt
+239536,Dawnstalker Vambraces
+239537,Dawnstalker Boots
+239538,Dawnstalker Girdle
+239539,Dawnstalker Handguards
+239540,Dawnstalker Headpiece
+239541,Dawnstalker Legguards
+239542,Dawnstalker Spaulders
+239543,Dawnstalker Tunic
+239544,Dawnstalker Wristguards
+239547,Duskwraith Wristguards
+239548,Duskwraith Chestguard
+239549,Duskwraith Grips
+239550,Duskwraith Mask
+239551,Duskwraith Leggings
+239552,Duskwraith Mantle
+239553,Duskwraith Treads
+239554,Duskwraith Belt
+239555,Duskwraith Bracers
+239556,Duskwraith Waistguard
+239557,Duskwraith Gauntlets
+239558,Duskwraith Sabatons
+239559,Duskwraith Pauldrons
+239560,Duskwraith Helmet
+239561,Duskwraith Legplates
+239562,Duskwraith Breastplate
+239565,Garb of Revelation
+239572,Boots of Revelation
+239574,Hands of Revelation
+239575,Crown of Revelation
+239577,Pants of Revelation
+239581,Mantle of Revelation
+239582,Girdle of Revelation
+239583,Wrists of Revelation
+239584,Gloves of Revelation
+239585,Circlet of Revelation
+239586,Shoulderpads of Revelation
+239587,Leggings of Revelation
+239588,Bindings of Revelation
+239589,Sandals of Revelation
+239590,Belt of Revelation
+239591,Robe of Revelation
+239618,Monster - Sword 1H - Vanquisher's Sword (Alt)
+239688,Monster - Spear 2H - Scarlet Cavalry - Spear
+239694,Covenant of Light
+239695,Scarlet Steed
+239696,Hilt of the Ashbringer
+239698,Dawnwoven Fabric
+239706,Consecrated Sabatons
+239707,Consecrated Helmet
+239708,Consecrated Pauldrons
+239709,Consecrated Legplates
+239710,Consecrated Sandals
+239712,Consecrated Shoulderpads
+239714,Consecrated Circlet
+239715,Consecrated Robe
+239716,Consecrated Gloves
+239718,Consecrated Belt
+239719,Consecrated Bindings
+239721,Consecrated Leggings
+239722,Consecrated Wristguards
+239726,Consecrated Boots
+239729,Consecrated Headpiece
+239730,Consecrated Handguards
+239731,Consecrated Tunic
+239756,Consecrated Girdle
+239757,Consecrated Legguards
+239758,Consecrated Spaulders
+239759,Consecrated Bracers
+239760,Consecrated Waistguard
+239761,Consecrated Breastplate
+239762,Consecrated Gauntlets
+239764,Crimson Bladeleaf
+240018,Fizzlefuse's Tinker Manual
+240020,Inquisition Legguards
+240021,Inquisition Spaulders
+240022,Inquisition Boots
+240023,Inquisition Vambraces
+240024,Inquisition Belt
+240025,Inquisition Shoulderplates
+240026,Inquisition Leggings
+240027,Inquisition Helmet
+240028,Inquisition Gloves
+240029,Inquisition Greaves
+240030,Inquisition Breastplate
+240031,Inquisition Bracers
+240032,Inquisition Waistguard
+240033,Inquisition Pauldrons
+240034,Inquisition Legplates
+240035,Inquisition Crown
+240036,Inquisition Gauntlets
+240037,Inquisition Sabatons
+240038,Inquisition Chestguard
+240039,Inquisition Tunic
+240040,Inquisition Headpiece
+240041,Inquisition Handguards
+240042,Inquisition Wristguards
+240043,Inquisition Girdle
+240044,Fireleaf Wristwraps
+240045,Fireleaf Waistguard
+240046,Fireleaf Mantle
+240047,Fireleaf Pants
+240048,Fireleaf Hood
+240049,Fireleaf Mitts
+240050,Fireleaf Boots
+240051,Fireleaf Garb
+240052,Fireleaf Bindings
+240053,Fireleaf Belt
+240054,Fireleaf Shoulderpads
+240055,Fireleaf Leggings
+240056,Fireleaf Circlet
+240057,Fireleaf Gloves
+240058,Fireleaf Sandals
+240059,Fireleaf Robe
+240060,Waywatcher Wraps
+240061,Waywatcher Sash
+240062,Waywatcher Shoulderpads
+240063,Waywatcher Trousers
+240064,Waywatcher Cowl
+240065,Waywatcher Grips
+240066,Waywatcher Stompers
+240067,Waywatcher Vest
+240068,Waywatcher Bindings
+240069,Waywatcher Cord
+240070,Waywatcher Mantle
+240071,Waywatcher Kilt
+240072,Waywatcher Hood
+240073,Waywatcher Mitts
+240074,Waywatcher Sandals
+240075,Waywatcher Leathers
+240076,Waywatcher Bracers
+240077,Waywatcher Waistguard
+240078,Waywatcher Pauldrons
+240079,Waywatcher Leggings
+240080,Waywatcher Headdress
+240081,Waywatcher Gauntlets
+240082,Waywatcher Sabatons
+240083,Waywatcher Armor
+240084,Waywatcher Wristguards
+240085,Waywatcher Girdle
+240086,Waywatcher Spaulders
+240087,Waywatcher Legguards
+240088,Waywatcher Headpiece
+240089,Waywatcher Handguards
+240090,Waywatcher Boots
+240091,Waywatcher Tunic
+240092,Soulcrusher Tunic
+240093,Soulcrusher Boots
+240095,Soulcrusher Handguards
+240096,Soulcrusher Headpiece
+240097,Soulcrusher Legguards
+240098,Soulcrusher Spaulders
+240099,Soulcrusher Girdle
+240100,Soulcrusher Wristguards
+240101,Soulcrusher Chestguard
+240102,Soulcrusher Sabatons
+240103,Soulcrusher Gloves
+240104,Soulcrusher Faceguard
+240105,Soulcrusher Legplates
+240106,Soulcrusher Pauldrons
+240107,Soulcrusher Waistguard
+240108,Soulcrusher Bracers
+240109,Soulcrusher Embrace
+240110,Soulcrusher Greaves
+240122,Soulcrusher Mitts
+240123,Soulcrusher Crown
+240124,Soulcrusher Kilt
+240125,Soulcrusher Mantle
+240126,Soulcrusher Cord
+240127,Soulcrusher Bindings
+240128,Soulcrusher Armor
+240129,Soulcrusher Treads
+240130,Soulcrusher Grips
+240131,Soulcrusher Helmet
+240132,Test Staff
+240134,Soulcrusher Leggings
+240135,Soulcrusher Epaulets
+240136,Soulcrusher Belt
+240137,Soulcrusher Vambraces
+240138,Heretic Robe
+240139,Heretic Sandals
+240140,Heretic Gloves
+240141,Heretic Cowl
+240142,Heretic Leggings
+240143,Heretic Shoulderpads
+240144,Heretic Belt
+240145,Heretic Bindings
+240146,Heretic Garb
+240147,Heretic Handguards
+240148,Heretic Hood
+240149,Heretic Pants
+240150,Heretic Mantle
+240151,Heretic Waistguard
+240152,Heretic Wristguards
+240153,Heretic Boots
+240174,Solistra, Fang of the First Light
+240195,Invisible Sword
+240217,Monster Item - Stave_2H_Jeweled_A_02 - Red
+240742,Monster - 1H, Shortsword, Red
+240832,Nivifacient Gland
+240835,Crate of Moonglade Supplies
+240836,Thisalee's Whistle
+240837,Strings of Fate
+240839,Thal'kituun, the Unseen Guest
+240841,High Commander's Guard
+240842,Scarlet Rotbringer
+240843,Starter's Pistol
+240844,Putress' Poker
+240845,Prototype Magnet
+240846,Magnetic Scrap
+240848,Nordrassil Detritus
+240849,Staff of the Glade
+240850,Lightfist Hammer
+240851,Regicide
+240852,Crimson Cleaver
+240853,Queensfall
+240854,Mercy
+240919,Ravagane
+240920,Leogan
+240921,Scarlet Smashbringer
+240922,Deception
+240923,Duplicity
+240924,Poleaxe of the Beast
+240925,Experiment-800M
+240936,Inert Ashbringer
+240945,Slice of Carrie's Apple Pie
+240994,Tim's Test Ranged Weapon 2
+240997,Fratley's Spur
+240998,Soporific Blade
+241001,Tyr's Fall
+241002,Remnants of the Red
+241003,Mirage, Rod of Illusion
+241004,Conundrum
+241006,Spire of Sacrifice
+241008,Condemnation
+241011,Greatstaff of Fealty
+241012,Wand of Reanimation
+241015,Aegis of the Scarlet Bastion
+241017,Demon's Folly
+241018,Nathrezim Heart
+241020,Putress' Completed Diary
+241021,The Light
+241022,Dawnbringer's Cloak
+241023,Drape of the Dastardly
+241024,Scarlet Commander's Cape
+241025,Flag of the Broken Admiral
+241026,Cardinal's Shawl
+241027,Shield Warden's Guard
+241028,Nathrezim Loop
+241029,Baelin's Band
+241030,Mason's Fraternity Ring
+241031,Barthalomew's Promise
+241032,Ring of Resurrection
+241034,Heart of Light
+241037,Abandoned Experiment
+241038,Sir Dornel's Didgeridoo
+241039,Infusion of Souls
+241068,Stiltz's Standard
+241069,Choke Chain
+241070,Hope of Herod
+241071,Talisman of the Scarlet Scoundrel
+241072,Vial of Pus
+241073,Touch of Light
+241074,Helm of the Red Crusade
+241075,Raging Destroyer's Helm
+241076,Cowl of the Covenant
+241077,Cardinal's Chapeau
+241078,Shroud of the Embalmed
+241079,Weight of the World
+241080,Herod's Pauldron
+241081,Corrupted Ashbringer
+241082,Ashbringer
+241083,S03 - Scarlet Enclave - Sword 2h Raid
+241084,S03 - Scarlet Enclave - Herod's Sword - Normal
+241085,S03 - Scarlet Enclave - Sword 1h
+241086,Scarlet Tower Shield
+241087,Scarlet Staff
+241088,Scarlet Staff
+241089,Scarlet Dagger
+241090,Scarlet Great Axe
+241091,Scarlet Mace
+241092,Scarlet Edge
+241120,S03 - Scarlet Enclave - Herod's Sword - Molten
+241121,Reborn Dagger
+241122,Reborn Knife
+241123,Reborn Dagger
+241124,Reborn Knife
+241128,Pile of Portiporters
+241152,Dawnwrought Shoulders
+241153,Doan's Mantle
+241154,Bearskin Mantle
+241156,Blighted Robes
+241157,Scarlet Chestplate
+241158,Chains of the Abandoned
+241159,Monastery Garb
+241160,Dawnworn Chainmail
+241161,Templar Breastplate
+241162,Sunblessed Leathers
+241163,Sunblaze Bracers
+241164,Scrapped Argent Leathers
+241165,Penitent Wraps
+241166,Dawnstripped Bands
+241167,Prisoner Shackles
+241168,Sunblaze Grips
+241169,Prototype Nitro Boosts
+241170,Enclave Protectors
+241171,Gloves of Departed Souls
+241172,Caldoran's Locked Gauntlets
+241173,High Wizard Wrap
+241174,Girdle of the Reborn Champion
+241175,Torturer's Toolbelt
+241176,Diesalven's Demise
+241177,Kilt of the Scarlet Arcanist
+241178,Stalwart Pain Plate
+241179,Leggings of Catastrophe
+241180,Lightscale Leggings
+241181,Dawnworn Chain Leggings
+241182,Templar Plate Legguards
+241183,Ashwalkers
+241184,Savior Sandals
+241185,Bear Training Boots
+241186,Polished Scarlet Mail Boots
+241187,Crimson Wartreads
+241190,Bird Whistle
+241191,Formula: Enchant Weapon - Grand Crusader
+241195,Formula: Enchant 2H Weapon - Grand Arcanist
+241201,Formula: Enchant Weapon - Grand Sorcerer
+241212,Cluck Cannon
+241233,[DNT] Super Strong Lockbox
+241241,Lucky Doubloon
+241613,No Longer Used
+241629,Scarlet Cannonball
+241649,Gauntlets of the Hillsbrad Guard
+241650,Major Discolored Healing Potion
+241651,Recipe: Major Discolored Healing Potion
+241652,Discolored Beast Heart
+241653,Heated Blade
+241654,Inert Ashbringer
+241655,Mishandled Healing Potion
+241656,Mishandled Healing Potion
+241657,Tempered Blade
+242018,Plaguelands Bleeding Heart
+242224,Basket of Hearts
+242256,Satchel of Incendiary Bombs
+242257,Mysterious Alchemical Sample
+242258,Research Notes
+242266,World of Wardcraft
+242267,From Arcanist to Archmage
+242268,If You Give a Crusader an Enchant
+242269,Brilliance of the Grand Sorcerer
+242270,Brilliance of the Grand Arcanist
+242271,Brilliance of the Grand Crusader
+242310,Hand of Reborn Justice
+242311,Leonid's Charm
+242312,Barthalomew Family Seal
+242313,Journal of the Revered
+242314,Cinders of the Fallen Crusade
+242315,Ashes of Arrogance
+242316,Dust of the Defiant
+242317,Desecrated Prayerbook
+242319,New Plague Samples
+242320,New Plague Samples
+242361,Formula: Enchant 2H Weapon - Grand Inquisitor
+242362,Brilliance of the Grand Inquisitor
+242363,Who, What, Where, When, and Die! Five Keys to a Good Inquisition
+242364,Mature Light Dragon Sinew
+242365,Wing of Balnazzar
+242366,Inescapable Fate
+242367,Wing and String
+242425,Torn Diary Page - Page 1
+242426,Torn Diary Page - Page 2
+242427,Putress' Diary
+242428,Torn Diary Page - Page 3
+242429,Putress' Diary
+242430,Torn Diary Page - Page 4
+242431,Torn Diary Page - Page 5
+242432,Putress' Diary
+242433,Torn Diary Page - Page 6
+242434,Putress' Diary
+242435,Putress' Diary
+242436,Putress' Diary
+242465,Jostled Chalice Fragment
+242710,Monster Weapon [DNT]
+242793,Portable Cannon
+243010,Corrupted Ashbringer
+243064,Long Staff
+243065,Broken Wand
+243177,Ingenious Toy
+243198,Poultry Precision Scope
+243229,Hearthstone of the Dawn
+243230,Ruined Lightforged Blade
+243345,Long Staff
+244460,Caladbolg
+6117,Squire's Shirt
+6118,Squire's Pants
+6119,Neophyte's Robe
+6120,Recruit's Shirt
+6122,Recruit's Boots
+6129,Acolyte's Robe
+6134,Primitive Mantle
+6135,Primitive Kilt
+6137,Thug Pants
+6138,Thug Boots
+6139,Novice's Robe
+6140,Apprentice's Robe
+11646,Lesser Arcanum of Voracity
+11647,Lesser Arcanum of Voracity
+11648,Lesser Arcanum of Voracity
+11649,Lesser Arcanum of Voracity
+13752,Soulbound Keepsake
+14023,Barov Peasant Caller
+15911,Taming Rod
+15913,Taming Rod
+15914,Taming Rod
+15915,Taming Rod
+15916,Taming Rod
+15917,Taming Rod
+15919,Taming Rod
+15920,Taming Rod
+15921,Taming Rod
+15922,Taming Rod
+15923,Taming Rod
+17363,Ryson's Beacon
+17364,Scrying Scope
+17410,Zinfizzlex's Portable Shredder Unit
+18150,Rune of Recall
+18152,Amethyst Phial
+19004,Minor Healthstone
+19005,Minor Healthstone
+19006,Lesser Healthstone
+19007,Lesser Healthstone
+19008,Healthstone
+19009,Healthstone
+19010,Greater Healthstone
+19011,Greater Healthstone
+19012,Major Healthstone
+19013,Major Healthstone
+20526,Scroll: Create Crest of Beckoning
+20527,Scroll: Create Crest of Beckoning
+20528,Scroll: Create Crest of Beckoning
+20532,Scroll: Create Signet of Beckoning
+20533,Scroll: Create Signet of Beckoning
+20535,Scroll: Create Signet of Beckoning
+20542,Scroll: Create Scepter of Beckoning
+20543,Scroll: Create Scepter of Beckoning
+20544,Scroll: Create Scepter of Beckoning
+20706,Cenarion Reservist's Pants
+20707,Cenarion Reservist's Pants
+21266,Logistics Assignment
+21271,Gently Shaken Gift
+21386,Followup Logistics Assignment
+22050,Brazier of Beckoning
+22051,Brazier of Beckoning
+22052,Brazier of Beckoning
+22056,Brazier of Beckoning
+22822,iCoke Prize Voucher
+23207,Mark of the Champion
