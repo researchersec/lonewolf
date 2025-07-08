@@ -7,8 +7,8 @@ import shutil
 api_key = os.environ['API_KEY']
 
 auth_url = 'https://auth.tradeskillmaster.com/oauth2/token'
-alli_pricing_url = 'https://pricing-api.tradeskillmaster.com/ah/513'
-horde_pricing_url = 'https://pricing-api.tradeskillmaster.com/ah/514'
+alli_pricing_url = 'https://pricing-api.tradeskillmaster.com/ah/561'
+horde_pricing_url = 'https://pricing-api.tradeskillmaster.com/ah/562'
 
 #realm_url = 'https://realm-api.tradeskillmaster.com/regions'
 #realm_data = 'https://realm-api.tradeskillmaster.com/regions/22/realms'
