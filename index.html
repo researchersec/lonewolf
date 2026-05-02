@@ -77,14 +77,14 @@
             let tableContent = '';
 
             itemsData.forEach(item => {
-                const itemPricing = pricingData.find(pricing => pricing.itemId === item.entry);
+                const itemPricing = pricingData.find(pricing => pricing.itemId === item.id);
 
                 if (itemPricing && item.name.toLowerCase().includes(searchInput)) {
                     const minBuyoutGold = Math.floor(itemPricing.minBuyout / 10000);
                     const minBuyoutSilver = Math.floor((itemPricing.minBuyout % 10000) / 100);
                     const minBuyoutCopper = itemPricing.minBuyout % 100;
-                    // data-wowhead="item=${item.entry}"
-                    const wowheadLink = `<a href="https://www.wowhead.com/classic/item=${item.entry}" data-wh-icon-size="tiny" target="_blank">${item.name}</a>`;
+                    // data-wowhead="item=${item.id}"
+                    const wowheadLink = `<a href="https://www.wowhead.com/classic/item=${item.id}" data-wh-icon-size="tiny" target="_blank">${item.name}</a>`;
 
                     tableContent += `<tr><td>${wowheadLink}</td><td>${formatCurrency(minBuyoutGold, minBuyoutSilver, minBuyoutCopper)}</td><td>${itemPricing.quantity}</td><td>${itemPricing.numAuctions}</td></tr>`;
                 }
