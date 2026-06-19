@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WoW Auction Prices</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 700px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #111;
+        color: #eee;
+    }
+
+    .item {
+        background: #1c1c1c;
+        padding: 16px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+    }
+
+    .price {
+        color: gold;
+        font-size: 1.3rem;
+    }
+
+    .updated {
+        color: #999;
+        margin-bottom: 24px;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Auction Prices</h1>
+
+<div class="updated" id="updated">
+    Loading...
+</div>
+
+<div id="items"></div>
+
+<script>
+const wanted = [36390, 30040, 30038];
+
+function formatGold(copper) {
+    const gold = Math.floor(copper / 10000);
+    const silver = Math.floor((copper % 10000) / 100);
+    const copperLeft = copper % 100;
+
+    return `${gold}g ${silver}s ${copperLeft}c`;
+}
+
+fetch("./horde.json")
+    .then(r => r.json())
+    .then(data => {
+
+        // Show file modified time (browser fetch timestamp fallback)
+        document.getElementById("updated").textContent =
+            "Last updated: " + new Date().toLocaleString();
+
+        const items = data.pricing_data
+            .filter(i => wanted.includes(i.itemId));
+
+        document.getElementById("items").innerHTML =
+            items.map(item => `
+                <div class="item">
+                    <h2>${item.itemName}</h2>
+
+                    <div>Item ID: ${item.itemId}</div>
+
+                    <div class="price">
+                        Market: ${formatGold(item.marketValue)}
+                    </div>
+
+                    <div>
+                        Buyout:
+                        ${item.minBuyout > 0
+                            ? formatGold(item.minBuyout)
+                            : "No auctions"}
+                    </div>
+
+                    <div>
+                        Auctions: ${item.numAuctions}
+                    </div>
+                </div>
+            `).join("");
+
+    })
+    .catch(err => {
+        document.body.innerHTML =
+            "<h2>Could not load horde.json</h2>";
+        console.error(err);
+    });
+</script>
+
+</body>
+</html>
